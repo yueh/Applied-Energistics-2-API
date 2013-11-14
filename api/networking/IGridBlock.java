@@ -46,7 +46,7 @@ public interface IGridBlock
 	DimensionalCoord getLocation();
 
 	/**
-	 * @return Transparent, or a valid color, NULL IF NOT VALID
+	 * @return Transparent, or a valid color, NULL IS NOT A VALID RETURN
 	 */
 	AEColor getGridColor();
 
@@ -64,8 +64,6 @@ public interface IGridBlock
 
 	/**
 	 * Determine which sides of the block can be connected too
-	 * 
-	 * @return
 	 */
 	EnumSet<ForgeDirection> getConnectableSides();
 
@@ -74,7 +72,6 @@ public interface IGridBlock
 	 * Smart > Covered > Glass
 	 * 
 	 * @param dir
-	 * @return
 	 */
 	public AECableType getCableConnectionType(ForgeDirection dir);
 
