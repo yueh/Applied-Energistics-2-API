@@ -4,9 +4,14 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import appeng.api.IAppEngApi;
 
 /**
- * used to interact with memory card items.
+ * Used to interact with memory card items.
+ * 
+ * Obtain via {@link IAppEngApi}.getmemeoryCardHandler()
+ * 
+ * Do Not Implement
  */
 public interface IMemoryCard
 {
@@ -20,19 +25,21 @@ public interface IMemoryCard
 	boolean isMemoryCard(ItemStack is);
 
 	/**
-	 * Configures the data stored on the memory card, the SettingsName, will be localized when displayed.
+	 * Configures the data stored on the memory card, the SettingsName, will be
+	 * localized when displayed.
 	 * 
 	 * @param is
 	 * @param SettingsName
 	 * @param data
-	 *            - tooltip - is a unlocalized string displayed after the settings name, optional but can be used to add
-	 *            details to the card for later.
+	 *            - tooltip - is a unlocalized string displayed after the
+	 *            settings name, optional but can be used to add details to the
+	 *            card for later.
 	 */
 	void setMemoryCardContents(ItemStack is, String SettingsName, NBTTagCompound data);
 
 	/**
-	 * returns the settings name provided previously by setMemoryCardContents, or "AppEng.GuiITooltip.Blank" if there is
-	 * no settings.
+	 * returns the settings name provided previously by setMemoryCardContents,
+	 * or "AppEng.GuiITooltip.Blank" if there is no settings.
 	 * 
 	 * @param is
 	 * @return
@@ -40,7 +47,8 @@ public interface IMemoryCard
 	String getSettingsName(ItemStack is);
 
 	/**
-	 * returns the NBT Data previously saved by setMemoryCardContents, or an empty NBTCompound
+	 * returns the NBT Data previously saved by setMemoryCardContents, or an
+	 * empty NBTCompound
 	 * 
 	 * @param is
 	 * @return

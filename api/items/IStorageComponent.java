@@ -1,7 +1,11 @@
 package appeng.api.items;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+/**
+ * Implemented on a {@link Item}
+ */
 public interface IStorageComponent
 {
 

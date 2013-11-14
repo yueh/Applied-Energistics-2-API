@@ -8,6 +8,11 @@ import net.minecraftforge.common.ForgeDirection;
 import appeng.client.render.BusRenderHelper;
 import appeng.parts.IBusCollsionHelper;
 
+/**
+ * Used Internally.
+ * 
+ * not intended for implementation.
+ */
 public interface IFacadePart
 {
 
@@ -36,7 +41,8 @@ public interface IFacadePart
 	 * @param busBounds
 	 * @param b
 	 */
-	void renderStatic(int x, int y, int z, BusRenderHelper instance, RenderBlocks renderer, IFacadeContainer fc, AxisAlignedBB busBounds, boolean renderStilt);
+	void renderStatic(int x, int y, int z, BusRenderHelper instance, RenderBlocks renderer, IFacadeContainer fc,
+			AxisAlignedBB busBounds, boolean renderStilt);
 
 	/**
 	 * render the part in inventory.

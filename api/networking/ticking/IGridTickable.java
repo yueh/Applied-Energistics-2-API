@@ -2,6 +2,9 @@ package appeng.api.networking.ticking;
 
 import appeng.api.networking.IGridNode;
 
+/**
+ * Implement on IGridHosts which want to use AE's Network Ticking Feature.
+ */
 public interface IGridTickable
 {
 

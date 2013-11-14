@@ -3,6 +3,9 @@ package appeng.api.networking.storage;
 import appeng.api.storage.IMEInventoryHandler;
 import appeng.api.storage.data.IAEFluidStack;
 
+/**
+ * Access Network Fluid Storage
+ */
 public interface IFluidStorageGrid extends IStorageGrid
 {
 

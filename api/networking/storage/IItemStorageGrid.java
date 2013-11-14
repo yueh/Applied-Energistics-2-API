@@ -3,6 +3,9 @@ package appeng.api.networking.storage;
 import appeng.api.storage.IMEInventoryHandler;
 import appeng.api.storage.data.IAEItemStack;
 
+/**
+ * Access Network Item Storage.
+ */
 public interface IItemStorageGrid extends IStorageGrid
 {
 
@@ -15,5 +18,5 @@ public interface IItemStorageGrid extends IStorageGrid
 	public IMEInventoryHandler<IAEItemStack> getCellView(ViewType view);
 
 	public IMEInventoryHandler<IAEItemStack> getInventory();
-	
+
 }

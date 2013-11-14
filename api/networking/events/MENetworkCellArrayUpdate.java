@@ -1,15 +1,15 @@
 package appeng.api.networking.events;
 
-
 /**
- * Posted when storage options in a AE Network update, such as a new Storage Bus or Cell is added, or removed.
+ * Posted by storage devices to inform AE to refreash its storage structure.
  * 
- * you do not need to send this event when your node is added / removed from the grid.
+ * This is done in cases such as a storage cell being removed or added to a
+ * drive.
+ * 
+ * you do not need to send this event when your node is added / removed from the
+ * grid.
  */
 public class MENetworkCellArrayUpdate extends MENetworkEvent
 {
-
-	public MENetworkCellArrayUpdate() {
-	}
 
 }

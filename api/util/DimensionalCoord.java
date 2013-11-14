@@ -3,6 +3,9 @@ package appeng.api.util;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+/**
+ * Represents a location in the Minecraft Universe
+ */
 public class DimensionalCoord extends WorldCoord
 {
 
@@ -16,7 +19,7 @@ public class DimensionalCoord extends WorldCoord
 	}
 
 	public DimensionalCoord(TileEntity s) {
-		super(s );
+		super( s );
 		w = s.worldObj;
 		dimId = w.provider.dimensionId;
 	}

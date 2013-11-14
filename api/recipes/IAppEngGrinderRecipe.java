@@ -3,7 +3,7 @@ package appeng.api.recipes;
 import net.minecraft.item.ItemStack;
 
 /**
- * Lets you manipulate existing recipes.
+ * Registration Records for {@link IGrinderRecipeManager}
  */
 public interface IAppEngGrinderRecipe
 {

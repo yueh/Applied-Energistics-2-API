@@ -5,32 +5,33 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 /**
- * Gives easy access to diffrent part of the various, items/blocks/materials in AE.
+ * Gives easy access to different part of the various, items/blocks/materials in
+ * AE.
  */
 public interface AEItemDefinition
 {
 
 	/**
-	 * returns the Block Implementation if applicable.
+	 * returns the {@link Block} Implementation if applicable.
 	 * 
 	 * @return
 	 */
 	Block block();
 
 	/**
-	 * returns the Item Implementation if applicable.
+	 * returns the {@link Item} Implementation if applicable.
 	 */
 	Item item();
 
 	/**
-	 * returns an item stack with specified quantity.
+	 * returns an {@link ItemStack} with specified quantity.
 	 * 
 	 * @return
 	 */
 	ItemStack stack(int stackSize);
 
 	/**
-	 * Compare Item with this item type.
+	 * Compare {@link ItemStack} with this {@link AEItemDefinition}
 	 * 
 	 * @param is
 	 * @return

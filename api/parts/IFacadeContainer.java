@@ -4,7 +4,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 
 /**
- * used internally.
+ * Used Internally.
+ * 
+ * not intended for implementation.
  */
 public interface IFacadeContainer
 {

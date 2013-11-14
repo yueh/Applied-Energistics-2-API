@@ -3,7 +3,14 @@ package appeng.api.tiles;
 import net.minecraftforge.common.ForgeDirection;
 
 /**
- * Interface must be implemented by a tile entity.
+ * Crank/Crankable API,
+ * 
+ * Tiles that Implement this can receive power, from the crank, and have the
+ * crank placed on them.
+ * 
+ * Tiles that access other tiles that implement this method can act as Cranks.
+ * 
+ * This interface must be implemented by a tile entity.
  */
 public interface ICrankable
 {

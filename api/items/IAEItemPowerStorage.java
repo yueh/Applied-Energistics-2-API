@@ -2,10 +2,10 @@ package appeng.api.items;
 
 import net.minecraft.item.ItemStack;
 import appeng.api.config.AccessRestriction;
+import appeng.api.networking.energy.IAEPowerStorage;
 
 /**
- * Basically the same as IAEPowerStorage for Parts, but an item version.
- * 
+ * Basically the same as {@link IAEPowerStorage}, but for items.
  */
 public interface IAEItemPowerStorage
 {

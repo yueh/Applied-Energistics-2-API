@@ -1,9 +1,13 @@
 package appeng.api.items;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import appeng.api.util.WorldCoord;
 
+/**
+ * Implemented on a {@link Item}
+ */
 public interface ISpatialStorageCell
 {
 

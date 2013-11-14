@@ -6,6 +6,11 @@ import net.minecraftforge.common.ForgeDirection;
 import appeng.api.util.AEColor;
 import appeng.api.util.DimensionalCoord;
 
+/**
+ * Implemented by AE
+ * 
+ * Implemented on AE's TileEntity or AE's FMP Part.
+ */
 public interface IPartHost
 {
 
@@ -18,7 +23,8 @@ public interface IPartHost
 	IFacadeContainer getFacadeContainer();
 
 	/**
-	 * see if you can add a part to the specified side, returns false if it failed to be added.
+	 * see if you can add a part to the specified side, returns false if it
+	 * failed to be added.
 	 * 
 	 * @param is
 	 * @param side
@@ -27,11 +33,13 @@ public interface IPartHost
 	boolean canAddPart(ItemStack part, ForgeDirection side);
 
 	/**
-	 * try to add a new part to the specified side, returns false if it failed to be added.
+	 * try to add a new part to the specified side, returns false if it failed
+	 * to be added.
 	 * 
 	 * @param is
 	 * @param side
-	 * @return null if the item failed to add, the side it was placed on other wise ( may diff for cables )
+	 * @return null if the item failed to add, the side it was placed on other
+	 *         wise ( may diff for cables )
 	 */
 	ForgeDirection addPart(ItemStack is, ForgeDirection side);
 
@@ -44,8 +52,9 @@ public interface IPartHost
 	IBusPart getPart(ForgeDirection side);
 
 	/**
-	 * removes the part on the side, this dosn't drop it or anything, if you don't do something with it, its just "gone"
-	 * and its never coming back; think about it.
+	 * removes the part on the side, this dosn't drop it or anything, if you
+	 * don't do something with it, its just "gone" and its never coming back;
+	 * think about it.
 	 * 
 	 * @param side
 	 */

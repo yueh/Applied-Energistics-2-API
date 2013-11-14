@@ -3,21 +3,32 @@ package appeng.api.storage;
 import appeng.api.storage.data.IAEStack;
 import appeng.api.storage.data.IItemList;
 
-
 /**
- * AE's Equivilant too IInventory, used to accessing and
+ * AE's Equivalent to IInventory, used to reading contents, and manipulating
+ * contents of ME Inventories.
+ * 
+ * Implementations should COMPLETELY ignore stack size limits from an external
+ * view point, Meaning that you can inject Integer.MAX_VALUE items and it should
+ * work as defined, or be able to extract Integer.MAX_VALUE and have it work as
+ * defined, Translations to MC's max stack size are external to the AE API.
+ * 
+ * If you want to request a stack of an item, you should should determin that
+ * prior to requesting the stack from the inventory.
+ * 
  */
 public interface IMEInventory<StackType extends IAEStack>
 {
 
 	/**
-	 * Store new items, or simulate the addition of new items into the ME Inventory.
+	 * Store new items, or simulate the addition of new items into the ME
+	 * Inventory.
 	 * 
 	 * @param input
 	 *            - item to add.
 	 * @param simulate
 	 *            - simulate, or perform action?
-	 * @return returns the number of items not added, or a empty stack; NEVER NULL
+	 * @return returns the number of items not added, or a empty stack; NEVER
+	 *         NULL
 	 */
 	public StackType injectItems(StackType input, boolean simulate);
 
@@ -28,7 +39,8 @@ public interface IMEInventory<StackType extends IAEStack>
 	 *            - item to request ( with stack size. )
 	 * @param simulate
 	 *            - simulate, or perform action?
-	 * @return returns the number of items extracted, or an empty stack; NEVER NULL
+	 * @return returns the number of items extracted, or an empty stack; NEVER
+	 *         NULL
 	 */
 	public StackType extractItems(StackType request, boolean simulate);
 
