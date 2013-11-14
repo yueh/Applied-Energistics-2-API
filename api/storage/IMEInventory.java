@@ -5,21 +5,10 @@ import appeng.api.storage.data.IItemList;
 
 
 /**
- * Lets you access Internal Cell Inventories.
+ * AE's Equivilant too IInventory, used to accessing and
  */
 public interface IMEInventory<StackType extends IAEStack>
 {
-
-	/**
-	 * Determine an estimated space available for the specified item,
-	 * 
-	 * @param input
-	 *            the item being checked, null is not valid.
-	 * @param maxNeeded
-	 *            - a limit which determines if the process can "early exit"
-	 * @return the number of items that is estimated to be added.
-	 */
-	public long getAvailableSpaceByItem(StackType input, long maxNeeded);
 
 	/**
 	 * Store new items, or simulate the addition of new items into the ME Inventory.

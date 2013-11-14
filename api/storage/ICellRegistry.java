@@ -1,11 +1,14 @@
 package appeng.api.storage;
 
+import appeng.api.IAppEngApi;
 import net.minecraft.item.ItemStack;
 
 /**
  * Storage Cell Registry, used for specially implemented cells, if you just want
  * to make a item act like a cell, or new cell with different bytes, then you
  * should probably consider IStorageCell instead its considerably simpler.
+ * 
+ * Do not Implement, obtained via {@link IAppEngApi}.getCellRegistry()
  */
 public interface ICellRegistry
 {

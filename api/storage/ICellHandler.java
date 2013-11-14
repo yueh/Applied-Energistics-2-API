@@ -3,7 +3,7 @@ package appeng.api.storage;
 import net.minecraft.item.ItemStack;
 
 /**
- * Registration record for a Custom Cell handler.
+ * Registration record for {@link ICellRegistry}
  */
 public interface ICellHandler
 {

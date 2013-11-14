@@ -4,8 +4,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 
 /**
- * A Registration for a special storage handler.
- * 
+ * A Registration Record for {@link IExternalStorageRegistry}
  */
 public interface IExternalStorageHandler
 {

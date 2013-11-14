@@ -3,9 +3,7 @@ package appeng.api.storage;
 import java.util.List;
 
 /**
- * 
  * Represents a tile that contributes to storage, such as a ME Chest, or ME Drive.
- * 
  */
 public interface ICellContainer
 {
