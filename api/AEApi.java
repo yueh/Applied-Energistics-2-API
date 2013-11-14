@@ -26,7 +26,7 @@ public class AEApi
 		{
 			try
 			{
-				Class c = ReflectionHelper.getClass( AEApi.class.getClassLoader(), "appeng.core.Api" );
+				Class c = Class.forName( "appeng.core.Api" );
 				api = (IAppEngApi) c.getField( "instance" ).get( c );
 			}
 			catch (Throwable e)
