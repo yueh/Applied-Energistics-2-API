@@ -27,7 +27,7 @@ public interface IOrientable
 	ForgeDirection getForward();
 
 	/**
-	 *  Returns the direction the bottom of the tile is facing.
+	 *  Returns the direction the top of the tile is facing.
 	 * @return
 	 */
 	ForgeDirection getUp();
