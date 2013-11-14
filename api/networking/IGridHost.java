@@ -13,7 +13,7 @@ public interface IGridHost
 
 	/**
 	 * get the grid node for a particular side of a block, you can return null,
-	 * by returning a valid node later and calling updatState, you can join the
+	 * by returning a valid node later and calling updateState, you can join the
 	 * Grid when your block is ready.
 	 * 
 	 * @param dir
