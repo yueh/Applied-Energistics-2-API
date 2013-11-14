@@ -1,0 +1,69 @@
+package appeng.api.parts;
+
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.AxisAlignedBB;
+import net.minecraftforge.common.ForgeDirection;
+import appeng.client.render.BusRenderHelper;
+import appeng.parts.IBusCollsionHelper;
+
+public interface IFacadePart
+{
+
+	/**
+	 * used to save the part.
+	 * 
+	 * @return
+	 */
+	ItemStack getItemStack();
+
+	/**
+	 * used to collide, and pick the part
+	 * 
+	 * @param ch
+	 */
+	void getBoxes(IBusCollsionHelper ch);
+
+	/**
+	 * render the part.
+	 * 
+	 * @param xCoord
+	 * @param yCoord
+	 * @param zCoord
+	 * @param instance
+	 * @param renderer
+	 * @param busBounds
+	 * @param b
+	 */
+	void renderStatic(int x, int y, int z, BusRenderHelper instance, RenderBlocks renderer, IFacadeContainer fc, AxisAlignedBB busBounds, boolean renderStilt);
+
+	/**
+	 * render the part in inventory.
+	 * 
+	 * @param instance
+	 * @param renderer
+	 */
+	void renderInventory(BusRenderHelper instance, RenderBlocks renderer);
+
+	/**
+	 * get side of facade.
+	 * 
+	 * @return
+	 */
+	ForgeDirection getSide();
+
+	/**
+	 * the box for the face of the facade.
+	 * 
+	 * @return
+	 */
+	AxisAlignedBB getPrimaryBox();
+
+	Item getItem();
+
+	int getItemDamage();
+
+	boolean isBC();
+
+}
