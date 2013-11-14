@@ -18,10 +18,11 @@ public interface ICellHandler
 	boolean isCell(ItemStack is, StorageChannel channel);
 
 	/**
-	 * return a new IMEHandler for the provided item.
-	 * 
+	 * If you cannot handle the provided item, return null
+	 *
 	 * @param is
-	 * @return if you cannot handle the provided item, return null.
+	 *
+	 * @return a new IMEHandler for the provided item
 	 */
 	IMEInventoryHandler getCellHandler(ItemStack is, StorageChannel channel);
 

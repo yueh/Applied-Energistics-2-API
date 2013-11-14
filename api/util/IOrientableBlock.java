@@ -9,14 +9,12 @@ public interface IOrientableBlock
 {
 	
 	/**
-	 * returns a IOrientable if applicable.
-	 * 
-	 * @param w
+	 * @param world
 	 * @param x
 	 * @param y
 	 * @param z
-	 * @return
+	 * @return a IOrientable if applicable
 	 */
-	IOrientable getOrientable(IBlockAccess w, int x, int y, int z);
+	IOrientable getOrientable(IBlockAccess world, int x, int y, int z);
 	
 }

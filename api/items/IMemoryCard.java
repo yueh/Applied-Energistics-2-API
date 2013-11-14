@@ -17,10 +17,8 @@ public interface IMemoryCard
 {
 
 	/**
-	 * returns true if the item is in fact a memory card.
-	 * 
 	 * @param is
-	 * @return
+	 * @return true if the item is in fact a memory card
 	 */
 	boolean isMemoryCard(ItemStack is);
 
@@ -31,7 +29,7 @@ public interface IMemoryCard
 	 * @param is
 	 * @param SettingsName
 	 * @param data
-	 *            - tooltip - is a unlocalized string displayed after the
+	 *            tooltip - is a unlocalized string displayed after the
 	 *            settings name, optional but can be used to add details to the
 	 *            card for later.
 	 */
@@ -47,11 +45,9 @@ public interface IMemoryCard
 	String getSettingsName(ItemStack is);
 
 	/**
-	 * returns the NBT Data previously saved by setMemoryCardContents, or an
-	 * empty NBTCompound
-	 * 
 	 * @param is
-	 * @return
+	 * @return the NBT Data previously saved by setMemoryCardContents, or an
+	 *         empty NBTCompound
 	 */
 	NBTTagCompound getData(ItemStack is);
 

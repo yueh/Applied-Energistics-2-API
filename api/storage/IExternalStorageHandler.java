@@ -23,7 +23,7 @@ public interface IExternalStorageHandler
 	 * implementing class for it, if not return null
 	 * 
 	 * @param te
-	 * @return HandlerFor Inventory.
+	 * @return The Handler for the inventory
 	 */
 	IMEInventory getInventory(TileEntity te, ForgeDirection d, StorageChannel channel);
 

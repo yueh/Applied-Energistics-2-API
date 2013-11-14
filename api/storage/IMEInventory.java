@@ -12,9 +12,8 @@ import appeng.api.storage.data.IItemList;
  * work as defined, or be able to extract Integer.MAX_VALUE and have it work as
  * defined, Translations to MC's max stack size are external to the AE API.
  * 
- * If you want to request a stack of an item, you should should determin that
+ * If you want to request a stack of an item, you should should determine that
  * prior to requesting the stack from the inventory.
- * 
  */
 public interface IMEInventory<StackType extends IAEStack>
 {
@@ -24,9 +23,9 @@ public interface IMEInventory<StackType extends IAEStack>
 	 * Inventory.
 	 * 
 	 * @param input
-	 *            - item to add.
+	 *             item to add.
 	 * @param simulate
-	 *            - simulate, or perform action?
+	 *             simulate, or perform action?
 	 * @return returns the number of items not added, or a empty stack; NEVER
 	 *         NULL
 	 */
@@ -36,9 +35,9 @@ public interface IMEInventory<StackType extends IAEStack>
 	 * Extract the specified item from the ME Inventory
 	 * 
 	 * @param request
-	 *            - item to request ( with stack size. )
+	 *             item to request ( with stack size. )
 	 * @param simulate
-	 *            - simulate, or perform action?
+	 *             simulate, or perform action?
 	 * @return returns the number of items extracted, or an empty stack; NEVER
 	 *         NULL
 	 */
@@ -48,15 +47,13 @@ public interface IMEInventory<StackType extends IAEStack>
 	 * request a full report of all available items, storage.
 	 * 
 	 * @param out
-	 *            - the IItemList the results will be written too
+	 *           the IItemList the results will be written too
 	 * @return returns same list that was passed in, is passed out
 	 */
 	public IItemList<StackType> getAvailableItems(IItemList out);
 
 	/**
-	 * return the type of channel your handler should be part of
-	 * 
-	 * @return
+	 * @return the type of channel your handler should be part of
 	 */
 	public StorageChannel getChannel();
 

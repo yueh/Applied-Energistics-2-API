@@ -11,7 +11,7 @@ public interface IItemComparisionProvider
 {
 
 	/**
-	 * should return a new IItemComparison, or return null if it dosn't handle
+	 * should return a new IItemComparison, or return null if it doesn't handle
 	 * the supplied item.
 	 * 
 	 * @param is
@@ -20,12 +20,10 @@ public interface IItemComparisionProvider
 	IItemComparison getComparison(ItemStack is);
 
 	/**
-	 * Simple test for support ( AE generally skips this and calls the above
-	 * function. )
+	 * Simple test for support ( AE generally skips this and calls the above function. )
 	 * 
 	 * @param stack
-	 * @return true, if getComparison will return a valid IItemComparison
-	 *         Object.
+	 * @return true, if getComparison will return a valid IItemComparison Object
 	 */
 	public boolean canHandle(ItemStack stack);
 

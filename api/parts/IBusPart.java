@@ -19,8 +19,8 @@ public interface IBusPart
 {
 
 	/**
-	 * get an itemstack that represents the bus, should contain the settings for whatever, can also be used in
-	 * conjunctino with removePart to take a part off and drop it or something.
+	 * get an ItemStack that represents the bus, should contain the settings for whatever, can also be used in
+	 * conjunction with removePart to take a part off and drop it or something.
 	 * 
 	 * @return
 	 */
@@ -38,7 +38,7 @@ public interface IBusPart
 	void renderInventory(IBusRenderHelper rh, RenderBlocks renderer);
 
 	/**
-	 * render world renderer ( prefered )
+	 * render world renderer ( preferred )
 	 * 
 	 * GL is NOT Available
 	 * 
@@ -66,21 +66,17 @@ public interface IBusPart
 	void renderDynamic(double x, double y, double z, IBusRenderHelper rh, RenderBlocks renderer);
 
 	/**
-	 * return if the bus ha a solid side, and you can place random stuf on it like torches or levers.
-	 * 
-	 * @return
+	 * @return if the bus has a solid side, and you can place random stuff on it like torches or levers
 	 */
 	boolean isSolid();
 
 	/**
-	 * return true if this part can connect to redstone ( also MFR Rednet )
-	 * 
-	 * @return
+	 * @return true if this part can connect to redstone ( also MFR Rednet )
 	 */
 	boolean canConnectRedstone();
 
 	/**
-	 * write additional NBT data to the world, ( the part id is nto part of this. )
+	 * write additional NBT data to the world, ( the part id is not part of this. )
 	 * 
 	 * @param extra
 	 */
@@ -94,29 +90,22 @@ public interface IBusPart
 	void readFromNBT(NBTTagCompound extra);
 
 	/**
-	 * get the amount of light produced by the bus.
-	 * @return
+	 * @return get the amount of light produced by the bus
 	 */
 	int getLightLevel();
 	
 	/**
-	 * 
 	 * a block around the bus's host has been changed.
-	 * 
 	 */
 	void onNeighborChanged();
 
 	/**
-	 * output redstone on facing side.
-	 * 
-	 * @return
+	 * @return output redstone on facing side
 	 */
 	int isProvidingStrongPower();
 
 	/**
-	 * output redstone on facing side.
-	 * 
-	 * @return
+	 * @return output redstone on facing side
 	 */
 	int isProvidingWeakPower();
 
@@ -165,12 +154,10 @@ public interface IBusPart
 	void addToWorld();
 
 	/**
-	 * return a grid node that represents the external facing side, these must be isWorldAccessable with the correct
-	 * faces marked as external.
-	 * 
 	 * used for tunnels.
 	 * 
-	 * @return
+	 * @return a grid node that represents the external facing side, these must be isWorldAccessable with the correct
+	 *         faces marked as external
 	 */
 	IGridNode getExternalFacingNode();
 

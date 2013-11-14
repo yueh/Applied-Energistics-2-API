@@ -4,9 +4,7 @@ public interface ILocatable
 {
 
 	/**
-	 * returns the serial for a locatable object.
-	 * 
-	 * @return
+	 * @return the serial for a locatable object
 	 */
 	long getLocatableSerial();
 

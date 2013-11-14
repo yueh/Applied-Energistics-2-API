@@ -15,10 +15,7 @@ public interface IPartHost
 {
 
 	/**
-	 * 
-	 * gets the facade container
-	 * 
-	 * @return
+	 * @return the facade container
 	 */
 	IFacadeContainer getFacadeContainer();
 
@@ -39,7 +36,7 @@ public interface IPartHost
 	 * @param is
 	 * @param side
 	 * @return null if the item failed to add, the side it was placed on other
-	 *         wise ( may diff for cables )
+	 *         wise ( may different for cables )
 	 */
 	ForgeDirection addPart(ItemStack is, ForgeDirection side);
 
@@ -52,7 +49,7 @@ public interface IPartHost
 	IBusPart getPart(ForgeDirection side);
 
 	/**
-	 * removes the part on the side, this dosn't drop it or anything, if you
+	 * removes the part on the side, this doesn't drop it or anything, if you
 	 * don't do something with it, its just "gone" and its never coming back;
 	 * think about it.
 	 * 
@@ -66,21 +63,17 @@ public interface IPartHost
 	void markForUpdate();
 
 	/**
-	 * the usual...
-	 * 
-	 * @return
+	 * @return the usual...
 	 */
 	DimensionalCoord getLocation();
 
 	/**
-	 * returns the tile entity for the host.
-	 * 
-	 * @return
+	 * @return the tile entity for the host
 	 */
 	TileEntity getTile();
 
 	/**
-	 * get the color of the host type ( this is determined by the middle cable.
+	 * @return the color of the host type ( this is determined by the middle cable. )
 	 */
 	AEColor getColor();
 

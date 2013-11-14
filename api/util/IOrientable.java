@@ -14,26 +14,22 @@ public interface IOrientable
 {
 
 	/**
-	 * true or false, if the tile rotation is meaningful, or even changeable.
-	 * 
-	 * @return
+	 * @return true or false, if the tile rotation is meaningful, or even changeable
 	 */
 	boolean canBeRotated();
 
 	/**
-	 *  Returns the direction the tile is facing.
-	 * @return
+	 * @return the direction the tile is facing
 	 */
 	ForgeDirection getForward();
 
 	/**
-	 *  Returns the direction the top of the tile is facing.
-	 * @return
+	 * @return the direction top of the tile
 	 */
 	ForgeDirection getUp();
 
 	/**
-	 *  Update the orientation
+	 * Update the orientation
 	 * @param Forward
 	 * @param Up
 	 */

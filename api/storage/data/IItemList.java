@@ -11,18 +11,17 @@ import appeng.api.config.FuzzyMode;
  * Don't Implement.
  * 
  * Construct with Util.createItemList()
- * 
  */
 public interface IItemList<StackType extends IAEStack> extends Iterable<StackType>
 {
 
 	/**
-	 * add a stack to the list stacksize is used to add to stackSize, this will merge the stack with an item already in
+	 * add a stack to the list stackSize is used to add to stackSize, this will merge the stack with an item already in
 	 * the list if found.
 	 * 
 	 * @param option
 	 */
-	public void addStorage(StackType option); // adds a stack as stored.
+	public void addStorage(StackType option); // adds a stack as stored
 
 	/**
 	 * add a stack to the list as craftable, this will merge the stack with an item already in the list if found.
@@ -37,44 +36,35 @@ public interface IItemList<StackType extends IAEStack> extends Iterable<StackTyp
 	 * 
 	 * @param option
 	 */
-	public void addRequestable(StackType option); // adds a stack as
-													// requestable.
+	public void addRequestable(StackType option); // adds a stack as requestable
 
 	/**
 	 * add a stack to the list, this will merge the stack with an item already in the list if found.
 	 * 
 	 * @param option
 	 */
-	public void add(StackType option); // adds stack as is.
+	public void add(StackType option); // adds stack as is
 
 	/**
-	 * return the first item in the list.
-	 * 
-	 * @return
+	 * @return the first item in the list
 	 */
 	StackType getFirstItem();
 
 	/**
-	 * return a stack equivalent to the stack passed in, but with the correct stack size information, or null if its not
-	 * present.
-	 * 
 	 * @param i
-	 * @return
+	 * @return a stack equivalent to the stack passed in, but with the correct stack size information, or null if its not
+	 *         present
 	 */
 	StackType findPrecise(StackType i);
 
 	/**
-	 * return a list of relevant fuzzy matched stacks
-	 * 
 	 * @param input
-	 * @return
+	 * @return a list of relevant fuzzy matched stacks
 	 */
 	public List<StackType> findFuzzy(StackType input, FuzzyMode fuzzy);
 
 	/**
-	 * the number of items in the list.
-	 * 
-	 * @return
+	 * @return the number of items in the list
 	 */
 	int size();
 
@@ -92,9 +82,7 @@ public interface IItemList<StackType extends IAEStack> extends Iterable<StackTyp
 	public void setCurrentPriority(int priority);
 
 	/**
-	 * returns true if there are no items in the list.
-	 * 
-	 * @return
+	 * @return true if there are no items in the list
 	 */
 	public boolean isEmpty();
 

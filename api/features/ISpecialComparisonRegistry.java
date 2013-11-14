@@ -10,10 +10,10 @@ public interface ISpecialComparisonRegistry
 {
 
 	/**
-	 * returns a handler it found for a specific item.
+	 * return TheHandler or null.
 	 * 
 	 * @param stack
-	 * @return TheHandler or null
+	 * @return a handler it found for a specific item
 	 */
 	IItemComparison getSpecialComparion(ItemStack stack);
 

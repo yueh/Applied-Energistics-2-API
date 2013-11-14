@@ -23,19 +23,19 @@ public interface IMovableHandler
 	 * 
 	 * Potential Example:
 	 * 
-	 * Chunk c = w.getChunkFromBlockCoords( x, z ); c.setChunkBlockTileEntity( x
-	 * & 0xF, y + y, z & 0xF, te );
+	 * Chunk c = world.getChunkFromBlockCoords( x, z ); c.setChunkBlockTileEntity( x
+	 * & 0xF, y + y, z & 0xF, tile );
 	 * 
-	 * if ( c.isChunkLoaded ) { w.addTileEntity( te ); w.markBlockForUpdate( x,
+	 * if ( c.isChunkLoaded ) { world.addTileEntity( tile ); world.markBlockForUpdate( x,
 	 * y, z ); }
 	 * 
 	 * @param tile
-	 * @param w
+	 * @param world
 	 * @param x
 	 * @param y
 	 * @param z
 	 * @return
 	 */
-	void moveTile(TileEntity tile, World w, int x, int y, int z);
+	void moveTile(TileEntity tile, World world, int x, int y, int z);
 
 }

@@ -12,14 +12,14 @@ public interface IBusRenderHelper
 	 * 
 	 * No complaints about the size, I like using pixels :P
 	 * 
-	 * @param minx
-	 * @param miny
-	 * @param minz
-	 * @param maxx
-	 * @param maxy
-	 * @param maxz
+	 * @param minX
+	 * @param minY
+	 * @param minZ
+	 * @param maxX
+	 * @param maxY
+	 * @param maxZ
 	 */
-	void setBounds(float minx, float miny, float minz, float maxx, float maxy, float maxz);
+	void setBounds(float minX, float minY, float minZ, float maxX, float maxY, float maxZ);
 
 	/**
 	 * static renderer
