@@ -32,69 +32,53 @@ public interface IAppEngApi
 
 	/**
 	 * Use the movable registry to white list your tiles.
-	 * 
-	 * @param c
 	 */
 	IMovableRegistry getMovableRegistry();
 
 	/**
 	 * Add new Grid Caches for use during run time, only use during loading phase.
-	 * 
-	 * @return
 	 */
 	IGridCacheRegistry getGridCacheRegistry();
 
 	/**
 	 * Add additional storage bus handlers to improve interplay with mod blocks that contains special inventories that
 	 * function unlike vanilla chests. AE uses this internally for barrels, dsu's, quantum chests, AE Networks and more.
-	 * *
-	 * 
-	 * @return IExternalStorageRegistry
 	 */
 	IExternalStorageRegistry getExternalStorageRegistry();
 
 	/**
 	 * Add additional special comparison functionality, AE Uses this internally for Bees.
-	 * 
-	 * @return ISpecialComparisonRegistry
 	 */
 	ISpecialComparisonRegistry getSpecialComparsonRegistry();
 
 	/**
 	 * Lets you register your items as wireless terminals
-	 * 
-	 * @return
 	 */
 	IWirelessTermRegistery getWirelessRegistry();
 
 	/**
-	 * return an locatable object by its serial used internally by AE for QNBs / Network Controllers
-	 * 
 	 * @param serial
-	 * @return
+	 *
+	 * @return a locatable object by its serial used internally by AE for QNBs / Network Controllers
 	 */
 	Object getLocateableBySerial(Long serial);
 
 	/**
-	 * creates a new instance of IAEItemStack from a MC ItemStack
-	 * 
-	 * @param is
-	 * @return
+	 * @param is An ItemStack
+	 *
+	 * @return a new instance of IAEItemStack from a MC ItemStack
 	 */
 	IAEItemStack createItemStack(ItemStack is);
 
 	/**
-	 * creates a new instance of IAEItemStack from a MC ItemStack
-	 * 
-	 * @param is
-	 * @return
+	 * @param is A FluidStack
+	 *
+	 * @return a new instance of IAEItemStack from a MC ItemStack
 	 */
 	IAEFluidStack createFluidStack(FluidStack is);
 
 	/**
-	 * Creates a new instance of IItemList
-	 * 
-	 * @return
+	 * @return a new instance of IItemList
 	 */
 	IItemList createItemList();
 
@@ -131,7 +115,7 @@ public interface IAppEngApi
 	 * 
 	 * @param itemID
 	 * @param meta
-	 *            - if you use OreDictionary.WILDCARD_VALUE it will blacklist the entire itemID.
+	 *            if you use OreDictionary.WILDCARD_VALUE it will blacklist the entire itemID
 	 */
 	void blacklistItemFromStorageCells(int itemID, int meta);
 
@@ -151,48 +135,39 @@ public interface IAppEngApi
 	IMemoryCard getMemoryCardHandler();
 
 	/**
-	 * returns the ISpatialStorage for the ItemStack, if it can get from form its item ( or from AE )
-	 * 
 	 * @param is
-	 * @return
+	 *
+	 * @return the ISpatialStorage for the ItemStack, if it can get from form its item ( or from AE )
 	 */
 	ISpatialStorageCell getSpatialStorageForItem(ItemStack is);
 
 	/**
-	 * returns accessible list of all of AE's Items
-	 * 
-	 * @return
+	 * @return an accessible list of all of AE's Items
 	 */
 	Items items();
 
 	/**
-	 * returns accessible list of all of AE's materials; materials are items
-	 * 
-	 * @return
+	 * @return an accessible list of all of AE's materials; materials are items
 	 */
 	Materials materials();
 
 	/**
-	 * returns accessible list of all of AE's blocks
-	 * 
-	 * @return
+	 * @return an accessible list of all of AE's blocks
 	 */
 	Blocks blocks();
 
 	/**
-	 * returns accessible list of all of AE's parts; parts are items.
-	 * 
-	 * @return
+	 * @return an accessible list of all of AE's parts, parts are items
 	 */
 	Parts parts();
 
 	/**
 	 * create a grid node for your IGridHost
 	 * 
-	 * @param blk
+	 * @param block
 	 * @return
 	 */
-	IGridNode createGridNode(IGridBlock blk);
+	IGridNode createGridNode(IGridBlock block);
 
 	/**
 	 * Register IBusItem with renderer
@@ -202,15 +177,15 @@ public interface IAppEngApi
 	/**
 	 * use in use item, to try and place a IBusItem
 	 * 
-	 * @param is
+	 * @param is An ItemStack
 	 * @param x
 	 * @param y
 	 * @param z
 	 * @param side
 	 * @param player
-	 * @param w
+	 * @param world
 	 * @return
 	 */
-	boolean placeBus(ItemStack is, int x, int y, int z, int side, EntityPlayer player, World w);
+	boolean placeBus(ItemStack is, int x, int y, int z, int side, EntityPlayer player, World world);
 
 }

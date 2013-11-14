@@ -3,7 +3,6 @@ package appeng.api.movable;
 import net.minecraft.tileentity.TileEntity;
 
 /**
- * 
  * Used to determine if a tile is marked as movable, a block will be considered
  * movable, if...
  * 
@@ -33,7 +32,6 @@ import net.minecraft.tileentity.TileEntity;
  * this system to create a better use experience.
  * 
  * If you need a build of deobf build of AE for testing, do not hesitate to ask.
- * 
  */
 public interface IMovableRegistry
 {
@@ -46,15 +44,12 @@ public interface IMovableRegistry
 	 * 
 	 * If you tile is handled with IMovableHandler or IMovableTile you do not
 	 * need to white list it.
-	 * 
 	 */
 	void whiteListTileEntity(Class<? extends TileEntity> c);
 
 	/**
-	 * returns true if the tile has accepted your request to move it.
-	 * 
 	 * @param te
-	 * @return
+	 * @return true if the tile has accepted your request to move it
 	 */
 	boolean askToMove(TileEntity te);
 
@@ -84,9 +79,7 @@ public interface IMovableRegistry
 	IMovableHandler getHandler(TileEntity te);
 
 	/**
-	 * returns a copy of the default handler
-	 * 
-	 * @return
+	 * @return a copy of the default handler
 	 */
 	IMovableHandler getDefaultHandler();
 

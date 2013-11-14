@@ -9,9 +9,7 @@ public interface ICraftingPattern
 {
 
 	/**
-	 * returns the outcome, MUST have a value.
-	 * 
-	 * @return
+	 * @return the outcome, MUST have a value
 	 */
 	IAEItemStack getOutput();
 

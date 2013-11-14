@@ -53,16 +53,12 @@ public interface IFacadePart
 	void renderInventory(BusRenderHelper instance, RenderBlocks renderer);
 
 	/**
-	 * get side of facade.
-	 * 
-	 * @return
+	 * @return side the facade is in
 	 */
 	ForgeDirection getSide();
 
 	/**
-	 * the box for the face of the facade.
-	 * 
-	 * @return
+	 * @return the box for the face of the facade
 	 */
 	AxisAlignedBB getPrimaryBox();
 

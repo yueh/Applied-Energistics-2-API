@@ -26,12 +26,12 @@ public interface IAEPowerStorage
 	public double extractAEPower(double amt, boolean simulate);
 
 	/**
-	 * returns the current maximum power ( this can change :P )
+	 * @return the current maximum power ( this can change :P )
 	 */
 	public double getAEMaxPower();
 
 	/**
-	 * returns the current AE Power Level, this may exceed getMEMaxPower()
+	 * @return the current AE Power Level, this may exceed getMEMaxPower()
 	 */
 	public double getAECurrentPower();
 

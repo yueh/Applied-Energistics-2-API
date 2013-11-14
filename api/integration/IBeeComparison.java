@@ -9,15 +9,13 @@ import forestry.api.genetics.IIndividual;
  * Assessable via: ( IBeeComparison )
  * IAEItemStack.getTagCompound().getSpecialComparison()
  * 
- * If you don't have the forestry api, just delete this file when using the API.
+ * If you don't have the forestry API, just delete this file when using the API.
  */
 public interface IBeeComparison
 {
 
 	/**
-	 * returns the Forestry IIndividual for this comparison object
-	 * 
-	 * @return
+	 * @return the Forestry IIndividual for this comparison object
 	 */
 	IIndividual getIndividual();
 

@@ -28,12 +28,12 @@ public interface IAEItemPowerStorage
 	public double extractAEPower(ItemStack is, double amt);
 
 	/**
-	 * returns the current maximum power ( this can change :P )
+	 * @return the current maximum power ( this can change :P )
 	 */
 	public double getAEMaxPower(ItemStack is);
 
 	/**
-	 * returns the current AE Power Level, this may exceed getMEMaxPower()
+	 * @return the current AE Power Level, this may exceed getMEMaxPower()
 	 */
 	public double getAECurrentPower(ItemStack is);
 

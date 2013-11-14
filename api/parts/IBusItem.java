@@ -11,7 +11,6 @@ import net.minecraft.world.World;
 
 //@formatter:off
 /**
- * 
  * This is a pretty basic requirement, once you implement the interface, and createPartFromItemStack
  * 
  * you must register your bus with the Bus renderer, using AEApi.instance().setItemBusRenderer( this );
@@ -26,12 +25,10 @@ import net.minecraft.world.World;
  * 	}
  * 
  * 	@Override
- * 	public boolean onItemUse(ItemStack is, EntityPlayer player, World w, int x, int y, int z, int side, float hitX, float hitY, float hitZ)
+ * 	public boolean onItemUse(ItemStack is, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ)
  * 	{
- * 		return AEApi.instance().placeBus( is, x, y, z, side, player, w );
+ * 		return AEApi.instance().placeBus( is, x, y, z, side, player, world );
  * 	}
- * 
- *
  */
 public interface IBusItem
 {

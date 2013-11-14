@@ -19,7 +19,7 @@ public interface IGridNode
 
 	/**
 	 * lets you walk the grid stating at the current node using a IGridVisitor,
-	 * generaly not needed, please use only if required.
+	 * generally not needed, please use only if required.
 	 * 
 	 * @param g
 	 */
@@ -53,23 +53,20 @@ public interface IGridNode
 	IGrid getGrid();
 
 	/**
-	 * By destroying your node, you destroy any connections, and its existance
+	 * By destroying your node, you destroy any connections, and its existence
 	 * in the grid, use in invalidate, or onChunkUnload
 	 */
 	void destroy();
 
 	/**
-	 * the world the node is located in.
-	 * 
-	 * @return
+	 * @return the world the node is located in
 	 */
 	World getWorld();
 
 	/**
-	 * returns a set of the connected sides, UNKNOWN represents an invisible
-	 * connection.
 	 * 
-	 * @return
+	 * @return a set of the connected sides, UNKNOWN represents an invisible
+	 *         connection
 	 */
 	EnumSet<ForgeDirection> getConnectedSides();
 
@@ -81,8 +78,7 @@ public interface IGridNode
 	Iterable<IGridConnection> getConnections();
 
 	/**
-	 * get the IGridBlock for this node.
-	 * @return
+	 * @return the IGridBlock for this node
 	 */
 	IGridBlock getGridBlock();
 

@@ -12,26 +12,20 @@ public interface ISpatialStorageCell
 {
 
 	/**
-	 * return true if this item is a spatial storage cell.
-	 * 
 	 * @param is
-	 * @return
+	 * @return true if this item is a spatial storage cell
 	 */
 	boolean isSpatialStorage(ItemStack is);
 
 	/**
-	 * return the maximum size of the spatial storage cell along any given axis.
-	 * 
 	 * @param is
-	 * @return
+	 * @return the maximum size of the spatial storage cell along any given axis
 	 */
 	int getMaxStoredDim(ItemStack is);
 
 	/**
-	 * returns the world for this cell.
-	 * 
 	 * @param is
-	 * @return
+	 * @return the world for this cell
 	 */
 	World getWorld(ItemStack is);
 

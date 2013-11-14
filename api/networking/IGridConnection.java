@@ -4,14 +4,12 @@ import net.minecraftforge.common.ForgeDirection;
 import appeng.me.GridNode;
 
 /**
- * 
  * Access to AE's internal grid connections.
  * 
  * Messing with connection is generally completely unnecessary, you should be able to just use IGridNode.updateState()
  * to have AE manage them for you.
  * 
  * Don't Implement.
- * 
  */
 public interface IGridConnection
 {
@@ -53,9 +51,7 @@ public interface IGridConnection
 	GridNode b();
 
 	/**
-	 * if the connection is invisible this returns false
-	 * 
-	 * @return
+	 * @return if the connection is invisible this returns false
 	 */
 	boolean hasDirection();
 

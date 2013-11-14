@@ -5,9 +5,7 @@ import appeng.api.networking.IGridCache;
 public interface IPathingGrid extends IGridCache {
 
 	/**
-	 * returns true if the network is in its booting stage.
-	 * 
-	 * @return
+	 * @return true if the network is in its booting stage
 	 */
 	boolean isNetworkBooting();
 	

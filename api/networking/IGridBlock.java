@@ -11,7 +11,6 @@ import appeng.api.util.DimensionalCoord;
  * An Implementation is required to create your node for IGridHost
  * 
  * Implement for use with IGridHost
- * 
  */
 public interface IGridBlock
 {
@@ -42,16 +41,12 @@ public interface IGridBlock
 	boolean isWorldAccessable();
 
 	/**
-	 * current location of this node.
-	 * 
-	 * @return
+	 * @return current location of this node
 	 */
 	DimensionalCoord getLocation();
 
 	/**
-	 * Transparent, or a valid color, NULL IS NOT VALID.
-	 * 
-	 * @return
+	 * @return Transparent, or a valid color, NULL IF NOT VALID
 	 */
 	AEColor getGridColor();
 
@@ -84,12 +79,12 @@ public interface IGridBlock
 	public AECableType getCableConnectionType(ForgeDirection dir);
 
 	/**
-	 * return true if your isNetworkRunning
+	 * @return true if your isNetworkRunning
 	 */
 	public boolean isNetworkMachineActive();
 
 	/**
-	 * return the tile represented by the IGridBlock, this may be this, or not
+	 * @return the tile represented by the IGridBlock, this may be this, or not
 	 * depending on your implementation
 	 */
 	IGridHost getMachine();

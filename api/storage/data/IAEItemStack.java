@@ -12,7 +12,6 @@ import net.minecraft.item.ItemStack;
  * Don't Implement.
  * 
  * Construct with Util.createItemStack( ItemStack )
- * 
  */
 public interface IAEItemStack extends IAEStack<IAEItemStack>
 {
@@ -25,16 +24,16 @@ public interface IAEItemStack extends IAEStack<IAEItemStack>
 	public ItemStack getItemStack();
 
 	/**
-	 * create a AE Item clone.
+	 * create a AE Item clone
 	 * 
-	 * @return the copy.
+	 * @return the copy
 	 */
 	public IAEItemStack copy();
 
 	/**
 	 * is there NBT Data for this item?
 	 * 
-	 * @return if there is.
+	 * @return if there is
 	 */
 	boolean hasTagCompound();
 
@@ -42,7 +41,7 @@ public interface IAEItemStack extends IAEStack<IAEItemStack>
 	 * Combines two IAEItemStacks via addition.
 	 * 
 	 * @param option
-	 *            , to add to the current one.
+	 *              to add to the current one.
 	 */
 	void add(IAEItemStack option);
 
@@ -54,9 +53,7 @@ public interface IAEItemStack extends IAEStack<IAEItemStack>
 	Item getItem();
 
 	/**
-	 * return the items damage value.
-	 * 
-	 * @return
+	 * @return the items damage value
 	 */
 	int getItemDamage();
 

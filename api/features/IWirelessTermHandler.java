@@ -10,11 +10,8 @@ public interface IWirelessTermHandler
 {
 
 	/**
-	 * return true, if usePower, hasPower, ect... can be called for the provided
-	 * item.
-	 * 
 	 * @param is
-	 * @return
+	 * @return true, if usePower, hasPower, etc... can be called for the provided item
 	 */
 	boolean canHandle(ItemStack is);
 
@@ -50,11 +47,11 @@ public interface IWirelessTermHandler
 	 * Encode the wireless frequency via the Controller.
 	 * 
 	 * @param item
-	 *            - the wireless terminal.
+	 *            the wireless terminal.
 	 * @param encKey
-	 *            - the wireless encryption key.
+	 *              the wireless encryption key.
 	 * @param name
-	 *            - null for now.
+	 *            null for now.
 	 */
 	void setEncryptionKey(ItemStack item, String encKey, String name);
 }

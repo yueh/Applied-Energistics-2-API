@@ -16,17 +16,16 @@ public interface ICellRegistry
 	/**
 	 * Register a new handler.
 	 * 
-	 * @param h
+	 * @param handler
 	 */
-	void addCellHandler(ICellHandler h);
+	void addCellHandler(ICellHandler handler);
 
 	/**
-	 * returns true if the provided item, can be handled by a handler in AE, (
-	 * AE May choose to skip this and just get the handler instead. )
+	 * return true, if you can get a InventoryHandler for the item passed.
 	 * 
 	 * @param is
-	 * @return returns true, if you can get a InventoryHandler for the item
-	 *         passed.
+	 * @return true if the provided item, can be handled by a handler in AE,
+	 *         ( AE May choose to skip this and just get the handler instead. )
 	 */
 	boolean isCellHandled(ItemStack is, StorageChannel channel);
 

@@ -4,20 +4,15 @@ import net.minecraft.nbt.NBTTagCompound;
 import appeng.api.features.IItemComparison;
 
 /**
- * 
  * Don't cast this... either compare with it, or copy it.
  * 
  * Don't Implement.
- * 
  */
 public interface IAETagCompound
 {
 
 	/**
-	 * Create a copy ( the copy will not be a IAETagCompount, it will be a
-	 * NBTTagCompound. )
-	 * 
-	 * @return
+	 * @return a copy ( the copy will not be a IAETagCompount, it will be a NBTTagCompound )
 	 */
 	public NBTTagCompound getNBTTagCompoundCopy();
 
@@ -30,9 +25,7 @@ public interface IAETagCompound
 	boolean equals(Object a);
 
 	/**
-	 * returns the special comparison for this tag.
-	 * 
-	 * @return
+	 * @return the special comparison for this tag
 	 */
 	IItemComparison getSpecialComparison();
 

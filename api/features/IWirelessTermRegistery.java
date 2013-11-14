@@ -18,19 +18,15 @@ public interface IWirelessTermRegistery
 	void registerWirelessHandler(IWirelessTermHandler handler);
 
 	/**
-	 * returns true if there is a handler for this item.
-	 * 
 	 * @param is
-	 * @return
+	 * @return true if there is a handler for this item
 	 */
 	boolean isWirelessTerminal(ItemStack is);
 
 	/**
-	 * returns a register handler for the item in question, or null if there
-	 * isn't one.
-	 * 
 	 * @param is
-	 * @return
+	 * @return a register handler for the item in question, or null if there
+	 *         isn't one
 	 */
 	IWirelessTermHandler getWirelessTerminalHandler(ItemStack is);
 
