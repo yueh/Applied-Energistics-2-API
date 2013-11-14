@@ -4,6 +4,11 @@ import java.util.Set;
 
 import net.minecraft.nbt.NBTTagCompound;
 
+/**
+ * Used to adjust settings on an object,
+ * 
+ * Obtained via {@link IConfigureableObject}
+ */
 public interface IConfigManager
 {
 

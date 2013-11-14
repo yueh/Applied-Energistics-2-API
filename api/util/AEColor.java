@@ -2,6 +2,12 @@ package appeng.api.util;
 
 import net.minecraft.item.ItemStack;
 
+/**
+ * List of all colors supported by AE, their names, and various colors for
+ * display.
+ * 
+ * Should be the same order as Dyes, excluding Transparent.
+ */
 public enum AEColor
 {
 
@@ -40,15 +46,15 @@ public enum AEColor
 	Transparent("AppEng.Colors.Transparent", 0x1B2344, 0x895CA8, 0xDABDEF);
 
 	final public String uName;
-	final public int solidVarient;
-	final public int darkVarient;
-	final public int lightVarient;
+	final public int blackVarient;
+	final public int mediumVarient;
+	final public int whiteVarient;
 
 	AEColor(String unlocalizedName, int sv, int dv, int lv) {
 		uName = unlocalizedName;
-		solidVarient = sv;
-		darkVarient = dv;
-		lightVarient = lv;
+		blackVarient = sv;
+		mediumVarient = dv;
+		whiteVarient = lv;
 	}
 
 	/**
@@ -56,8 +62,7 @@ public enum AEColor
 	 */
 	public boolean matches(AEColor color)
 	{
-		if ( equals( Transparent ) || color.equals( Transparent ) )
-			return true;
+		if ( equals( Transparent ) || color.equals( Transparent ) ) return true;
 		return equals( color );
 	}
 

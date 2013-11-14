@@ -4,8 +4,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 
 /**
- * This is used internally to return a location, in a few places, just use as
- * is...
+ * Represents a relative coordinate, either relative to another object, or
+ * relative to the origin of a dimension.
  */
 public class WorldCoord
 {

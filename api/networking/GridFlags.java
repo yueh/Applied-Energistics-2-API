@@ -6,11 +6,6 @@ package appeng.api.networking;
 public enum GridFlags
 {
 	/**
-	 * notifies this node of power changes, via GridNotifications.
-	 */
-	POWER_NOTIFICATION,
-	
-	/**
 	 * import/export buses, terminals, and other devices that use network
 	 * features, will use this setting.
 	 */
