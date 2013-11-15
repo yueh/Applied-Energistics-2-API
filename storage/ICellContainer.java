@@ -14,6 +14,7 @@ public interface ICellContainer
 	 * You must return the correct Handler for the correct channel, if your handler returns a IAEItemStack handler, for
 	 * a Fluid Channel stuffs going to explode, same with the reverse.
 	 * 
+	 * @return a valid list of handlers, NEVER NULL
 	 */
 	List<IMEInventoryHandler> getCellArray(StorageChannel channel);
 

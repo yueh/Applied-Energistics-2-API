@@ -21,7 +21,7 @@ public enum GridFlags
 	CANNOT_CARRY_DENSE,
 
 	/**
-	 * This block can transmit 32 signals, this should only apply to Tier2 Cable, and Quantum Network Bridges.
+	 * This block can transmit 32 signals, this should only apply to Tier2 Cable, P2P Tunnels, and Quantum Network Bridges.
 	 */
 	TIER_2_CAPACITY
 }

@@ -6,7 +6,7 @@ import appeng.api.networking.events.MENetworkCraftingChange;
  * Allows a IGridHost to provide crafting patterns to the network, post a
  * {@link MENetworkCraftingChange} to tell AE to update.
  */
-public interface ICraftingProvider extends IPushable
+public interface ICraftingProvider extends ICraftingMedium
 {
 
 	/**

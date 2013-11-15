@@ -1,13 +1,10 @@
 package appeng.api;
 
-import cpw.mods.fml.relauncher.ReflectionHelper;
-
 /**
  * 
  * Entry point for api.
  * 
  * Available IMCs:
- * 
  * 
  */
 public class AEApi
@@ -16,9 +13,9 @@ public class AEApi
 	static private IAppEngApi api = null;
 
 	/**
-	 * All future API calls should be made via this method.
+	 * API Entry Point.
 	 * 
-	 * @return the AE API
+	 * @return the {@link IAppEngApi}
 	 */
 	public static IAppEngApi instance()
 	{

@@ -5,8 +5,7 @@ import net.minecraftforge.common.ForgeDirection;
 /**
  * Crank/Crankable API,
  * 
- * Tiles that Implement this can receive power, from the crank, and have the
- * crank placed on them.
+ * Tiles that Implement this can receive power, from the crank, and have the crank placed on them.
  * 
  * Tiles that access other tiles that implement this method can act as Cranks.
  * 
@@ -28,10 +27,7 @@ public interface ICrankable
 	void applyTurn();
 
 	/**
-	 * Tests to see if the crank can attach on the given side.
-	 * 
-	 * @param directionToCrank
-	 * @return
+	 * @return true if the crank can attach on the given side.
 	 */
 	boolean canCrankAttach(ForgeDirection directionToCrank);
 
