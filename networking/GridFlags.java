@@ -6,13 +6,22 @@ package appeng.api.networking;
 public enum GridFlags
 {
 	/**
-	 * import/export buses, terminals, and other devices that use network
-	 * features, will use this setting.
+	 * import/export buses, terminals, and other devices that use network features, will use this setting.
 	 */
 	REQURE_CHANNEL,
 
 	/**
 	 * MAC, and P2P ME tunnels use this setting.
 	 */
-	DENSE_CHANNEL
+	DENSE_CHANNEL,
+
+	/**
+	 * Used by P2P Tunnels to prevent tunnels from tunneling recursively.
+	 */
+	CANNOT_CARRY_DENSE,
+
+	/**
+	 * This block can transmit 32 signals, this should only apply to Tier2 Cable, and Quantum Network Bridges.
+	 */
+	TIER_2_CAPACITY
 }
