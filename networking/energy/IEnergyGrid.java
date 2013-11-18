@@ -47,7 +47,7 @@ public interface IEnergyGrid extends IGridCache, IEnergyGridProvider
 	 * already stored in the network, you can extract it if you want, however it
 	 * it owned by the network, this is different then IAEEnergyStore
 	 * 
-	 * Another important not, is that if a network that had overflow is deleted,
+	 * Another important note, is that if a network that had overflow is deleted,
 	 * its power is gone, this is one of the reasons why keeping overflow to a
 	 * minimum is important.
 	 * 
