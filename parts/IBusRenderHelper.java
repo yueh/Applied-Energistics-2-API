@@ -101,4 +101,11 @@ public interface IBusRenderHelper
 	 */
 	void setTexture(Icon ico);
 
+	/**
+	 * configure the color multiplier for the inventory renderer.
+	 * 
+	 * @param whiteVariant
+	 */
+	void setInvColor(int whiteVariant);
+
 }
