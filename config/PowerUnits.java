@@ -2,12 +2,12 @@ package appeng.api.config;
 
 public enum PowerUnits
 {
-	AE("gui.appliedenergistics.units.appliedenergstics"), // Native Units - AE Energy
-	MJ("gui.appliedenergistics.units.buildcraft"), // BuildCraft - Minecraft Joules
-	EU("gui.appliedenergistics.units.ic2"), // IndustrialCraft 2 - Energy Units
-	KJ("gui.appliedenergistics.units.universalelectricity"), // Universal Electricity - KiloJoules
-	WA("gui.appliedenergistics.units.rotarycraft"), // RotaryCraft - Watts
-	RF("gui.appliedenergistics.units.thermalexpansion"); // ThermalExpansion - Redstone Flux
+	AE("gui.appliedenergistics2.units.appliedenergstics"), // Native Units - AE Energy
+	MJ("gui.appliedenergistics2.units.buildcraft"), // BuildCraft - Minecraft Joules
+	EU("gui.appliedenergistics2.units.ic2"), // IndustrialCraft 2 - Energy Units
+	KJ("gui.appliedenergistics2.units.universalelectricity"), // Universal Electricity - KiloJoules
+	WA("gui.appliedenergistics2.units.rotarycraft"), // RotaryCraft - Watts
+	RF("gui.appliedenergistics2.units.thermalexpansion"); // ThermalExpansion - Redstone Flux
 
 	private PowerUnits(String un) {
 		unlocalizedName = un;
