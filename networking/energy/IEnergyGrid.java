@@ -10,6 +10,19 @@ public interface IEnergyGrid extends IGridCache, IEnergyGridProvider
 {
 
 	/**
+	 * 
+	 * @return the current calculated idle energy drain each tick, is used
+	 *         internally to drain power for each tick.
+	 */
+	public double getIdlePowerUsage();
+
+	/**
+	 * @return the average power drain over the past 10 ticks, includes idle
+	 *         usage during this time, and all use of extractPower.
+	 */
+	public double getAvgPowerUsage();
+
+	/**
 	 * AE maintains an idle draw of power separate from active power draw, it
 	 * condenses this into a single operation that determines the networks
 	 * "powered state" if the network is considered off-line, your machines
@@ -34,9 +47,9 @@ public interface IEnergyGrid extends IGridCache, IEnergyGridProvider
 	 * already stored in the network, you can extract it if you want, however it
 	 * it owned by the network, this is different then IAEEnergyStore
 	 * 
-	 * Another important not, is that if a network that had overflow is
-	 * deleted, its power is gone, this is one of the reasons why keeping
-	 * overflow to a minimum is important.
+	 * Another important not, is that if a network that had overflow is deleted,
+	 * its power is gone, this is one of the reasons why keeping overflow to a
+	 * minimum is important.
 	 * 
 	 * @param amt
 	 *            power to inject into the network
