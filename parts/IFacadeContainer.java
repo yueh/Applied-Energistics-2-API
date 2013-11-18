@@ -1,6 +1,5 @@
 package appeng.api.parts;
 
-import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 
 /**
@@ -12,17 +11,19 @@ public interface IFacadeContainer
 {
 
 	/**
-	 * add facade part
+	 * Attempts to add the {@link IFacadePart} to the given side.
+	 * 
+	 * @return true if the facade as successfully added.
 	 */
 	boolean addFacade(IFacadePart a);
 
 	/**
-	 * remove facade part
+	 * Removed the facade on the given side, or does nothing.
 	 */
-	void removeFacade(TileEntity te, IFacadePart b);
+	void removeFacade(IPartHost host, ForgeDirection side);
 
 	/**
-	 * get facade part
+	 * @return the {@link IFacadePart} for a given side, or null.
 	 */
 	IFacadePart getFacade(ForgeDirection s);
 
