@@ -6,9 +6,11 @@ import java.io.IOException;
 
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.Vec3;
 import net.minecraftforge.common.ForgeDirection;
 import appeng.api.networking.IGridNode;
 import appeng.parts.IBusCollsionHelper;
@@ -93,7 +95,7 @@ public interface IBusPart
 	 * @return get the amount of light produced by the bus
 	 */
 	int getLightLevel();
-	
+
 	/**
 	 * a block around the bus's host has been changed.
 	 */
@@ -175,5 +177,14 @@ public interface IBusPart
 	 * @param boxes
 	 */
 	void getBoxes(IBusCollsionHelper bch);
+
+	/**
+	 * Called when you right click the part, very similar to Block.onActivateBlock
+	 * 
+	 * @param player
+	 * @param pos
+	 * @return if your activate method performed something.
+	 */
+	boolean onActivate(EntityPlayer player, Vec3 pos);
 
 }
