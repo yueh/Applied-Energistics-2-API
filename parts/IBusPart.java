@@ -80,16 +80,16 @@ public interface IBusPart
 	/**
 	 * write additional NBT data to the world, ( the part id is not part of this. )
 	 * 
-	 * @param extra
+	 * @param data
 	 */
-	void writeToNBT(NBTTagCompound extra);
+	void writeToNBT(NBTTagCompound data);
 
 	/**
 	 * read from additional NBT in the world.
 	 * 
-	 * @param extra
+	 * @param data
 	 */
-	void readFromNBT(NBTTagCompound extra);
+	void readFromNBT(NBTTagCompound data);
 
 	/**
 	 * @return get the amount of light produced by the bus
