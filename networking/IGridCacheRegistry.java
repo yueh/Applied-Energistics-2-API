@@ -19,9 +19,11 @@ public interface IGridCacheRegistry
 	/**
 	 * requests a new instance of a grid cache for use, used internally
 	 * 
+	 * @param grid
+	 * 
 	 * @param id
 	 * @return
 	 */
-	HashMap<Class<? extends IGridCache>, IGridCache> createCacheInstance();
+	HashMap<Class<? extends IGridCache>, IGridCache> createCacheInstance(IGrid grid);
 
 }
