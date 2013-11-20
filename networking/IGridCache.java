@@ -5,8 +5,8 @@ package appeng.api.networking;
  * Allows you to create a network wise service, AE2 uses these for providing
  * item, spatial, and tunnel services.
  * 
- * Any Class that implements this, should have a public default constructor
- * that takes a single argument of type IGrid.
+ * Any Class that implements this, should have a public default constructor that
+ * takes a single argument of type IGrid.
  * 
  */
 public interface IGridCache
@@ -40,27 +40,27 @@ public interface IGridCache
 
 	/**
 	 * Called when a grid splits into two grids, AE will call a split as it
-	 * Iteratively processes changes.
+	 * Iteratively processes changes. The destination should receive half, and
+	 * the current cache should receive half.
 	 * 
-	 * @param storageA
-	 * @param storageB
+	 * @param destinationStorage
 	 */
-	void onSplit(IGridStorage storageB);
+	void onSplit(IGridStorage destinationStorage);
 
 	/**
 	 * Called when two grids merge into one, AE will call a join as it
-	 * Iteratively processes changes.
+	 * Iteratively processes changes. Use this method to incorporate all the
+	 * data from the source into your cache.
 	 * 
-	 * @param storageA
-	 * @param storageB
+	 * @param sourceStorage
 	 */
-	void onJoin(IGridStorage storageB);
+	void onJoin(IGridStorage sourceStorage);
 
 	/**
 	 * Called when saving changes,
 	 * 
-	 * @param storage
+	 * @param destinationStorage
 	 */
-	void populateGridStorage(IGridStorage storage);
+	void populateGridStorage(IGridStorage destinationStorage);
 
 }
