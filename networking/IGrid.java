@@ -66,4 +66,10 @@ public interface IGrid
 	 * @return
 	 */
 	public boolean isReady();
+
+	/**
+	 * @return true if the last node been removed from the grid.
+	 */
+	public boolean isEmpty();
+
 }
