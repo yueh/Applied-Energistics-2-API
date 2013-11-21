@@ -21,16 +21,16 @@ public interface AEItemDefinition
 	Item item();
 
 	/**
-	 * @return an {@link ItemStack} with specified quantity
+	 * @return an {@link ItemStack} with specified quantity of this item.
 	 */
 	ItemStack stack(int stackSize);
 
 	/**
 	 * Compare {@link ItemStack} with this {@link AEItemDefinition}
 	 * 
-	 * @param is
-	 * @return
+	 * @param comparableItem
+	 * @return true if the item stack is a matching item.
 	 */
-	boolean sameAs(ItemStack is);
+	boolean sameAs(ItemStack comparableItem);
 
 }
