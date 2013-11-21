@@ -19,7 +19,7 @@ public class Blocks
 	public AEItemDefinition blockQuartzPiller;
 	public AEItemDefinition blockQuartzChiseled;
 	public AEItemDefinition blockQuartzGlass;
-	public AEItemDefinition BlockQuartzVibrantGlass;
+	public AEItemDefinition blockQuartzVibrantGlass;
 	public AEItemDefinition blockQuartzTorch;
 
 	/*
