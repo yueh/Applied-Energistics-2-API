@@ -113,11 +113,6 @@ public interface IAppEngApi
 	ICraftingPatternMAC getAssemblerPattern(ItemStack i);
 
 	/**
-	 * gives you the ability to interface with AE Memory Cards.
-	 */
-	IMemoryCard getMemoryCardHandler();
-
-	/**
 	 * @param is
 	 *
 	 * @return the ISpatialStorage for the ItemStack, if it can get from form its item ( or from AE )

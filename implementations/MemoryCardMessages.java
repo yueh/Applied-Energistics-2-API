@@ -1,4 +1,4 @@
-package appeng.api.items;
+package appeng.api.implementations;
 
 /**
  * Status Results for use with {@link IMemoryCard}
