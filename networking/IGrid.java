@@ -12,10 +12,10 @@ public interface IGrid
 {
 
 	/**
-	 * Get a grid cache of the specified type
+	 * Get Access to various grid modules 
 	 * 
-	 * @param id
-	 * @return
+	 * @param iface
+	 * @return the IGridCache you requested.
 	 */
 	public <C extends IGridCache> C getCache(Class<? extends IGridCache> iface);
 
@@ -32,7 +32,7 @@ public interface IGrid
 	 * Post an event into the network event bus, but direct it at a single node.
 	 * 
 	 * @param ev
-	 *            - event to post
+	 *            event to post
 	 * @return returns ev back to original poster
 	 */
 	public MENetworkEvent postEventTo(IGridNode node, MENetworkEvent ev);
@@ -41,34 +41,30 @@ public interface IGrid
 	 * get a list of the diversity of classes, you can use this to better detect which machines your interested in,
 	 * rather then iterating the entire grid to test them.
 	 * 
-	 * @return
+	 * @return iterator of all available host types.
 	 */
 	public Iterable<Class> getMachinesClasses();
 
 	/**
 	 * Get machines on the network.
 	 * 
-	 * @param c
-	 * @return
+	 * @param classofIGridHost
+	 * @return iterator of all nodes belonging to hosts of specified class.
 	 */
-	public Iterable<IGridNode> getMachines(Class c);
+	public Iterable<IGridNode> getMachines(Class classofIGridHost);
 
 	/**
-	 * lets you iterate all the nodes on a network, use with caution.
-	 * 
-	 * @return
+	 * @return iterator for all nodes on the network, node visitors are prefered.
 	 */
 	Iterable<GridNode> getNodes();
 
 	/**
-	 * the current grids status, returns true if the grid is ready and operating
-	 * 
-	 * @return
+	 * @return the current grids status, returns true if the grid is ready and operating
 	 */
 	public boolean isReady();
 
 	/**
-	 * @return true if the last node been removed from the grid.
+	 * @return true if the last node has been removed from the grid.
 	 */
 	public boolean isEmpty();
 
