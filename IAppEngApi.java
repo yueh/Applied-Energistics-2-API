@@ -57,56 +57,45 @@ public interface IAppEngApi
 	IWirelessTermRegistery getWirelessRegistry();
 
 	/**
-	 * @param serial
-	 *
-	 * @return a locatable object by its serial used internally by AE for QNBs / Network Controllers
-	 */
-	Object getLocateableBySerial(Long serial);
-
-	/**
-	 * @param is An ItemStack
-	 *
-	 * @return a new instance of IAEItemStack from a MC ItemStack
+	 * @param is
+	 *            An ItemStack
+	 * 
+	 * @return a new instance of {@link IAEItemStack} from a MC
+	 *         {@link ItemStack}
 	 */
 	IAEItemStack createItemStack(ItemStack is);
 
 	/**
-	 * @param is A FluidStack
-	 *
-	 * @return a new instance of IAEItemStack from a MC ItemStack
+	 * @param is
+	 *            A FluidStack
+	 * 
+	 * @return a new instance of {@link IAEFluidStack} from a Forge
+	 *         {@link FluidStack}
 	 */
 	IAEFluidStack createFluidStack(FluidStack is);
 
 	/**
-	 * @return a new instance of IItemList
+	 * @return a new instance of {@link IItemList}
 	 */
 	IItemList createItemList();
 
 	/**
 	 * Allows you to register new cell types, these will function in drives
-	 * 
-	 * @return
 	 */
 	ICellRegistry getCellRegistry();
 
 	/**
 	 * Manage grinder recipes via API
-	 * 
-	 * @return
 	 */
 	IGrinderRecipeManager getGrinderRecipeManage();
 
 	/**
 	 * get access to the locatable registry
-	 * 
-	 * @return
 	 */
 	ILocateableRegistry getLocateableRegistry();
 
 	/**
 	 * get access to the p2p tunnel registry.
-	 * 
-	 * @return
 	 */
 	IP2PTunnelRegistry getP2PTunnelRegistry();
 
@@ -121,16 +110,11 @@ public interface IAppEngApi
 
 	/**
 	 * gives you access to assembler pattern data.
-	 * 
-	 * @param i
-	 * @return
 	 */
 	ICraftingPatternMAC getAssemblerPattern(ItemStack i);
 
 	/**
 	 * gives you the ability to interface with AE Memory Cards.
-	 * 
-	 * @return
 	 */
 	IMemoryCard getMemoryCardHandler();
 
@@ -177,7 +161,8 @@ public interface IAppEngApi
 	/**
 	 * use in use item, to try and place a IBusItem
 	 * 
-	 * @param is An ItemStack
+	 * @param is
+	 *            ItemStack of an item which implements {@link IBusItem}
 	 * @param x
 	 * @param y
 	 * @param z
