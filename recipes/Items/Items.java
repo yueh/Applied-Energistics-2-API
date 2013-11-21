@@ -5,27 +5,27 @@ import appeng.api.util.AEItemDefinition;
 public class Items
 {
 
-	public AEItemDefinition toolCertusQuartzAxe;
-	public AEItemDefinition toolCertusQuartzHoe;
-	public AEItemDefinition toolCertusQuartzShovel;
-	public AEItemDefinition toolCertusQuartzPick;
-	public AEItemDefinition toolCertusQuartzSword;
-	public AEItemDefinition toolCertusQuartzWrench;
-	public AEItemDefinition toolCertusQuartzKnife;
+	public AEItemDefinition itemCertusQuartzAxe;
+	public AEItemDefinition itemCertusQuartzHoe;
+	public AEItemDefinition itemCertusQuartzShovel;
+	public AEItemDefinition itemCertusQuartzPick;
+	public AEItemDefinition itemCertusQuartzSword;
+	public AEItemDefinition itemCertusQuartzWrench;
+	public AEItemDefinition itemCertusQuartzKnife;
 
-	public AEItemDefinition toolNetherQuartzAxe;
-	public AEItemDefinition toolNetherQuartzHoe;
-	public AEItemDefinition toolNetherQuartzShovel;
-	public AEItemDefinition toolNetherQuartzPick;
-	public AEItemDefinition toolNetherQuartzSword;
-	public AEItemDefinition toolNetherQuartzWrench;
-	public AEItemDefinition toolNetherQuartzKnife;
+	public AEItemDefinition itemNetherQuartzAxe;
+	public AEItemDefinition itemNetherQuartzHoe;
+	public AEItemDefinition itemNetherQuartzShovel;
+	public AEItemDefinition itemNetherQuartzPick;
+	public AEItemDefinition itemNetherQuartzSword;
+	public AEItemDefinition itemNetherQuartzWrench;
+	public AEItemDefinition itemNetherQuartzKnife;
 
-	public AEItemDefinition toolEntropyAccelerator;
-	public AEItemDefinition toolEntropyManipulator;
-	public AEItemDefinition toolWirelessTerminal;
-	public AEItemDefinition toolMassCannon;
-	public AEItemDefinition toolMemoryCard;
+	public AEItemDefinition itemEntropyAccelerator;
+	public AEItemDefinition itemEntropyManipulator;
+	public AEItemDefinition itemWirelessTerminal;
+	public AEItemDefinition itemMassCannon;
+	public AEItemDefinition itemMemoryCard;
 
 	public AEItemDefinition itemCell1k;
 	public AEItemDefinition itemCell4k;

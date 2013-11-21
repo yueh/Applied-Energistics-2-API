@@ -5,26 +5,26 @@ import appeng.api.util.AEItemDefinition;
 public class Parts
 {
 
-	public AEItemDefinition CableSmart;
-	public AEItemDefinition CableCovered;
-	public AEItemDefinition CableGlass;
-	public AEItemDefinition CableDark;
+	public AEItemDefinition partCableSmart;
+	public AEItemDefinition partCableCovered;
+	public AEItemDefinition partCableGlass;
+	public AEItemDefinition partCableDark;
 
-	public AEItemDefinition StorageBus;
-	public AEItemDefinition ImportBus;
-	public AEItemDefinition ExportBus;
+	public AEItemDefinition partStorageBus;
+	public AEItemDefinition partImportBus;
+	public AEItemDefinition partExportBus;
 
-	public AEItemDefinition LevelEmitter;
-	public AEItemDefinition TransitionPlane;
-	public AEItemDefinition Wireless;
+	public AEItemDefinition partLevelEmitter;
+	public AEItemDefinition partTransitionPlane;
+	public AEItemDefinition partWireless;
 
-	public AEItemDefinition P2PTunnel;
+	public AEItemDefinition partP2PTunnel;
 
-	public AEItemDefinition CraftingMonitor;
-	public AEItemDefinition PatternTerminal;
-	public AEItemDefinition CraftingTerminal;
-	public AEItemDefinition Terminal;
-	public AEItemDefinition StorageMonitor;
-	public AEItemDefinition ConversionMonitor;
+	public AEItemDefinition partCraftingMonitor;
+	public AEItemDefinition partPatternTerminal;
+	public AEItemDefinition partCraftingTerminal;
+	public AEItemDefinition partTerminal;
+	public AEItemDefinition partStorageMonitor;
+	public AEItemDefinition partConversionMonitor;
 
 }

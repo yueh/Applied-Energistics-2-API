@@ -8,83 +8,67 @@ public class Blocks
 	/*
 	 * World Gen
 	 */
-	public AEItemDefinition blkQuartzOre;
-	public AEItemDefinition blkOreQuartzCharged;
-	public AEItemDefinition blkMatrixFrame;
+	public AEItemDefinition blockQuartzOre;
+	public AEItemDefinition blockQuartzOreCharged;
+	public AEItemDefinition blockMatrixFrame;
 
 	/*
 	 * Decorative
 	 */
-	public AEItemDefinition blkQuartz;
-	public AEItemDefinition blkQuartzGlass;
-	public AEItemDefinition blkQuartzLamp;
-	public AEItemDefinition blkQuartzPiller;
-	public AEItemDefinition blkQuartzChiseled;
-	public AEItemDefinition blkQuartzTorch;
+	public AEItemDefinition blockQuartz;
+	public AEItemDefinition blockQuartzPiller;
+	public AEItemDefinition blockQuartzChiseled;
+	public AEItemDefinition blockQuartzGlass;
+	public AEItemDefinition BlockQuartzVibrantGlass;
+	public AEItemDefinition blockQuartzTorch;
 
 	/*
 	 * Misc
 	 */
-	public AEItemDefinition blkGrinder;
-	public AEItemDefinition blkCrankHandle;
-	public AEItemDefinition blkCharger;
-	public AEItemDefinition blkTinyTnt;
+	public AEItemDefinition blockGrindStone;
+	public AEItemDefinition blockCrankHandle;
+	public AEItemDefinition blockCharger;
+	public AEItemDefinition blockTinyTNT;
 
 	/*
 	 * Mac Components
 	 */
-	public AEItemDefinition blkPatternProvider;
-	public AEItemDefinition blkAssemblerFieldWall;
-	public AEItemDefinition blkHeatVent;
-	public AEItemDefinition blkCraftingAccelerator;
+	public AEItemDefinition blockPatternProvider;
+	public AEItemDefinition blockAssemblerFieldWall;
+	public AEItemDefinition blockHeatVent;
+	public AEItemDefinition blockCraftingCPU;
 
 	/*
 	 * Quantum Network Bridge
 	 */
-	public AEItemDefinition blkQuantumRing;
-	public AEItemDefinition blkQuantumLink;
+	public AEItemDefinition blockQuantumRing;
+	public AEItemDefinition blockQuantumLink;
 
 	/*
 	 * Spatial IO
 	 */
-	public AEItemDefinition blkSpatialPylon;
-	public AEItemDefinition blkSpatialIOPort;
+	public AEItemDefinition blockSpatialPylon;
+	public AEItemDefinition blockSpatialIOPort;
 
 	/*
-	 * Cables
+	 * Bus / Cables
 	 */
-	public AEItemDefinition blkCableBus;
-	public AEItemDefinition blkDarkCable;
+	public AEItemDefinition blockMultiPart;
 
 	/*
 	 * Machines
 	 */
-	public AEItemDefinition blkController;
-	public AEItemDefinition blkDrive;
-	public AEItemDefinition blkPatternEncoder;
-	public AEItemDefinition blkChest;
-	public AEItemDefinition blkInterface;
-	public AEItemDefinition blkPartitioner;
-	public AEItemDefinition blkIOPort;
-	public AEItemDefinition blkCondenser;
-	public AEItemDefinition blkPowerRelay;
+	public AEItemDefinition blockController;
+	public AEItemDefinition blockDrive;
+	public AEItemDefinition blockChest;
+	public AEItemDefinition blockInterface;
+	public AEItemDefinition blockPartitioner;
+	public AEItemDefinition blockIOPort;
+	public AEItemDefinition blockCondenser;
+	public AEItemDefinition blockPowerRelay;
 
-	public AEItemDefinition blkEnergyCell;
-	public AEItemDefinition blkEnergyCellDense;
-	public AEItemDefinition blkEnergyCellCreative;
-
-	/*
-	 * Parts
-	 */
-	public AEItemDefinition blkP2PTunnel;
-	public AEItemDefinition blkImportBus;
-	public AEItemDefinition blkExportBus;
-	public AEItemDefinition blkStorageBus;
-	public AEItemDefinition blkLevelEmitter;
-	public AEItemDefinition blkCraftingMonitor;
-	public AEItemDefinition blkStorageMonitor;
-	public AEItemDefinition blkTransitionPlane;
-	public AEItemDefinition blkCraftingTerminal;
-	public AEItemDefinition blkTerminal;
+	public AEItemDefinition blockEnergyCell;
+	public AEItemDefinition blockEnergyCellDense;
+	public AEItemDefinition blockEnergyCellCreative;
 
 }
