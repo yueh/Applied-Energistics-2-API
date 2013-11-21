@@ -23,8 +23,12 @@ public interface IGridCache
 	/**
 	 * inform your cache, that a machine was removed from the grid.
 	 * 
-	 * @param gridNode
+	 * Important: Do not trust the grids state in this method, interact only
+	 * with the node you are passed, if you need to manage other grid
+	 * information, do it on the next updateTick.
 	 * 
+	 * @param grid
+	 * @param gridNode
 	 * @param machine
 	 */
 	void removeNode(IGrid grid, IGridNode gridNode, IGridHost machine);
@@ -32,8 +36,12 @@ public interface IGridCache
 	/**
 	 * informs you cache that a machine was added to the grid.
 	 * 
-	 * @param gridNode
+	 * Important: Do not trust the grids state in this method, interact only
+	 * with the node you are passed, if you need to manage other grid
+	 * information, do it on the next updateTick.
 	 * 
+	 * @param grid
+	 * @param gridNode
 	 * @param machine
 	 */
 	void addNode(IGrid grid, IGridNode gridNode, IGridHost machine);
