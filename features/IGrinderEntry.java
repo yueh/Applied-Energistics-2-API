@@ -1,11 +1,11 @@
-package appeng.api.recipes;
+package appeng.api.features;
 
 import net.minecraft.item.ItemStack;
 
 /**
- * Registration Records for {@link IGrinderRecipeManager}
+ * Registration Records for {@link IGrinderRegistry}
  */
-public interface IAppEngGrinderRecipe
+public interface IGrinderEntry
 {
 
 	/**

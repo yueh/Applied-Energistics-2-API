@@ -1,4 +1,4 @@
-package appeng.api.recipes.Items;
+package appeng.api.definitions;
 
 import appeng.api.util.AEItemDefinition;
 

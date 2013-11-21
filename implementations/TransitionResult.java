@@ -1,4 +1,4 @@
-package appeng.api.items;
+package appeng.api.implementations;
 
 /**
  * Defines the result of performing a transition from the world into a storage

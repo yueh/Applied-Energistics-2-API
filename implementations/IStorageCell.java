@@ -1,4 +1,4 @@
-package appeng.api.items;
+package appeng.api.implementations;
 
 import net.minecraft.item.ItemStack;
 import appeng.api.storage.data.IAEItemStack;

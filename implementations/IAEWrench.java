@@ -1,4 +1,4 @@
-package appeng.api.items;
+package appeng.api.implementations;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
