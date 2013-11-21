@@ -9,7 +9,6 @@ import appeng.api.features.ILocateableRegistry;
 import appeng.api.features.IP2PTunnelRegistry;
 import appeng.api.features.ISpecialComparisonRegistry;
 import appeng.api.features.IWirelessTermRegistery;
-import appeng.api.items.IMemoryCard;
 import appeng.api.items.ISpatialStorageCell;
 import appeng.api.movable.IMovableRegistry;
 import appeng.api.networking.IGridBlock;
