@@ -26,7 +26,7 @@ public interface IAppEngApi
 	/**
 	 * @return helper for working with grids, and buses.
 	 */
-	IPartHelper part();
+	IPartHelper partHelper();
 
 	/**
 	 * @return an accessible list of all of AE's Items
