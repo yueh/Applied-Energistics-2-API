@@ -21,7 +21,7 @@ public interface IAEStack<StackType extends IAEStack>
 	 * 
 	 * @return basically ItemStack.stackSize
 	 */
-	public long getStackSize();
+	long getStackSize();
 
 	/**
 	 * changes the number of items in the stack.
@@ -29,7 +29,7 @@ public interface IAEStack<StackType extends IAEStack>
 	 * @param basically
 	 *            , ItemStack.stackSize = N
 	 */
-	public void setStackSize(long stackSize);
+	StackType setStackSize(long stackSize);
 
 	/**
 	 * Same as getStackSize, but for requestable items. ( LP )
@@ -43,7 +43,7 @@ public interface IAEStack<StackType extends IAEStack>
 	 * 
 	 * @return basically itemStack.stackSize = N but for setStackSize items.
 	 */
-	void setCountRequestable(long countRequestable);
+	StackType setCountRequestable(long countRequestable);
 
 	/**
 	 * true, if the item can be crafted.
@@ -57,12 +57,12 @@ public interface IAEStack<StackType extends IAEStack>
 	 * 
 	 * @param isCraftable
 	 */
-	void setCraftable(boolean isCraftable);
+	StackType setCraftable(boolean isCraftable);
 
 	/**
 	 * clears, requsetable, craftable, and stack sizes.
 	 */
-	public void reset();
+	StackType reset();
 
 	/**
 	 * returns true, if the item can be crafted, requested, or extracted.
@@ -109,7 +109,7 @@ public interface IAEStack<StackType extends IAEStack>
 	 * 
 	 * @param priority
 	 */
-	public void setPriority(int priority);
+	StackType setPriority(int priority);
 
 	/**
 	 * Compare stacks using precise logic.
@@ -124,7 +124,7 @@ public interface IAEStack<StackType extends IAEStack>
 	 * @return true if they are the same.
 	 */
 	@Override
-	public boolean equals(Object obj);
+	boolean equals(Object obj);
 
 	/**
 	 * compare stacks using fuzzy logic
@@ -135,7 +135,7 @@ public interface IAEStack<StackType extends IAEStack>
 	 * @param mode
 	 * @return
 	 */
-	public boolean fuzzyComparison(Object st, FuzzyMode mode);
+	boolean fuzzyComparison(Object st, FuzzyMode mode);
 
 	/**
 	 * Slower for disk saving, but smaller/more efficient for packets.
@@ -143,7 +143,7 @@ public interface IAEStack<StackType extends IAEStack>
 	 * @param data
 	 * @throws IOException
 	 */
-	public void writeToPacket(DataOutputStream data) throws IOException;
+	void writeToPacket(DataOutputStream data) throws IOException;
 
 	/**
 	 * Clone the Item / Fluid Stack
