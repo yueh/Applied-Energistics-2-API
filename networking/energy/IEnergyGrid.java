@@ -1,5 +1,6 @@
 package appeng.api.networking.energy;
 
+import appeng.api.config.Actionable;
 import appeng.api.networking.IGridCache;
 import appeng.api.networking.events.MENetworkPowerStatusChange;
 
@@ -46,21 +47,21 @@ public interface IEnergyGrid extends IGridCache, IEnergyGridProvider
 	 * 
 	 * @param amt
 	 *            power to inject into the network
-	 * @param simulate
+	 * @param mode
 	 *            should the action be simulated or performed?
 	 * @return the amount of power that the network has OVER the limit.
 	 */
-	public double injectPower(double amt, boolean simulate);
+	public double injectPower(double amt, Actionable mode);
 
 	/**
 	 * Extract power from the network.
 	 * 
 	 * @param amt
-	 * @param simulate
+	 * @param mode
 	 *            should the action be simulated or performed?
 	 * @return returns extracted power.
 	 */
-	public double extractPower(double amt, boolean simulate);
+	public double extractPower(double amt, Actionable mode);
 
 	/**
 	 * this is should be considered an estimate, and not relied upon for real calculations.

@@ -1,6 +1,7 @@
 package appeng.api.networking.energy;
 
 import appeng.api.config.AccessRestriction;
+import appeng.api.config.Actionable;
 
 /**
  * Used to access information about AE's various power accepting blocks for monitoring purposes.
@@ -15,7 +16,7 @@ public interface IAEPowerStorage
 	 * 
 	 * @return
 	 */
-	public double injectAEPower(double amt, boolean simulate);
+	public double injectAEPower(double amt, Actionable mode);
 
 	/**
 	 * Attempt to extract power from the device, it will extract what it can and return it.
@@ -23,7 +24,7 @@ public interface IAEPowerStorage
 	 * @param amt
 	 * @return
 	 */
-	public double extractAEPower(double amt, boolean simulate);
+	public double extractAEPower(double amt, Actionable mode);
 
 	/**
 	 * @return the current maximum power ( this can change :P )

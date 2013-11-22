@@ -1,5 +1,6 @@
 package appeng.api.crafting;
 
+import appeng.api.config.Actionable;
 import net.minecraft.item.ItemStack;
 
 /**
@@ -19,6 +20,6 @@ public interface ICraftingMedium
 	 * @param itemToInject
 	 * @return the amount of the item that could not be handled at this time, or null if it was fully injected.
 	 */
-	ItemStack InjectItem(ItemStack itemToInject, boolean simulate);
+	ItemStack InjectItem(ItemStack itemToInject, Actionable mode);
 
 }
