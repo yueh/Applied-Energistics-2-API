@@ -23,6 +23,12 @@ public class SelectedPart
 	 */
 	public final ForgeDirection side;
 
+	public SelectedPart() {
+		part = null;
+		facade = null;
+		side = ForgeDirection.UNKNOWN;
+	}
+
 	public SelectedPart(IBusPart part, ForgeDirection side) {
 		this.part = part;
 		facade = null;
