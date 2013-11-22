@@ -21,12 +21,21 @@ public interface IBusPart
 {
 
 	/**
-	 * get an ItemStack that represents the bus, should contain the settings for whatever, can also be used in
-	 * conjunction with removePart to take a part off and drop it or something.
+	 * get an ItemStack that represents the bus, should contain the settings for
+	 * whatever, can also be used in conjunction with removePart to take a part
+	 * off and drop it or something.
 	 * 
+	 * This is used to drop the bus, and to save the bus, when saving the bus,
+	 * wrenched is false, and writeToNBT will be called to save improtant
+	 * details about the part, if the part is wrenched include in your NBT Data
+	 * any settings you might want to keep around, you can restore those
+	 * settings when constructing your part.
+	 * 
+	 * @param wrenched
+	 *            was a wrench used?
 	 * @return
 	 */
-	ItemStack getItemStack();
+	ItemStack getItemStack(boolean wrenched);
 
 	/**
 	 * render item form for inventory, or entity.
@@ -78,14 +87,16 @@ public interface IBusPart
 	boolean canConnectRedstone();
 
 	/**
-	 * write additional NBT data to the world, ( the part id is not part of this. )
+	 * Write the part information for saving, the part will be saved with
+	 * getItemStack(false) and this method will be called after to load
+	 * settings, inventory or other values from the world.
 	 * 
 	 * @param data
 	 */
 	void writeToNBT(NBTTagCompound data);
 
 	/**
-	 * read from additional NBT in the world.
+	 * Read the previously written NBT Data. this is the mirror for writeToNBT
 	 * 
 	 * @param data
 	 */
