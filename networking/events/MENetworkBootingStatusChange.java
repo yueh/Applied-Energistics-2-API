@@ -1,8 +1,6 @@
 package appeng.api.networking.events;
-import appeng.api.networking.IGrid;
-import appeng.api.networking.IGridNode;
-import appeng.api.networking.energy.IEnergyGrid;
 
+import appeng.api.networking.IGridNode;
 
 /**
  * Posted by the network when the booting status of the network goes up

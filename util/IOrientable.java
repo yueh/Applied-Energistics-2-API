@@ -1,6 +1,5 @@
 package appeng.api.util;
 
-import cpw.mods.fml.common.Mod.Block;
 import net.minecraftforge.common.ForgeDirection;
 
 /**

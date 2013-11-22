@@ -2,6 +2,7 @@ package appeng.api.util;
 
 import java.util.ArrayList;
 
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public interface ICommonTile
@@ -17,6 +18,6 @@ public interface ICommonTile
 	 * @param z
 	 * @param drops
 	 */
-	void getDrops(World world, int x, int y, int z, ArrayList drops);
+	void getDrops(World world, int x, int y, int z, ArrayList<ItemStack> drops);
 
 }

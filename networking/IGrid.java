@@ -1,7 +1,6 @@
 package appeng.api.networking;
 
 import appeng.api.networking.events.MENetworkEvent;
-import appeng.me.GridNode;
 
 /**
  * Gives you access to Grid based information.
@@ -12,7 +11,7 @@ public interface IGrid
 {
 
 	/**
-	 * Get Access to various grid modules 
+	 * Get Access to various grid modules
 	 * 
 	 * @param iface
 	 * @return the IGridCache you requested.
@@ -43,7 +42,7 @@ public interface IGrid
 	 * 
 	 * @return iterator of all available host types.
 	 */
-	public Iterable<Class> getMachinesClasses();
+	public Iterable<Class<? extends IGridHost>> getMachinesClasses();
 
 	/**
 	 * Get machines on the network.
@@ -51,12 +50,12 @@ public interface IGrid
 	 * @param classofIGridHost
 	 * @return iterator of all nodes belonging to hosts of specified class.
 	 */
-	public Iterable<IGridNode> getMachines(Class classofIGridHost);
+	public Iterable<IGridNode> getMachines(Class<? extends IGridHost> classofIGridHost);
 
 	/**
 	 * @return iterator for all nodes on the network, node visitors are prefered.
 	 */
-	Iterable<GridNode> getNodes();
+	Iterable<IGridNode> getNodes();
 
 	/**
 	 * @return the current grids status, returns true if the grid is ready and operating

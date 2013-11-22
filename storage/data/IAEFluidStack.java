@@ -30,6 +30,7 @@ public interface IAEFluidStack extends IAEStack<IAEFluidStack>
 	 * 
 	 * @return the copy.
 	 */
+	@Override
 	public IAEFluidStack copy();
 
 	/**
@@ -38,6 +39,7 @@ public interface IAEFluidStack extends IAEStack<IAEFluidStack>
 	 * @param option
 	 *            , to add to the current one.
 	 */
+	@Override
 	void add(IAEFluidStack option);
 
 	/**

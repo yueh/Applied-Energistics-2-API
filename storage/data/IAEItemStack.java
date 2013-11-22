@@ -28,6 +28,7 @@ public interface IAEItemStack extends IAEStack<IAEItemStack>
 	 * 
 	 * @return the copy
 	 */
+	@Override
 	public IAEItemStack copy();
 
 	/**
@@ -41,8 +42,9 @@ public interface IAEItemStack extends IAEStack<IAEItemStack>
 	 * Combines two IAEItemStacks via addition.
 	 * 
 	 * @param option
-	 *              to add to the current one.
+	 *            to add to the current one.
 	 */
+	@Override
 	void add(IAEItemStack option);
 
 	/**

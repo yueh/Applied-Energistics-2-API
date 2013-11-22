@@ -22,6 +22,7 @@ public interface IAETagCompound
 	 * @param a
 	 * @return true, if they are the same.
 	 */
+	@Override
 	boolean equals(Object a);
 
 	/**
