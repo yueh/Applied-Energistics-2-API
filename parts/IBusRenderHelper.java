@@ -1,5 +1,6 @@
 package appeng.api.parts;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.util.Icon;
 import net.minecraftforge.common.ForgeDirection;
@@ -107,5 +108,10 @@ public interface IBusRenderHelper
 	 * @param whiteVariant
 	 */
 	void setInvColor(int whiteVariant);
+
+	/**
+	 * @return the block used for rendering, might need it for some reason...
+	 */
+	Block getBlock();
 
 }
