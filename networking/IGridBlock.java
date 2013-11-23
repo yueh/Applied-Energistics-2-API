@@ -3,7 +3,6 @@ package appeng.api.networking;
 import java.util.EnumSet;
 
 import net.minecraftforge.common.ForgeDirection;
-import appeng.api.util.AECableType;
 import appeng.api.util.AEColor;
 import appeng.api.util.DimensionalCoord;
 
@@ -66,14 +65,6 @@ public interface IGridBlock
 	 * Determine which sides of the block can be connected too
 	 */
 	EnumSet<ForgeDirection> getConnectableSides();
-
-	/**
-	 * Determines how cables render when they connect to this block. Priority is
-	 * Smart > Covered > Glass
-	 * 
-	 * @param dir
-	 */
-	public AECableType getCableConnectionType(ForgeDirection dir);
 
 	/**
 	 * @return true if your isNetworkRunning

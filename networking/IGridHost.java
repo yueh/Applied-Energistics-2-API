@@ -1,6 +1,7 @@
 package appeng.api.networking;
 
 import net.minecraftforge.common.ForgeDirection;
+import appeng.api.util.AECableType;
 
 /**
  * 
@@ -23,5 +24,12 @@ public interface IGridHost
 	 *         AEApi.instance().createGridNode( MyIGridBlock )
 	 */
 	public IGridNode getGridNode(ForgeDirection dir);
+
+	/**
+	 * Determines how cables render when they connect to this block. Priority is Smart > Covered > Glass
+	 * 
+	 * @param dir
+	 */
+	public AECableType getCableConnectionType(ForgeDirection dir);
 
 }
