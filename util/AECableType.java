@@ -2,11 +2,10 @@ package appeng.api.util;
 
 public enum AECableType
 {
-
 	/**
-	 * Connections to this block should render as smart.
+	 * No Cable present.
 	 */
-	SMART,
+	NONE,
 
 	/**
 	 * Connections to this block should render as glass.
@@ -16,6 +15,11 @@ public enum AECableType
 	/**
 	 * Connections to this block should render as covered.
 	 */
-	COVERED
+	COVERED,
+
+	/**
+	 * Connections to this block should render as smart.
+	 */
+	SMART
 
 }

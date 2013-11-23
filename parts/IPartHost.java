@@ -4,6 +4,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Vec3;
 import net.minecraftforge.common.ForgeDirection;
+import appeng.api.util.AECableType;
 import appeng.api.util.AEColor;
 import appeng.api.util.DimensionalCoord;
 
@@ -106,5 +107,10 @@ public interface IPartHost
 	 * @return
 	 */
 	SelectedPart selectPart(Vec3 pos);
+
+	/**
+	 * Get the type of cable present in this part.
+	 */
+	AECableType getCableType(ForgeDirection side);
 
 }
