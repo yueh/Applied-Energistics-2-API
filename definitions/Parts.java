@@ -20,6 +20,7 @@ public class Parts
 
 	public AEItemDefinition partP2PTunnel;
 
+	public AEItemDefinition partCableAnchor;
 	public AEItemDefinition partMonitior;
 	public AEItemDefinition partSemiDarkMonitor;
 	public AEItemDefinition partDarkMonitor;
