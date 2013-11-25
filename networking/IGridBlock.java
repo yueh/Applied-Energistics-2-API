@@ -3,6 +3,7 @@ package appeng.api.networking;
 import java.util.EnumSet;
 
 import net.minecraftforge.common.ForgeDirection;
+import appeng.api.parts.IBusPart;
 import appeng.api.util.AEColor;
 import appeng.api.util.DimensionalCoord;
 
@@ -23,7 +24,9 @@ public interface IGridBlock
 	double getIdlePowerUsage();
 
 	/**
-	 * Various flags that AE uses to modify basic behavior for various parts of the network.
+	 * Various flags that AE uses to modify basic behavior for various parts of
+	 * the network.
+	 * 
 	 * @return
 	 */
 	EnumSet<GridFlags> getFlags();
@@ -62,7 +65,9 @@ public interface IGridBlock
 	public void setNetworkStatus(IGrid grid, int channelsInUse);
 
 	/**
-	 * Determine which sides of the block can be connected too
+	 * Determine which sides of the block can be connected too, only used when
+	 * isWorldAccessable returns true, not used for {@link IBusPart}
+	 * implementations.
 	 */
 	EnumSet<ForgeDirection> getConnectableSides();
 
@@ -72,8 +77,8 @@ public interface IGridBlock
 	public boolean isNetworkMachineActive();
 
 	/**
-	 * @return the tile represented by the IGridBlock, this may be this, or not
-	 * depending on your implementation
+	 * @return the IGridHost for the node, this will be an IGridPart or a
+	 *         TileEntity generally speaking.
 	 */
 	IGridHost getMachine();
 
