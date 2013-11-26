@@ -19,7 +19,7 @@ import appeng.api.parts.LayerBase;
  * 
  * You must use {@link ISidedInventory} instead of {@link IInventory}.
  * 
- * If your inventory changes in between placement and removal, you must trigger an PartChange on the {@link IPartHost}
+ * If your inventory changes in between placement and removal, you must trigger a PartChange on the {@link IPartHost}
  * so it can recalculate the inventory wrapper.
  */
 public class LayerISidedInventory extends LayerBase implements ISidedInventory
@@ -41,7 +41,7 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 	{
 		super.PartChanged();
 
-		invs = new ArrayList(); // fast rand-access.
+		invs = new ArrayList();
 		int slotCount = 0;
 
 		for (ForgeDirection side : ForgeDirection.VALID_DIRECTIONS)
