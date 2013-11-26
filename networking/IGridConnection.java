@@ -1,7 +1,6 @@
 package appeng.api.networking;
 
 import net.minecraftforge.common.ForgeDirection;
-import appeng.me.GridNode;
 
 /**
  * Access to AE's internal grid connections.
@@ -20,7 +19,7 @@ public interface IGridConnection
 	 * @param gridNode
 	 * @return
 	 */
-	GridNode getOtherSide(GridNode gridNode);
+	IGridNode getOtherSide(IGridNode gridNode);
 
 	/**
 	 * determine the direction of the connection based on your node.
@@ -28,7 +27,7 @@ public interface IGridConnection
 	 * @param gridNode
 	 * @return
 	 */
-	ForgeDirection getDirection(GridNode gridNode);
+	ForgeDirection getDirection(IGridNode gridNode);
 
 	/**
 	 * by destroying a connection you may create new grids, and trigger un-expected behavior, you should only destroy
@@ -41,18 +40,23 @@ public interface IGridConnection
 	 * 
 	 * @return
 	 */
-	GridNode a();
+	IGridNode a();
 
 	/**
 	 * get node B
 	 * 
 	 * @return
 	 */
-	GridNode b();
+	IGridNode b();
 
 	/**
 	 * @return if the connection is invisible this returns false
 	 */
 	boolean hasDirection();
+
+	/**
+	 * @return how many channels pass over this connections.
+	 */
+	int getChannels();
 
 }
