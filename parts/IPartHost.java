@@ -106,4 +106,14 @@ public interface IPartHost
 	 */
 	SelectedPart selectPart(Vec3 pos);
 
+	/**
+	 * can be used by parts to trigger the tile or part to save.
+	 */
+	public void markForSave();
+
+	/**
+	 * part of the {@link LayerBase}
+	 */
+	public void PartChanged();
+
 }
