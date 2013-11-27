@@ -3,6 +3,7 @@ package appeng.api.util;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 
 /**
  * Gives easy access to different part of the various, items/blocks/materials in AE.
