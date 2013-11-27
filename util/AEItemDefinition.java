@@ -21,6 +21,11 @@ public interface AEItemDefinition
 	Item item();
 
 	/**
+	 * @return the {@link TileEntity} Class if applicable.
+	 */
+	Class<? extends TileEntity> entity();
+
+	/**
 	 * @return an {@link ItemStack} with specified quantity of this item.
 	 */
 	ItemStack stack(int stackSize);
