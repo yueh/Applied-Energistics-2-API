@@ -7,7 +7,7 @@ import net.minecraftforge.common.ForgeDirection;
 /**
  * A Registry of External Storage handlers.
  * 
- * Do not implement obtain via {@link IAppEngApi}.getExternalStorageRegistry()
+ * Do not implement obtain via {@link IAppEngApi}.registries().getExternalStorageRegistry()
  */
 public interface IExternalStorageRegistry
 {
@@ -19,7 +19,7 @@ public interface IExternalStorageRegistry
 	 */
 	void addExternalStorageInterface(IExternalStorageHandler esh);
 
-	/** 
+	/**
 	 * @param te
 	 * @param opposite
 	 * @param channel

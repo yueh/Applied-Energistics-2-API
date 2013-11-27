@@ -20,7 +20,7 @@ import net.minecraft.item.ItemStack;
  * 	@Override
  * 	public boolean onItemUse(ItemStack is, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ)
  * 	{
- * 		return AEApi.instance().placeBus( is, x, y, z, side, player, world );
+ * 		return AEApi.instance().partHelper().placeBus( is, x, y, z, side, player, world );
  * 	}
  */
 public interface IBusItem

@@ -6,7 +6,7 @@ import net.minecraftforge.common.ForgeDirection;
  * All Layers must extends this, this get part implementation is provided to interface with the parts, however a real
  * implementation will be used at runtime.
  */
-public class LayerBase
+public class LayerBase // implements IPartHost
 {
 
 	/**
