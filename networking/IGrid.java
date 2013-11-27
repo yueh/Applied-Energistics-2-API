@@ -50,7 +50,7 @@ public interface IGrid
 	 * @param classofIGridHost
 	 * @return iterator of all nodes belonging to hosts of specified class.
 	 */
-	public Iterable<IGridNode> getMachines(Class<? extends IGridHost> classofIGridHost);
+	public IMachineSet getMachines(Class<? extends IGridHost> classofIGridHost);
 
 	/**
 	 * @return iterator for all nodes on the network, node visitors are prefered.
@@ -66,5 +66,10 @@ public interface IGrid
 	 * @return true if the last node has been removed from the grid.
 	 */
 	public boolean isEmpty();
+
+	/**
+	 * @return the node considered the pivot point of the grid.
+	 */
+	public IGridNode getPivot();
 
 }
