@@ -63,7 +63,7 @@ public interface IPartHost
 	void removePart(ForgeDirection side);
 
 	/**
-	 * something changed, might want to tell someone.
+	 * something changed, might want to send a packet to clients to update state.
 	 */
 	void markForUpdate();
 
