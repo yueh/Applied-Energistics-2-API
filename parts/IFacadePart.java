@@ -5,8 +5,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraftforge.common.ForgeDirection;
-import appeng.client.render.BusRenderHelper;
-import appeng.parts.IBusCollsionHelper;
 
 /**
  * Used Internally.
@@ -41,8 +39,7 @@ public interface IFacadePart
 	 * @param busBounds
 	 * @param b
 	 */
-	void renderStatic(int x, int y, int z, BusRenderHelper instance, RenderBlocks renderer, IFacadeContainer fc,
-			AxisAlignedBB busBounds, boolean renderStilt);
+	void renderStatic(int x, int y, int z, IBusRenderHelper instance, RenderBlocks renderer, IFacadeContainer fc, AxisAlignedBB busBounds, boolean renderStilt);
 
 	/**
 	 * render the part in inventory.
@@ -50,7 +47,7 @@ public interface IFacadePart
 	 * @param instance
 	 * @param renderer
 	 */
-	void renderInventory(BusRenderHelper instance, RenderBlocks renderer);
+	void renderInventory(IBusRenderHelper instance, RenderBlocks renderer);
 
 	/**
 	 * @return side the facade is in
