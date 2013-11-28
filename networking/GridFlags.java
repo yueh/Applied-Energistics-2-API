@@ -16,6 +16,11 @@ public enum GridFlags
 	DENSE_CHANNEL,
 
 	/**
+	 * cannot carry channels over this node.
+	 */
+	CANNOT_CARRY,
+
+	/**
 	 * Used by P2P Tunnels to prevent tunnels from tunneling recursively.
 	 */
 	CANNOT_CARRY_DENSE,
