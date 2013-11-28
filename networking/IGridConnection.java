@@ -57,6 +57,6 @@ public interface IGridConnection
 	/**
 	 * @return how many channels pass over this connections.
 	 */
-	int getChannels();
+	int getUsedChannels();
 
 }
