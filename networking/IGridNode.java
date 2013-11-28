@@ -6,6 +6,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import appeng.api.IAppEngApi;
+import appeng.api.util.IReadOnlyCollection;
 
 /**
  * 
@@ -77,7 +78,7 @@ public interface IGridNode
 	 * 
 	 * @return
 	 */
-	Iterable<IGridConnection> getConnections();
+	IReadOnlyCollection<IGridConnection> getConnections();
 
 	/**
 	 * @return the IGridBlock for this node
