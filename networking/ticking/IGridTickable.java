@@ -20,7 +20,6 @@ public interface IGridTickable
 	 */
 
 	/**
-	 * 
 	 * You can return null, if you wish to tick using MC's ticking mechanism, or
 	 * you can return a valid TickingRequest to tell AE a guide for which type
 	 * of responsiveness your device wants.
@@ -36,7 +35,6 @@ public interface IGridTickable
 	TickingRequest getTickingRequest(IGridNode node);
 
 	/**
-	 * 
 	 * AE lets you adjust your tick rate based on the results of your tick, if
 	 * your block as accomplished work you may wish to increase the ticking
 	 * speed, if your block is idle you may wish to slow it down.
