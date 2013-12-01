@@ -9,7 +9,7 @@ public interface IGridTickable
 {
 
 	/**
-	 * important node regarding IGridTickables with more then one one node,
+	 * Important note regarding IGridTickables with more then one one node,
 	 * 
 	 * If your IGridHost hosts multiple nodes, it may be on multiple grids, or
 	 * its node may be present on the same grid multiple times, this is as
@@ -22,7 +22,7 @@ public interface IGridTickable
 	/**
 	 * 
 	 * You can return null, if you wish to tick using MC's ticking mechanism, or
-	 * you can return a valid TickingRequest to tell AE a guide for white type
+	 * you can return a valid TickingRequest to tell AE a guide for which type
 	 * of responsiveness your device wants.
 	 * 
 	 * this will be called for your tile any time your tile changes grids, this

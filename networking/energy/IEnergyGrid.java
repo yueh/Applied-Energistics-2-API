@@ -11,7 +11,6 @@ public interface IEnergyGrid extends IGridCache, IEnergyGridProvider
 {
 
 	/**
-	 * 
 	 * @return the current calculated idle energy drain each tick, is used internally to drain power for each tick.
 	 */
 	public double getIdlePowerUsage();
