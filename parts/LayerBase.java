@@ -17,7 +17,7 @@ public class LayerBase // implements IPartHost
 	 * @param side
 	 * @return the part for the requested side.
 	 */
-	public IBusPart getPart(ForgeDirection side)
+	public IPart getPart(ForgeDirection side)
 	{
 		return null; // place holder.
 	}

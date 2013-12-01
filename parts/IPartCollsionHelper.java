@@ -1,6 +1,6 @@
 package appeng.api.parts;
 
-public interface IBusCollsionHelper
+public interface IPartCollsionHelper
 {
 
 	/**

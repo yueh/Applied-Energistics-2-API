@@ -11,7 +11,7 @@ public class SelectedPart
 	/**
 	 * selected part.
 	 */
-	public final IBusPart part;
+	public final IPart part;
 
 	/**
 	 * facade part.
@@ -29,7 +29,7 @@ public class SelectedPart
 		side = ForgeDirection.UNKNOWN;
 	}
 
-	public SelectedPart(IBusPart part, ForgeDirection side) {
+	public SelectedPart(IPart part, ForgeDirection side) {
 		this.part = part;
 		facade = null;
 		this.side = side;

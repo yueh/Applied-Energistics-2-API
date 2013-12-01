@@ -2,7 +2,7 @@ package appeng.api.parts.layers;
 
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
-import appeng.api.parts.IBusPart;
+import appeng.api.parts.IPart;
 import appeng.api.parts.IPartHost;
 import appeng.api.parts.LayerBase;
 import buildcraft.api.power.IPowerReceptor;
@@ -15,7 +15,7 @@ public class LayerIPowerReceptor extends LayerBase implements IPowerReceptor
 	@Override
 	public PowerReceiver getPowerReceiver(ForgeDirection side)
 	{
-		IBusPart part = getPart( side );
+		IPart part = getPart( side );
 		if ( part instanceof IPowerReceptor )
 			return ((IPowerReceptor) part).getPowerReceiver( side );
 		return null;

@@ -1,12 +1,12 @@
 package appeng.api.implementations;
 
 import appeng.api.networking.IGridHost;
-import appeng.api.parts.IBusPart;
+import appeng.api.parts.IPart;
 
 /**
  * Implemented by all screen like parts provided by AE.
  */
-public interface IPartMonitor extends IBusPart, IGridHost
+public interface IPartMonitor extends IPart, IGridHost
 {
 
 	/**

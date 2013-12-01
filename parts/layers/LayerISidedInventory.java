@@ -8,7 +8,7 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ForgeDirection;
-import appeng.api.parts.IBusPart;
+import appeng.api.parts.IPart;
 import appeng.api.parts.IPartHost;
 import appeng.api.parts.LayerBase;
 
@@ -46,7 +46,7 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 
 		for (ForgeDirection side : ForgeDirection.VALID_DIRECTIONS)
 		{
-			IBusPart bp = getPart( side );
+			IPart bp = getPart( side );
 			if ( bp instanceof ISidedInventory )
 			{
 				ISidedInventory part = (ISidedInventory) bp;

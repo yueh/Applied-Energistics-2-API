@@ -44,13 +44,13 @@ public interface IPartHelper
 	/**
 	 * Register IBusItem with renderer
 	 */
-	void setItemBusRenderer(IBusItem i);
+	void setItemBusRenderer(IPartItem i);
 
 	/**
 	 * use in use item, to try and place a IBusItem
 	 * 
 	 * @param is
-	 *            ItemStack of an item which implements {@link IBusItem}
+	 *            ItemStack of an item which implements {@link IPartItem}
 	 * @param x
 	 * @param y
 	 * @param z

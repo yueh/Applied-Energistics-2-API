@@ -3,7 +3,7 @@ package appeng.api.networking;
 import java.util.EnumSet;
 
 import net.minecraftforge.common.ForgeDirection;
-import appeng.api.parts.IBusPart;
+import appeng.api.parts.IPart;
 import appeng.api.util.AEColor;
 import appeng.api.util.DimensionalCoord;
 
@@ -66,7 +66,7 @@ public interface IGridBlock
 
 	/**
 	 * Determine which sides of the block can be connected too, only used when
-	 * isWorldAccessable returns true, not used for {@link IBusPart}
+	 * isWorldAccessable returns true, not used for {@link IPart}
 	 * implementations.
 	 */
 	EnumSet<ForgeDirection> getConnectableSides();

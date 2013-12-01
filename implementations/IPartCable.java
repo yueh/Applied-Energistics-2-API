@@ -4,16 +4,16 @@ import java.util.EnumSet;
 
 import net.minecraftforge.common.ForgeDirection;
 import appeng.api.networking.IGridHost;
-import appeng.api.parts.IBusPart;
+import appeng.api.parts.IPart;
 import appeng.api.parts.IPartHost;
 import appeng.api.util.AECableType;
 import appeng.api.util.AEColor;
 
 /**
- * Implemented on the IBusParts cable objects that can be placed at
- * {@link ForgeDirection}.UNKNWON in {@link IPartHost}s
+ * Implemented on the {@link IPart}s cable objects that can be placed at {@link ForgeDirection}.UNKNWON in
+ * {@link IPartHost}s
  */
-public interface IPartCable extends IBusPart, IGridHost
+public interface IPartCable extends IPart, IGridHost
 {
 
 	/**
@@ -27,8 +27,7 @@ public interface IPartCable extends IBusPart, IGridHost
 	AECableType getCableConnectionType();
 
 	/**
-	 * Change the color of the cable, this should cost a small amount of dye, or
-	 * something.
+	 * Change the color of the cable, this should cost a small amount of dye, or something.
 	 * 
 	 * @param newColor
 	 * @return if the color change was successful.

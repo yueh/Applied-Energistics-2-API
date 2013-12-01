@@ -49,7 +49,7 @@ public interface IPartHost
 	 * @return the part located on the specified side, or null if there is no
 	 *         part.
 	 */
-	IBusPart getPart(ForgeDirection side);
+	IPart getPart(ForgeDirection side);
 
 	/**
 	 * removes the part on the side, this doesn't drop it or anything, if you

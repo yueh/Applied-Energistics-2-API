@@ -2,12 +2,12 @@ package appeng.api.networking;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
-import appeng.api.parts.IBusPart;
+import appeng.api.parts.IPart;
 import appeng.api.util.AECableType;
 
 /**
  * 
- * Implement to create a networked {@link TileEntity} or {@link IBusPart} must
+ * Implement to create a networked {@link TileEntity} or {@link IPart} must
  * be implemented for a part, or tile entity to become part of a grid.
  * 
  */

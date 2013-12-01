@@ -3,7 +3,7 @@ package appeng.api.parts.layers;
 import ic2.api.energy.tile.IEnergySink;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
-import appeng.api.parts.IBusPart;
+import appeng.api.parts.IPart;
 import appeng.api.parts.LayerBase;
 
 public class LayerIEnergySink extends LayerBase implements IEnergySink
@@ -12,7 +12,7 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 	@Override
 	public boolean acceptsEnergyFrom(TileEntity emitter, ForgeDirection direction)
 	{
-		IBusPart part = getPart( direction );
+		IPart part = getPart( direction );
 		if ( part instanceof IEnergySink )
 			return ((IEnergySink) part).acceptsEnergyFrom( emitter, direction );
 		return false;
@@ -27,7 +27,7 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 
 		for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS)
 		{
-			IBusPart part = getPart( dir );
+			IPart part = getPart( dir );
 			if ( part instanceof IEnergySink )
 			{
 				// use lower number cause ic2 deletes power it sends that isn't recieved.
@@ -41,7 +41,7 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 	@Override
 	public double injectEnergyUnits(ForgeDirection directionFrom, double amount)
 	{
-		IBusPart part = getPart( directionFrom );
+		IPart part = getPart( directionFrom );
 		if ( part instanceof IEnergySink )
 			return ((IEnergySink) part).injectEnergyUnits( directionFrom, amount );
 		return amount;

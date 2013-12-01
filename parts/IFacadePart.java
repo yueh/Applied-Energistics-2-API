@@ -26,7 +26,7 @@ public interface IFacadePart
 	 * 
 	 * @param ch
 	 */
-	void getBoxes(IBusCollsionHelper ch);
+	void getBoxes(IPartCollsionHelper ch);
 
 	/**
 	 * render the part.
@@ -39,7 +39,7 @@ public interface IFacadePart
 	 * @param busBounds
 	 * @param b
 	 */
-	void renderStatic(int x, int y, int z, IBusRenderHelper instance, RenderBlocks renderer, IFacadeContainer fc, AxisAlignedBB busBounds, boolean renderStilt);
+	void renderStatic(int x, int y, int z, IPartRenderHelper instance, RenderBlocks renderer, IFacadeContainer fc, AxisAlignedBB busBounds, boolean renderStilt);
 
 	/**
 	 * render the part in inventory.
@@ -47,7 +47,7 @@ public interface IFacadePart
 	 * @param instance
 	 * @param renderer
 	 */
-	void renderInventory(IBusRenderHelper instance, RenderBlocks renderer);
+	void renderInventory(IPartRenderHelper instance, RenderBlocks renderer);
 
 	/**
 	 * @return side the facade is in
