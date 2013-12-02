@@ -21,9 +21,9 @@ public class Items
 	public AEItemDefinition itemNetherQuartzWrench;
 	public AEItemDefinition itemNetherQuartzKnife;
 
-	public AEItemDefinition itemEntropyAccelerator;
 	public AEItemDefinition itemEntropyManipulator;
 	public AEItemDefinition itemWirelessTerminal;
+	public AEItemDefinition itemChargedStaff;
 	public AEItemDefinition itemMassCannon;
 	public AEItemDefinition itemMemoryCard;
 

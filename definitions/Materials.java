@@ -11,13 +11,19 @@ public class Materials
 
 	public AEItemDefinition materialSilicon;
 
-	public AEItemDefinition materialAdvProcessAsm;
-	public AEItemDefinition materialAdvProcessor;
+	public AEItemDefinition materialLogicProcessorAsm;
+	public AEItemDefinition materialLogicProcessor;
+
+	public AEItemDefinition materialCalcProcessor;
+
+	public AEItemDefinition materialEngProcessor;
+
+	public AEItemDefinition materialBasicCard;
 	public AEItemDefinition materialAdvCard;
 
-	public AEItemDefinition materialBasicProcessAsm;
-	public AEItemDefinition materialBasicProcessor;
-	public AEItemDefinition materialBasicCard;
+	public AEItemDefinition materialPureifiedCertusQuartzCrystal;
+	public AEItemDefinition materialPureifiedNetherQuartzCrystal;
+	public AEItemDefinition materialPureifiedFluixCrystal;
 
 	public AEItemDefinition materialCell1kPart;
 	public AEItemDefinition materialCell4kPart;
