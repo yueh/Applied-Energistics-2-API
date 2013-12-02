@@ -3,6 +3,7 @@ package appeng.api.parts;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.entity.Entity;
@@ -196,5 +197,15 @@ public interface IPart
 	 * @return if your activate method performed something.
 	 */
 	boolean onActivate(EntityPlayer player, Vec3 pos);
+
+	/**
+	 * Add drops to the items being dropped into the world, if your item stores
+	 * its contents when wrenched use the wrenched boolean to control what data
+	 * is saved vs dropped when it is broken.
+	 * 
+	 * @param drops
+	 * @param wrenched
+	 */
+	void getDrops(List<ItemStack> drops, boolean wrenched);
 
 }
