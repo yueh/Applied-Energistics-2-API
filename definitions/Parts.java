@@ -8,6 +8,8 @@ public class Parts
 	public AEItemDefinition partCableSmart;
 	public AEItemDefinition partCableCovered;
 	public AEItemDefinition partCableGlass;
+
+	public AEItemDefinition partQuartzFiber;
 	public AEItemDefinition partCableDark;
 
 	public AEItemDefinition partStorageBus;

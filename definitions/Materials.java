@@ -57,8 +57,9 @@ public class Materials
 	public AEItemDefinition materialWireless;
 	public AEItemDefinition materialWirelessBooster;
 
+	public AEItemDefinition materialAnnihilationCore;
+	public AEItemDefinition materialFormationCore;
 	public AEItemDefinition materialBlankPattern;
-	public AEItemDefinition materialConversionMatrix;
 
 	public AEItemDefinition materialSingularity;
 	public AEItemDefinition materialQESingularity;
