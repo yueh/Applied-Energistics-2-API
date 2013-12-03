@@ -3,22 +3,22 @@ package appeng.api.networking.events;
 /**
  *  An event that is posted Whenever a spatial IO is Actived, called for IGridCache
  *
- * @params IGridHost ( instance of the SpatialIO block )
- *
- *
- * 
- *
+ * @param IGridHost ( instance of the SpatialIO block )
+ * @param double ( the amount of energy that the SpatialIO uses)
  */
  
- // be sure to rewrite stuff and import stuff correctly. this is just the raw idea.
+ 
 public class MENetworkSpatialEvent extends MENetworkEvent
 {
 
   public final IGridHost host;
+  public final double spatialEnergyUsage;
   
   
-  public MENetworkSpatialEvent(IGridHost SpatialIO) {
+  public MENetworkSpatialEvent(IGridHost SpatialIO, double EnergyUsage) {
                host = SpatialIO;
+               spatialEnergyUsage = EnergyUsage;
+               
         }
   
 }
