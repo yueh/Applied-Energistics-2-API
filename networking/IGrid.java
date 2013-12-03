@@ -41,7 +41,7 @@ public interface IGrid
 	 * get a list of the diversity of classes, you can use this to better detect which machines your interested in,
 	 * rather then iterating the entire grid to test them.
 	 * 
-	 * @return IReadOnlyCollection of all available host types.
+	 * @return IReadOnlyCollection of all available host types (Of Type IGridHost).
 	 */
 	public IReadOnlyCollection<Class<? extends IGridHost>> getMachinesClasses();
 
