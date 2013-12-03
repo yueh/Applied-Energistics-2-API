@@ -87,9 +87,8 @@ public interface IPart
 	boolean canConnectRedstone();
 
 	/**
-	 * Write the part information for saving, the part will be saved with
-	 * getItemStack(false) and this method will be called after to load
-	 * settings, inventory or other values from the world.
+	 * Write the part information for saving, the part will be saved with getItemStack(false) and this method will be
+	 * called after to load settings, inventory or other values from the world.
 	 * 
 	 * @param data
 	 */
@@ -207,5 +206,10 @@ public interface IPart
 	 * @param wrenched
 	 */
 	void getDrops(List<ItemStack> drops, boolean wrenched);
+
+	/**
+	 * @return 0 - 8, reasonable default 3-4, this controls the cable connection to the node.
+	 */
+	int cableConnectionRenderTo();
 
 }
