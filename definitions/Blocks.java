@@ -65,7 +65,8 @@ public class Blocks
 	public AEItemDefinition blockPartitioner;
 	public AEItemDefinition blockIOPort;
 	public AEItemDefinition blockCondenser;
-	public AEItemDefinition blockPowerRelay;
+	public AEItemDefinition blockEnergyAcceptor;
+	public AEItemDefinition blockVibrationChamber;
 
 	public AEItemDefinition blockEnergyCell;
 	public AEItemDefinition blockEnergyCellDense;
