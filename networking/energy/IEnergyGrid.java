@@ -22,6 +22,11 @@ public interface IEnergyGrid extends IGridCache, IEnergyGridProvider
 	public double getAvgPowerUsage();
 
 	/**
+	 * @return the average energy injected into the system per tick, for the last 10 ticks.
+	 */
+	public double getAvgPowerInjection();
+
+	/**
 	 * AE maintains an idle draw of power separate from active power draw, it condenses this into a single operation
 	 * that determines the networks "powered state" if the network is considered off-line, your machines should not
 	 * function.
