@@ -28,5 +28,11 @@ public enum GridFlags
 	/**
 	 * This block can transmit 32 signals, this should only apply to Tier2 Cable, P2P Tunnels, and Quantum Network Bridges.
 	 */
-	TIER_2_CAPACITY
+	TIER_2_CAPACITY,
+
+	/**
+	 * This block is part of a multiblock, used in conjunction with REQUIRE_CANNEL, and {@link IGridMultiblock} see this
+	 * interface for details.
+	 */
+	MULTIBLOCK
 }
