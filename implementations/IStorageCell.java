@@ -73,4 +73,9 @@ public interface IStorageCell
 	 * @return if the ItemStack should behavior as a storage cell.
 	 */
 	boolean isStorageCell(ItemStack i);
+
+	/**
+	 * @return drain in ae/t this storage cell will use.
+	 */
+	double getIdleDrain();
 }
