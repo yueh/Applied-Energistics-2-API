@@ -1,5 +1,7 @@
 package appeng.api.networking.events;
 
+import appeng.api.networking.IGridHost;
+
 /**
  *  An event that is posted Whenever a spatial IO is Actived, called for IGridCache
  *
