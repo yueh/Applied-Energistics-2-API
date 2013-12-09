@@ -26,16 +26,15 @@ public interface ICellRegistry
 	 * @return true if the provided item, can be handled by a handler in AE, ( AE May choose to skip this and just get
 	 *         the handler instead. )
 	 */
-	boolean isCellHandled(ItemStack is, StorageChannel channel);
+	boolean isCellHandled(ItemStack is);
 
 	/**
 	 * get the handler, for the requested type.
 	 * 
 	 * @param is
-	 * @param chan
 	 * @return the handler registered for this item type.
 	 */
-	ICellHandler getHander(ItemStack is, StorageChannel chan);
+	ICellHandler getHander(ItemStack is);
 
 	/**
 	 * returns an IMEInventoryHandler for the provided item.

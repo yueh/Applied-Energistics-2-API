@@ -20,7 +20,7 @@ public interface ICellHandler
 	 * @param is
 	 * @return return true, if getCellHandler will not return null.
 	 */
-	boolean isCell(ItemStack is, StorageChannel channel);
+	boolean isCell(ItemStack is);
 
 	/**
 	 * If you cannot handle the provided item, return null
