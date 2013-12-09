@@ -25,4 +25,9 @@ public interface IChestOrDrive extends ICellContainer, IGridHost
 	 */
 	int slotStatus(int slot);
 
+	/**
+	 * @return if the device is online you should check this before providing any other information.
+	 */
+	boolean isPowered();
+
 }

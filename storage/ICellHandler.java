@@ -30,7 +30,7 @@ public interface ICellHandler
 	 * 
 	 * @return a new IMEHandler for the provided item
 	 */
-	IMEInventoryHandler getCellHandler(ItemStack is, StorageChannel channel);
+	IMEInventoryHandler getCellInventory(ItemStack is, StorageChannel channel);
 
 	/**
 	 * @return the ME Chest texture for this storage cell type, should be 10x10 with 3px of transparent padding on a
@@ -41,18 +41,19 @@ public interface ICellHandler
 	Icon getTopTexture();
 
 	/**
+	 * 
 	 * Called when the storage cell is planed in an ME Chest and the user tries to open the terminal side, if your item
 	 * is not available via ME Chests simply tell the user they can't use it, or something, other wise you should open
 	 * your gui and display the cell to the user.
 	 * 
 	 * @param player
-	 *            the player
 	 * @param chest
-	 *            tile entity of the chest.
-	 * @param the
-	 *            itemstack of the container ( not used for accessing the contents, use the tile entity for that. )
+	 * @param cellHandler
+	 * @param inv
+	 * @param is
+	 * @param chan
 	 */
-	void openChestGui(EntityPlayer player, IChestOrDrive chest, ItemStack is);
+	void openChestGui(EntityPlayer player, IChestOrDrive chest, ICellHandler cellHandler, IMEInventoryHandler inv, ItemStack is, StorageChannel chan);
 
 	/**
 	 * 0 - black, ( you don't need to return this for power state, its just available as an option )
