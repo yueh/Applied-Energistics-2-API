@@ -16,7 +16,9 @@ public class Parts
 	public AEItemDefinition partImportBus;
 	public AEItemDefinition partExportBus;
 
+	public AEItemDefinition partNetworkEmitter;
 	public AEItemDefinition partLevelEmitter;
+
 	public AEItemDefinition partTransitionPlane;
 	public AEItemDefinition partWireless;
 

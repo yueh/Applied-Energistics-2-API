@@ -4,13 +4,15 @@ import java.util.EnumSet;
 
 public enum Settings
 {
-	REDSTONE_INPUT(EnumSet.allOf( RedstoneMode.class )), REDSTONE_OUTPUT(EnumSet.of( RedstoneMode.HIGH_SIGNAL,
-			RedstoneMode.LOW_SIGNAL )),
+	LEVEL_EMITTER_MODE(EnumSet.allOf( LevelEmitterMode.class )),
+
+	NETWORK_EMITTER_MODE(EnumSet.allOf( NetworkEmitterMode.class )),
+
+	REDSTONE_INPUT(EnumSet.allOf( RedstoneMode.class )), REDSTONE_OUTPUT(EnumSet.of( RedstoneMode.HIGH_SIGNAL, RedstoneMode.LOW_SIGNAL )),
 
 	CONDENSER_OUTPUT(EnumSet.allOf( CondenserOuput.class )),
 
-	POWER_UNITS(EnumSet.allOf( PowerUnits.class )), ACCESS(EnumSet.allOf( AccessRestriction.class )), COMPARISON(EnumSet
-			.allOf( FuzzyMode.class )),
+	POWER_UNITS(EnumSet.allOf( PowerUnits.class )), ACCESS(EnumSet.allOf( AccessRestriction.class )), COMPARISON(EnumSet.allOf( FuzzyMode.class )),
 
 	SORT_DIRECTION(EnumSet.allOf( SortDir.class )), SORT_BY(EnumSet.allOf( SortOrder.class )),
 
@@ -18,8 +20,7 @@ public enum Settings
 
 	ACTIONS(EnumSet.allOf( ActionItems.class )), IO_DIRECTION(EnumSet.of( RelativeDirection.LEFT, RelativeDirection.RIGHT )),
 
-	INCLUSION(EnumSet.allOf( IncludeExclude.class )), CRAFT(EnumSet.of( YesNo.YES, YesNo.NO )), BLOCK(EnumSet.of( YesNo.YES,
-			YesNo.NO )),
+	INCLUSION(EnumSet.allOf( IncludeExclude.class )), CRAFT(EnumSet.of( YesNo.YES, YesNo.NO )), BLOCK(EnumSet.of( YesNo.YES, YesNo.NO )),
 
 	OPERATION_MODE(EnumSet.allOf( OperationMode.class )), FULLNESS_MODE(EnumSet.allOf( FullnessMode.class )),
 
