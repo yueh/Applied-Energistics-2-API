@@ -27,6 +27,8 @@ public class Items
 	public AEItemDefinition itemMassCannon;
 	public AEItemDefinition itemMemoryCard;
 
+	public AEItemDefinition itemCellCreative;
+
 	public AEItemDefinition itemCell1k;
 	public AEItemDefinition itemCell4k;
 	public AEItemDefinition itemCell16k;
