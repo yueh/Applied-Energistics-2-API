@@ -56,7 +56,7 @@ public interface ICellHandler
 	void openChestGui(EntityPlayer player, IChestOrDrive chest, ICellHandler cellHandler, IMEInventoryHandler inv, ItemStack is, StorageChannel chan);
 
 	/**
-	 * 0 - black, ( you don't need to return this for power state, its just available as an option )
+	 * 0 - cell is missing.
 	 * 
 	 * 1 - green, ( usually means available room for types or items. )
 	 * 

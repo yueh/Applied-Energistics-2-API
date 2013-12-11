@@ -25,4 +25,11 @@ public interface ICellContainer
 	 */
 	int getPriority();
 
+	/**
+	 * tell the Cell container that this slot should blink, the slot number is relative to the
+	 * 
+	 * @param slot
+	 */
+	void blinkCell(int slot);
+
 }
