@@ -10,7 +10,7 @@ public class Parts
 	public AEItemDefinition partCableGlass;
 
 	public AEItemDefinition partQuartzFiber;
-	public AEItemDefinition partCableDark;
+	public AEItemDefinition partToggleBus;
 
 	public AEItemDefinition partStorageBus;
 	public AEItemDefinition partImportBus;
