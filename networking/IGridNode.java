@@ -115,4 +115,10 @@ public interface IGridNode
 	 * @param nodeData
 	 */
 	void saveToNBT(String name, NBTTagCompound nodeData);
+
+	/**
+	 * @return if the node's channel requirements are currently met, use this for display purposes, use isActive for
+	 *         status.
+	 */
+	boolean meetsChannelRequirements();
 }
