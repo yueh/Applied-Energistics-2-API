@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.entity.Entity;
@@ -12,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Vec3;
+import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import appeng.api.networking.IGridNode;
 import cpw.mods.fml.relauncher.Side;
@@ -211,5 +213,16 @@ public interface IPart
 	 * @return 0 - 8, reasonable default 3-4, this controls the cable connection to the node.
 	 */
 	int cableConnectionRenderTo();
+
+	/**
+	 * same as Block.randomDisplayTick, for but parts.
+	 * 
+	 * @param world
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param r
+	 */
+	void randomDisplayTick(World world, int x, int y, int z, Random r);
 
 }
