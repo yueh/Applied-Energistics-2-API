@@ -19,7 +19,9 @@ public class Parts
 	public AEItemDefinition partNetworkEmitter;
 	public AEItemDefinition partLevelEmitter;
 
-	public AEItemDefinition partTransitionPlane;
+	public AEItemDefinition partAnnihilationPlane;
+	public AEItemDefinition partFormationPlane;
+
 	public AEItemDefinition partWireless;
 
 	public AEItemDefinition partP2PTunnel;

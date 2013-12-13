@@ -27,6 +27,7 @@ public class Blocks
 	 */
 	public AEItemDefinition blockGrindStone;
 	public AEItemDefinition blockCrankHandle;
+	public AEItemDefinition blockInscriber;
 	public AEItemDefinition blockCharger;
 	public AEItemDefinition blockTinyTNT;
 
