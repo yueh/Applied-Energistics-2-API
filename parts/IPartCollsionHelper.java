@@ -1,5 +1,7 @@
 package appeng.api.parts;
 
+import net.minecraftforge.common.ForgeDirection;
+
 public interface IPartCollsionHelper
 {
 
@@ -16,5 +18,20 @@ public interface IPartCollsionHelper
 	 * @param maxZ
 	 */
 	void addBox(double minX, double minY, double minZ, double maxX, double maxY, double maxZ);
+
+	/**
+	 * @return east in world space.
+	 */
+	ForgeDirection getWorldX();
+
+	/**
+	 * @return up in world space.
+	 */
+	ForgeDirection getWorldY();
+
+	/**
+	 * @return forward in world space.
+	 */
+	ForgeDirection getWorldZ();
 
 }

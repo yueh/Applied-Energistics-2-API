@@ -115,13 +115,18 @@ public interface IPartRenderHelper
 	Block getBlock();
 
 	/**
-	 * @return the left vector in world directions, rather then renderer
+	 * @return the east vector in world directions, rather then renderer
 	 */
-	ForgeDirection getRelativeLeft();
+	ForgeDirection getWorldX();
 
 	/**
 	 * @return the up vector in world directions, rather then renderer.
 	 */
-	ForgeDirection getRelativeUp();
+	ForgeDirection getWorldY();
+
+	/**
+	 * @return the forward vector in world directions, rather then renderer.
+	 */
+	ForgeDirection getWorldZ();
 
 }
