@@ -28,8 +28,11 @@ public class Blocks
 	public AEItemDefinition blockGrindStone;
 	public AEItemDefinition blockCrankHandle;
 	public AEItemDefinition blockInscriber;
+	public AEItemDefinition blockWireless;
 	public AEItemDefinition blockCharger;
 	public AEItemDefinition blockTinyTNT;
+	public AEItemDefinition blockNetworkEmitter;
+	public AEItemDefinition blockQuartzCrystalizer;
 
 	/*
 	 * Mac Components

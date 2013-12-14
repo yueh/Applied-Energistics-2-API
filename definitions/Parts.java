@@ -22,8 +22,6 @@ public class Parts
 	public AEItemDefinition partAnnihilationPlane;
 	public AEItemDefinition partFormationPlane;
 
-	public AEItemDefinition partWireless;
-
 	public AEItemDefinition partP2PTunnel;
 
 	public AEItemDefinition partCableAnchor;
