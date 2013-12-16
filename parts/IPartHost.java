@@ -116,4 +116,12 @@ public interface IPartHost
 	 */
 	public void PartChanged();
 
+	/**
+	 * get the redstone state of host on this side, this value is cached internally.
+	 * 
+	 * @param side
+	 * @return
+	 */
+	boolean hasRedstone(ForgeDirection side);
+
 }
