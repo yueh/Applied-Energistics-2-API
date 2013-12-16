@@ -11,12 +11,12 @@ public class Parts
 
 	public AEItemDefinition partQuartzFiber;
 	public AEItemDefinition partToggleBus;
+	public AEItemDefinition partInvertedToggleBus;
 
 	public AEItemDefinition partStorageBus;
 	public AEItemDefinition partImportBus;
 	public AEItemDefinition partExportBus;
 
-	public AEItemDefinition partNetworkEmitter;
 	public AEItemDefinition partLevelEmitter;
 
 	public AEItemDefinition partAnnihilationPlane;
