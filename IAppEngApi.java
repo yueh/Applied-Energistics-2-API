@@ -6,6 +6,8 @@ import appeng.api.definitions.Materials;
 import appeng.api.definitions.Parts;
 import appeng.api.features.IRegistryContainer;
 import appeng.api.networking.IGridBlock;
+import appeng.api.networking.IGridConnection;
+import appeng.api.networking.IGridHost;
 import appeng.api.networking.IGridNode;
 import appeng.api.parts.IPartHelper;
 import appeng.api.storage.IStorageHelper;
@@ -49,11 +51,19 @@ public interface IAppEngApi
 	Parts parts();
 
 	/**
-	 * create a grid node for your IGridHost
+	 * create a grid node for your {@link IGridHost}
 	 * 
 	 * @param block
 	 * @return
 	 */
 	IGridNode createGridNode(IGridBlock block);
+
+	/**
+	 * create a connection between two {@link IGridNode}
+	 * 
+	 * @param a
+	 * @param b
+	 */
+	IGridConnection createGridConnection(IGridNode a, IGridNode b);
 
 }
