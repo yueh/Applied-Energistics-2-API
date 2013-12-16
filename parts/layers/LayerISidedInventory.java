@@ -26,7 +26,7 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 {
 
 	// a simple empty array for empty stuff..
-	private final static int[] nullSides = new int[0];
+	private final static int[] nullSides = new int[] {};
 
 	// cache of inventory state.
 	private int sides[][] = null;
