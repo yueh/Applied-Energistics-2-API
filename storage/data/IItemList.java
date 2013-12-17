@@ -86,4 +86,9 @@ public interface IItemList<StackType extends IAEStack> extends Iterable<StackTyp
 	 */
 	public boolean isEmpty();
 
+	/**
+	 * resets stack sizes to 0.
+	 */
+	void resetStatus();
+
 }
