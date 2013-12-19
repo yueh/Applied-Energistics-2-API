@@ -7,7 +7,7 @@ import appeng.api.networking.events.MENetworkPowerStatusChange;
 /**
  * AE's Power system.
  */
-public interface IEnergyGrid extends IGridCache, IEnergyGridProvider
+public interface IEnergyGrid extends IGridCache, IEnergySource, IEnergyGridProvider
 {
 
 	/**
@@ -56,16 +56,6 @@ public interface IEnergyGrid extends IGridCache, IEnergyGridProvider
 	 * @return the amount of power that the network has OVER the limit.
 	 */
 	public double injectPower(double amt, Actionable mode);
-
-	/**
-	 * Extract power from the network.
-	 * 
-	 * @param amt
-	 * @param mode
-	 *            should the action be simulated or performed?
-	 * @return returns extracted power.
-	 */
-	public double extractPower(double amt, Actionable mode);
 
 	/**
 	 * this is should be considered an estimate, and not relied upon for real calculations.
