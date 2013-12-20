@@ -1,6 +1,8 @@
 package appeng.api.implementations;
 
-public interface IMEChest extends IChestOrDrive, IStorageMonitorable
+import appeng.api.networking.energy.IEnergySource;
+
+public interface IMEChest extends IChestOrDrive, IStorageMonitorable, IEnergySource
 {
 
 }
