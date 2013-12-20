@@ -109,12 +109,12 @@ public interface IPartHost
 	/**
 	 * can be used by parts to trigger the tile or part to save.
 	 */
-	public void markForSave();
+	void markForSave();
 
 	/**
 	 * part of the {@link LayerBase}
 	 */
-	public void PartChanged();
+	void PartChanged();
 
 	/**
 	 * get the redstone state of host on this side, this value is cached internally.
