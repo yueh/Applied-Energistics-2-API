@@ -34,21 +34,23 @@ public class MEMontorHandler<StackType extends IAEStack> implements IMEInventory
 		listeners.remove( l );
 	}
 
-	private StackType monitorDiffrence(IAEStack original, StackType leftOvers, boolean subtract)
+	private StackType monitorDiffrence(IAEStack original, StackType leftOvers, boolean extraction)
 	{
 		StackType diff = (StackType) original.copy();
 
-		if ( leftOvers != null )
+		if ( extraction )
+			diff.setStackSize( leftOvers == null ? 0 : -leftOvers.getStackSize() );
+		else if ( leftOvers != null )
 			diff.decStackSize( leftOvers.getStackSize() );
 
-		if ( subtract )
-			diff.setStackSize( -diff.getStackSize() );
-
-		Iterator<IMEMontorHandlerReciever<StackType>> i = listeners.iterator();
-		while (i.hasNext())
+		if ( diff.getStackSize() != 0 )
 		{
-			IMEMontorHandlerReciever<StackType> recv = i.next();
-			recv.postChange( diff );
+			Iterator<IMEMontorHandlerReciever<StackType>> i = listeners.iterator();
+			while (i.hasNext())
+			{
+				IMEMontorHandlerReciever<StackType> recv = i.next();
+				recv.postChange( diff );
+			}
 		}
 
 		return leftOvers;
