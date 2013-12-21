@@ -16,7 +16,7 @@ public enum Settings
 
 	SORT_DIRECTION(EnumSet.allOf( SortDir.class )), SORT_BY(EnumSet.allOf( SortOrder.class )),
 
-	VIEW_MODE(EnumSet.allOf( ViewItems.class )), SEARCH_MODE(EnumSet.allOf( SearchBoxMode.class )),
+	SEARCH_TOOLTIPS(EnumSet.of( YesNo.YES, YesNo.NO )), VIEW_MODE(EnumSet.allOf( ViewItems.class )), SEARCH_MODE(EnumSet.allOf( SearchBoxMode.class )),
 
 	ACTIONS(EnumSet.allOf( ActionItems.class )), IO_DIRECTION(EnumSet.of( RelativeDirection.LEFT, RelativeDirection.RIGHT )),
 
