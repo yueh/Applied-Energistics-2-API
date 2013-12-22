@@ -10,8 +10,8 @@ import appeng.api.storage.data.IAEStack;
  * 
  * @param <StackType>
  */
-public interface IMEInventoryHandler<StackType extends IAEStack> extends IMEInventory<StackType>
-{
+public interface IMEInventoryHandler<StackType extends IAEStack> extends
+		IMEInventory<StackType> {
 
 	/**
 	 * determine if items can be injected/extracted.
@@ -23,7 +23,7 @@ public interface IMEInventoryHandler<StackType extends IAEStack> extends IMEInve
 	/**
 	 * determine if a particular item is prioritized for this inventory handler,
 	 * if it is, then it will be added to this inventory prior to any
-	 * non-prioritiezed inventories.
+	 * non-prioritized inventories.
 	 * 
 	 * @param input
 	 *            - item that might be added
@@ -51,8 +51,9 @@ public interface IMEInventoryHandler<StackType extends IAEStack> extends IMEInve
 	/**
 	 * pass back value for blinkCell.
 	 * 
-	 * @return the slot index for the cell that this represents in the storage unit, the method on the
-	 *         {@link ICellContainer} will be called with this value, only trust the return value of this mehod if you
+	 * @return the slot index for the cell that this represents in the storage
+	 *         unit, the method on the {@link ICellContainer} will be called
+	 *         with this value, only trust the return value of this mehod if you
 	 *         are the implementor of the {@link IMEInventoryHandler}.
 	 */
 	public int getSlot();
