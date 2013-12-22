@@ -2,8 +2,9 @@ package appeng.api.implementations;
 
 import appeng.api.networking.IGridHost;
 import appeng.api.storage.ICellContainer;
+import appeng.api.util.IOrientable;
 
-public interface IChestOrDrive extends ICellContainer, IGridHost
+public interface IChestOrDrive extends ICellContainer, IGridHost, IOrientable
 {
 
 	/**
