@@ -1,17 +1,15 @@
 package appeng.api.implementations;
 
-import appeng.api.storage.MEMontorHandler;
-import appeng.api.storage.StorageChannel;
+import appeng.api.storage.IMEMonitor;
+import appeng.api.storage.data.IAEFluidStack;
+import appeng.api.storage.data.IAEItemStack;
+import appeng.api.storage.data.IAEStack;
 
-public interface IStorageMonitorable
+public interface IStorageMonitorable<T extends IAEStack<IAEStack>>
 {
 
-	/**
-	 * Get Monitor for chest.
-	 * 
-	 * @param chan
-	 * @return
-	 */
-	MEMontorHandler getMonitor(StorageChannel chan);
+	IMEMonitor<IAEItemStack> getItemInventory();
+
+	IMEMonitor<IAEFluidStack> getFluidInventory();
 
 }
