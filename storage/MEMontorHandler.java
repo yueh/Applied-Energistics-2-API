@@ -3,6 +3,7 @@ package appeng.api.storage;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import appeng.api.AEApi;
 import appeng.api.config.AccessRestriction;
 import appeng.api.config.Actionable;
 import appeng.api.storage.data.IAEStack;
@@ -14,24 +15,29 @@ import appeng.api.storage.data.IItemList;
  * 
  * @param <StackType>
  */
-public class MEMontorHandler<StackType extends IAEStack> implements IMEInventoryHandler<StackType>
+public class MEMontorHandler<StackType extends IAEStack> implements IMEMonitor<StackType>
 {
 
-	private final IMEInventoryHandler<StackType> internal;
+	private final IMEInventoryHandler<StackType> internalHandler;
+	private final IItemList<StackType> cachedList = AEApi.instance().storage().createItemList();
 	private final LinkedList<IMEMontorHandlerReciever<StackType>> listeners = new LinkedList<IMEMontorHandlerReciever<StackType>>();
 
-	public MEMontorHandler(IMEInventoryHandler<StackType> t) {
-		internal = t;
+	private boolean hasChanged = true;
+
+	protected IMEInventoryHandler<StackType> getHandler()
+	{
+		return internalHandler;
 	}
 
-	public void addListener(IMEMontorHandlerReciever<StackType> l)
+	protected void postChange(StackType diff)
 	{
-		listeners.add( l );
-	}
-
-	public void removeListener(IMEMontorHandlerReciever<StackType> l)
-	{
-		listeners.remove( l );
+		hasChanged = true;// need to update the cache.
+		Iterator<IMEMontorHandlerReciever<StackType>> i = listeners.iterator();
+		while (i.hasNext())
+		{
+			IMEMontorHandlerReciever<StackType> recv = i.next();
+			recv.postChange( diff );
+		}
 	}
 
 	private StackType monitorDiffrence(IAEStack original, StackType leftOvers, boolean extraction)
@@ -44,74 +50,96 @@ public class MEMontorHandler<StackType extends IAEStack> implements IMEInventory
 			diff.decStackSize( leftOvers.getStackSize() );
 
 		if ( diff.getStackSize() != 0 )
-		{
-			Iterator<IMEMontorHandlerReciever<StackType>> i = listeners.iterator();
-			while (i.hasNext())
-			{
-				IMEMontorHandlerReciever<StackType> recv = i.next();
-				recv.postChange( diff );
-			}
-		}
+			postChange( diff );
 
 		return leftOvers;
+	}
+
+	public MEMontorHandler(IMEInventoryHandler<StackType> t) {
+		internalHandler = t;
+	}
+
+	@Override
+	public void addListener(IMEMontorHandlerReciever<StackType> l)
+	{
+		listeners.add( l );
+	}
+
+	@Override
+	public void removeListener(IMEMontorHandlerReciever<StackType> l)
+	{
+		listeners.remove( l );
 	}
 
 	@Override
 	public StackType injectItems(StackType input, Actionable mode)
 	{
 		if ( mode == Actionable.SIMULATE )
-			return internal.injectItems( input, mode );
-		return monitorDiffrence( (StackType) input.copy(), internal.injectItems( input, mode ), false );
+			return getHandler().injectItems( input, mode );
+		return monitorDiffrence( (StackType) input.copy(), getHandler().injectItems( input, mode ), false );
 	}
 
 	@Override
 	public StackType extractItems(StackType request, Actionable mode)
 	{
 		if ( mode == Actionable.SIMULATE )
-			return internal.extractItems( request, mode );
-		return monitorDiffrence( (StackType) request.copy(), internal.extractItems( request, mode ), true );
+			return getHandler().extractItems( request, mode );
+		return monitorDiffrence( (StackType) request.copy(), getHandler().extractItems( request, mode ), true );
+	}
+
+	@Override
+	public IItemList<StackType> getStorageList()
+	{
+		if ( hasChanged )
+		{
+			hasChanged = false;
+			cachedList.resetStatus();
+			return getAvailableItems( cachedList );
+		}
+
+		return cachedList;
 	}
 
 	@Override
 	public IItemList<StackType> getAvailableItems(IItemList out)
 	{
-		return internal.getAvailableItems( out );
+		return getHandler().getAvailableItems( out );
 	}
 
 	@Override
 	public StorageChannel getChannel()
 	{
-		return internal.getChannel();
+		return getHandler().getChannel();
 	}
 
 	@Override
 	public AccessRestriction getAccess()
 	{
-		return internal.getAccess();
+		return getHandler().getAccess();
 	}
 
 	@Override
 	public boolean isPrioritized(StackType input)
 	{
-		return internal.isPrioritized( input );
+		return getHandler().isPrioritized( input );
 	}
 
 	@Override
 	public boolean canAccept(StackType input)
 	{
-		return internal.canAccept( input );
+		return getHandler().canAccept( input );
 	}
 
 	@Override
 	public int getPriority()
 	{
-		return internal.getPriority();
+		return getHandler().getPriority();
 	}
 
 	@Override
 	public int getSlot()
 	{
-		return internal.getSlot();
+		return getHandler().getSlot();
 	}
 
 }
