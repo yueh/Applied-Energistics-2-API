@@ -61,10 +61,7 @@ public interface IAEItemStack extends IAEStack<IAEItemStack>
 
 	/**
 	 * Compare the Ore Dictionary ID for this to another item.
-	 * 
-	 * @param oreID
-	 * @return
 	 */
-	public boolean sameOre(Object oreID);
+	boolean sameOre(IAEItemStack is);
 
 }

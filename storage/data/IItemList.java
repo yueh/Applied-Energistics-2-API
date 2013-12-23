@@ -1,7 +1,7 @@
 package appeng.api.storage.data;
 
+import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 
 import appeng.api.config.FuzzyMode;
 
@@ -52,8 +52,8 @@ public interface IItemList<StackType extends IAEStack> extends Iterable<StackTyp
 
 	/**
 	 * @param i
-	 * @return a stack equivalent to the stack passed in, but with the correct stack size information, or null if its not
-	 *         present
+	 * @return a stack equivalent to the stack passed in, but with the correct stack size information, or null if its
+	 *         not present
 	 */
 	StackType findPrecise(StackType i);
 
@@ -61,7 +61,7 @@ public interface IItemList<StackType extends IAEStack> extends Iterable<StackTyp
 	 * @param input
 	 * @return a list of relevant fuzzy matched stacks
 	 */
-	public List<StackType> findFuzzy(StackType input, FuzzyMode fuzzy);
+	public Collection<StackType> findFuzzy(StackType input, FuzzyMode fuzzy);
 
 	/**
 	 * @return the number of items in the list
@@ -73,13 +73,6 @@ public interface IItemList<StackType extends IAEStack> extends Iterable<StackTyp
 	 */
 	@Override
 	public Iterator<StackType> iterator();
-
-	/**
-	 * sets the priority of all the items being added to the list, usually only AE needs to call this.
-	 * 
-	 * @param priority
-	 */
-	public void setCurrentPriority(int priority);
 
 	/**
 	 * @return true if there are no items in the list

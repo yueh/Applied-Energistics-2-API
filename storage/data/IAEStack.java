@@ -105,13 +105,6 @@ public interface IAEStack<StackType extends IAEStack>
 	void writeToNBT(NBTTagCompound i);
 
 	/**
-	 * used for assembling priority sorts.
-	 * 
-	 * @param priority
-	 */
-	StackType setPriority(int priority);
-
-	/**
 	 * Compare stacks using precise logic.
 	 * 
 	 * a IAEItemStack to another AEItemStack or a ItemStack.
