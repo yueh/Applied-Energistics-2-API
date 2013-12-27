@@ -1,7 +1,8 @@
 package appeng.api.storage;
 
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.Map.Entry;
 
 import appeng.api.AEApi;
 import appeng.api.config.AccessRestriction;
@@ -20,7 +21,7 @@ public class MEMontorHandler<StackType extends IAEStack> implements IMEMonitor<S
 
 	private final IMEInventoryHandler<StackType> internalHandler;
 	private final IItemList<StackType> cachedList = AEApi.instance().storage().createItemList();
-	private final LinkedList<IMEMontorHandlerReciever<StackType>> listeners = new LinkedList<IMEMontorHandlerReciever<StackType>>();
+	private final HashMap<IMEMontorHandlerReciever<StackType>, Object> listeners = new HashMap<IMEMontorHandlerReciever<StackType>, Object>();
 
 	private boolean hasChanged = true;
 
@@ -32,11 +33,15 @@ public class MEMontorHandler<StackType extends IAEStack> implements IMEMonitor<S
 	protected void postChange(StackType diff)
 	{
 		hasChanged = true;// need to update the cache.
-		Iterator<IMEMontorHandlerReciever<StackType>> i = listeners.iterator();
+		Iterator<Entry<IMEMontorHandlerReciever<StackType>, Object>> i = listeners.entrySet().iterator();
 		while (i.hasNext())
 		{
-			IMEMontorHandlerReciever<StackType> recv = i.next();
-			recv.postChange( diff );
+			Entry<IMEMontorHandlerReciever<StackType>, Object> o = i.next();
+			IMEMontorHandlerReciever<StackType> recv = o.getKey();
+			if ( recv.isValid( o.getValue() ) )
+				recv.postChange( diff );
+			else
+				i.remove();
 		}
 	}
 
@@ -60,9 +65,9 @@ public class MEMontorHandler<StackType extends IAEStack> implements IMEMonitor<S
 	}
 
 	@Override
-	public void addListener(IMEMontorHandlerReciever<StackType> l)
+	public void addListener(IMEMontorHandlerReciever<StackType> l, Object verificationToken)
 	{
-		listeners.add( l );
+		listeners.put( l, verificationToken );
 	}
 
 	@Override
