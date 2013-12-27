@@ -82,4 +82,10 @@ public interface IGridBlock
 	 */
 	IGridHost getMachine();
 
+	/**
+	 * called when the grid for the node has changed, the general grid state
+	 * should not be trusted at this point.
+	 */
+	void gridChanged();
+
 }
