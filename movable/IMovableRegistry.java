@@ -7,12 +7,16 @@ import net.minecraft.tileentity.TileEntity;
  * movable, if...
  * 
  * 1. The Tile or its super classes have been white listed with
- * whiteListTileEntity. 2. The Tile has been register with the ICM ( which
- * basically calls whiteListTileEntity. ) 3. The Tile implements IMovableTile 4.
+ * whiteListTileEntity.
+ * 
+ * 2. The Tile has been register with the IMC ( which
+ * basically calls whiteListTileEntity. )
+ *
+ * 3. The Tile implements IMovableTile 4.
  * A IMovableHandler is register that returns canHandle = true for the Tile
  * Entity Class
  * 
- * ICM Example: FMLInterModComms.sendMessage( "AppliedEnergistics",
+ * IMC Example: FMLInterModComms.sendMessage( "AppliedEnergistics",
  * "movabletile", "appeng.common.AppEngTile" );
  * 
  * The movement process is as follows,
@@ -39,7 +43,7 @@ public interface IMovableRegistry
 	/**
 	 * White list your tile entity with the registry.
 	 * 
-	 * You can also use the ICM, FMLInterModComms.sendMessage(
+	 * You can also use the IMC, FMLInterModComms.sendMessage(
 	 * "AppliedEnergistics", "movabletile", "appeng.common.AppEngTile" );
 	 * 
 	 * If you tile is handled with IMovableHandler or IMovableTile you do not
@@ -58,14 +62,14 @@ public interface IMovableRegistry
 	 * 
 	 * @param te
 	 */
-	void doneMoveing(TileEntity te);
+	void doneMoving(TileEntity te);
 
 	/**
 	 * add a new handler movable handler.
 	 * 
-	 * @param han
+	 * @param handler
 	 */
-	void addHandler(IMovableHandler han);
+	void addHandler(IMovableHandler handler);
 
 	/**
 	 * handlers are used to perform movement, this allows you to override AE's
