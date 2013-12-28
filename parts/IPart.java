@@ -8,6 +8,7 @@ import java.util.Random;
 
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -23,15 +24,12 @@ public interface IPart
 {
 
 	/**
-	 * get an ItemStack that represents the bus, should contain the settings for
-	 * whatever, can also be used in conjunction with removePart to take a part
-	 * off and drop it or something.
+	 * get an ItemStack that represents the bus, should contain the settings for whatever, can also be used in
+	 * conjunction with removePart to take a part off and drop it or something.
 	 * 
-	 * This is used to drop the bus, and to save the bus, when saving the bus,
-	 * wrenched is false, and writeToNBT will be called to save improtant
-	 * details about the part, if the part is wrenched include in your NBT Data
-	 * any settings you might want to keep around, you can restore those
-	 * settings when constructing your part.
+	 * This is used to drop the bus, and to save the bus, when saving the bus, wrenched is false, and writeToNBT will be
+	 * called to save improtant details about the part, if the part is wrenched include in your NBT Data any settings
+	 * you might want to keep around, you can restore those settings when constructing your part.
 	 * 
 	 * @param wrenched
 	 *            was a wrench used?
@@ -107,6 +105,14 @@ public interface IPart
 	 * @return get the amount of light produced by the bus
 	 */
 	int getLightLevel();
+
+	/**
+	 * does this part act like a ladder?
+	 * 
+	 * @param entity
+	 * @return
+	 */
+	boolean isLadder(EntityLivingBase entity);
 
 	/**
 	 * a block around the bus's host has been changed.
@@ -200,9 +206,8 @@ public interface IPart
 	boolean onActivate(EntityPlayer player, Vec3 pos);
 
 	/**
-	 * Add drops to the items being dropped into the world, if your item stores
-	 * its contents when wrenched use the wrenched boolean to control what data
-	 * is saved vs dropped when it is broken.
+	 * Add drops to the items being dropped into the world, if your item stores its contents when wrenched use the
+	 * wrenched boolean to control what data is saved vs dropped when it is broken.
 	 * 
 	 * @param drops
 	 * @param wrenched
