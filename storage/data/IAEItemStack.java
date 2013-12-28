@@ -64,4 +64,19 @@ public interface IAEItemStack extends IAEStack<IAEItemStack>
 	 */
 	boolean sameOre(IAEItemStack is);
 
+	/**
+	 * compare the item/damage/nbt of the stack.
+	 * 
+	 * @param otherStack
+	 * @return
+	 */
+	boolean isSameType(IAEItemStack otherStack);
+
+	/**
+	 * compare the item/damage/nbt of the stack.
+	 * 
+	 * @param otherStack
+	 * @return
+	 */
+	boolean isSameType(ItemStack stored);
 }
