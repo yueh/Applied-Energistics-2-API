@@ -12,7 +12,7 @@ public enum Settings
 
 	CONDENSER_OUTPUT(EnumSet.allOf( CondenserOuput.class )),
 
-	POWER_UNITS(EnumSet.allOf( PowerUnits.class )), ACCESS(EnumSet.allOf( AccessRestriction.class )), COMPARISON(EnumSet.allOf( FuzzyMode.class )),
+	POWER_UNITS(EnumSet.allOf( PowerUnits.class )), ACCESS(EnumSet.allOf( AccessRestriction.class )), COMPARISON(EnumSet.allOf( MatchingMode.class )),
 
 	SORT_DIRECTION(EnumSet.allOf( SortDir.class )), SORT_BY(EnumSet.allOf( SortOrder.class )),
 
