@@ -16,12 +16,12 @@ import appeng.api.storage.data.IItemList;
  * 
  * @param <StackType>
  */
-public class MEMontorHandler<StackType extends IAEStack> implements IMEMonitor<StackType>
+public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<StackType>
 {
 
 	private final IMEInventoryHandler<StackType> internalHandler;
 	private final IItemList<StackType> cachedList = AEApi.instance().storage().createItemList();
-	private final HashMap<IMEMontorHandlerReciever<StackType>, Object> listeners = new HashMap<IMEMontorHandlerReciever<StackType>, Object>();
+	private final HashMap<IMEMonitorHandlerReciever<StackType>, Object> listeners = new HashMap<IMEMonitorHandlerReciever<StackType>, Object>();
 
 	private boolean hasChanged = true;
 
@@ -33,11 +33,11 @@ public class MEMontorHandler<StackType extends IAEStack> implements IMEMonitor<S
 	protected void postChange(StackType diff)
 	{
 		hasChanged = true;// need to update the cache.
-		Iterator<Entry<IMEMontorHandlerReciever<StackType>, Object>> i = listeners.entrySet().iterator();
+		Iterator<Entry<IMEMonitorHandlerReciever<StackType>, Object>> i = listeners.entrySet().iterator();
 		while (i.hasNext())
 		{
-			Entry<IMEMontorHandlerReciever<StackType>, Object> o = i.next();
-			IMEMontorHandlerReciever<StackType> recv = o.getKey();
+			Entry<IMEMonitorHandlerReciever<StackType>, Object> o = i.next();
+			IMEMonitorHandlerReciever<StackType> recv = o.getKey();
 			if ( recv.isValid( o.getValue() ) )
 				recv.postChange( diff );
 			else
@@ -60,18 +60,18 @@ public class MEMontorHandler<StackType extends IAEStack> implements IMEMonitor<S
 		return leftOvers;
 	}
 
-	public MEMontorHandler(IMEInventoryHandler<StackType> t) {
+	public MEMonitorHandler(IMEInventoryHandler<StackType> t) {
 		internalHandler = t;
 	}
 
 	@Override
-	public void addListener(IMEMontorHandlerReciever<StackType> l, Object verificationToken)
+	public void addListener(IMEMonitorHandlerReciever<StackType> l, Object verificationToken)
 	{
 		listeners.put( l, verificationToken );
 	}
 
 	@Override
-	public void removeListener(IMEMontorHandlerReciever<StackType> l)
+	public void removeListener(IMEMonitorHandlerReciever<StackType> l)
 	{
 		listeners.remove( l );
 	}

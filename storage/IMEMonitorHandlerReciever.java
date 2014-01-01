@@ -2,7 +2,7 @@ package appeng.api.storage;
 
 import appeng.api.storage.data.IAEStack;
 
-public interface IMEMontorHandlerReciever<StackType extends IAEStack>
+public interface IMEMonitorHandlerReciever<StackType extends IAEStack>
 {
 
 	/**
