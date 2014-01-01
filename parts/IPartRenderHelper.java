@@ -129,4 +129,17 @@ public interface IPartRenderHelper
 	 */
 	ForgeDirection getWorldZ();
 
+	/**
+	 * Pre-Calculates default lighting for the part, call this before using the render helper to render anything else to
+	 * get simplified, but faster lighting for more then one block.
+	 * 
+	 * Only worth it if you render more then 1 block.
+	 */
+	void useSimpliedRendering(int x, int y, int z, IPart p);
+
+	/**
+	 * disables, useSimpliedRendering.
+	 */
+	void normalRendering();
+
 }
