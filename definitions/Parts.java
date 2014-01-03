@@ -16,6 +16,7 @@ public class Parts
 	public AEItemDefinition partStorageBus;
 	public AEItemDefinition partImportBus;
 	public AEItemDefinition partExportBus;
+	public AEItemDefinition partInterface;
 
 	public AEItemDefinition partLevelEmitter;
 
