@@ -1,6 +1,5 @@
 package appeng.api.util;
 
-import net.minecraft.item.ItemStack;
 
 /**
  * List of all colors supported by AE, their names, and various colors for display.
@@ -79,15 +78,6 @@ public enum AEColor
 		if ( equals( Transparent ) || color.equals( Transparent ) )
 			return true;
 		return equals( color );
-	}
-
-	/**
-	 * @return if the color of a ME Cable ItemStack, use {@link AEItemDefinition}.sameAs first if your want to use this.
-	 */
-	public static AEColor fromCable(ItemStack is)
-	{
-		int dmg = is.getItemDamage();
-		return AEColor.values()[dmg];
 	}
 
 }
