@@ -1,7 +1,7 @@
 package appeng.api.networking.storage;
 
-import appeng.api.implementations.IStorageMonitorable;
 import appeng.api.networking.IGridCache;
+import appeng.api.storage.IStorageMonitorable;
 import appeng.api.storage.StorageChannel;
 import appeng.api.storage.data.IAEStack;
 

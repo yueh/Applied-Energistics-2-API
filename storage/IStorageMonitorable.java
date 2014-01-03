@@ -1,6 +1,5 @@
-package appeng.api.implementations;
+package appeng.api.storage;
 
-import appeng.api.storage.IMEMonitor;
 import appeng.api.storage.data.IAEFluidStack;
 import appeng.api.storage.data.IAEItemStack;
 

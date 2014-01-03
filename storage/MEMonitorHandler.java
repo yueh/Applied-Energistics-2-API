@@ -25,6 +25,11 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 
 	private boolean hasChanged = true;
 
+	public void forceUpdate()
+	{
+		hasChanged = true;
+	}
+
 	protected IMEInventoryHandler<StackType> getHandler()
 	{
 		return internalHandler;
