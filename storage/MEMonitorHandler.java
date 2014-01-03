@@ -23,12 +23,7 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 	private final IItemList<StackType> cachedList = AEApi.instance().storage().createItemList();
 	private final HashMap<IMEMonitorHandlerReciever<StackType>, Object> listeners = new HashMap<IMEMonitorHandlerReciever<StackType>, Object>();
 
-	private boolean hasChanged = true;
-
-	public void forceUpdate()
-	{
-		hasChanged = true;
-	}
+	protected boolean hasChanged = true;
 
 	protected IMEInventoryHandler<StackType> getHandler()
 	{
