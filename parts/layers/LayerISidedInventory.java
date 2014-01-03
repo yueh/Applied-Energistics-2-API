@@ -1,6 +1,7 @@
 package appeng.api.parts.layers;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,8 +20,8 @@ import appeng.api.parts.LayerBase;
  * 
  * You must use {@link ISidedInventory} instead of {@link IInventory}.
  * 
- * If your inventory changes in between placement and removal, you must trigger a PartChange on the {@link IPartHost}
- * so it can recalculate the inventory wrapper.
+ * If your inventory changes in between placement and removal, you must trigger a PartChange on the {@link IPartHost} so
+ * it can recalculate the inventory wrapper.
  */
 public class LayerISidedInventory extends LayerBase implements ISidedInventory
 {
@@ -64,7 +65,7 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 		else
 		{
 			sides = new int[][] { nullSides, nullSides, nullSides, nullSides, nullSides, nullSides };
-			slots = new ArrayList<InvSot>( slotCount );
+			slots = new ArrayList<InvSot>( Collections.nCopies( slotCount, (InvSot) null ) );
 
 			int offsetForLayer = 0;
 			int offsetForPart = 0;
@@ -149,7 +150,7 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 	public boolean canExtractItem(int slot, ItemStack itemstack, int side)
 	{
 		if ( isSlotValid( slot ) )
-			slots.get( slot ).canExtractItem( itemstack, side );
+			return slots.get( slot ).canExtractItem( itemstack, side );
 
 		return false;
 	}
@@ -158,7 +159,7 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 	public boolean canInsertItem(int slot, ItemStack itemstack, int side)
 	{
 		if ( isSlotValid( slot ) )
-			slots.get( slot ).canInsertItem( itemstack, side );
+			return slots.get( slot ).canInsertItem( itemstack, side );
 
 		return false;
 	}
