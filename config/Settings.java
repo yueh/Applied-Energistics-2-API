@@ -8,7 +8,7 @@ public enum Settings
 
 	NETWORK_EMITTER_MODE(EnumSet.allOf( NetworkEmitterMode.class )),
 
-	REDSTONE_INPUT(EnumSet.allOf( RedstoneMode.class )), REDSTONE_OUTPUT(EnumSet.of( RedstoneMode.HIGH_SIGNAL, RedstoneMode.LOW_SIGNAL )),
+	REDSTONE_EMITTER(EnumSet.of( RedstoneMode.HIGH_SIGNAL, RedstoneMode.LOW_SIGNAL )), REDSTONE_CONTROLLED(EnumSet.allOf( RedstoneMode.class )),
 
 	CONDENSER_OUTPUT(EnumSet.allOf( CondenserOuput.class )),
 
@@ -27,6 +27,11 @@ public enum Settings
 	TRASH_CATCH(EnumSet.of( YesNo.YES, YesNo.NO )), FUZZY_MODE(EnumSet.allOf( FuzzyMode.class ));
 
 	EnumSet values;
+
+	public EnumSet getPossibleValues()
+	{
+		return values;
+	}
 
 	private Settings(EnumSet set) {
 		if ( set == null || set.isEmpty() )
