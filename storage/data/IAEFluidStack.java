@@ -9,9 +9,6 @@ import net.minecraftforge.fluids.FluidStack;
  * 
  * You may hold on to these if you want, just make sure you let go of them when
  * your not using them.
- * 
- * For better performance, compare Fluids by their ID, getFluid loops through
- * a HashMap which is not performance-friendly!
  *
  * Don't Implement.
  * 
