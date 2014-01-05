@@ -4,7 +4,10 @@ import appeng.api.storage.StorageChannel;
 import appeng.api.storage.data.IItemList;
 
 /**
- * posted by the network when the networks Storage Changes, you can use the currentItems list to check levels, and update status.
+ * posted by the network when the networks Storage Changes, you can use the currentItems list to check levels, and
+ * update status.
+ * 
+ * this is the least useful method of getting info about changes in the network.
  * 
  * Do not modify the list or its contents in anyway.
  */
