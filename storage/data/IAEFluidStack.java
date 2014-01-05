@@ -4,12 +4,15 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 
 /**
- * An alternate version of ItemStack for AE to keep tabs on things easier, and
- * to support larger storage. stackSizes of getItemStack will be capped.
+ * An alternate version of FluidStack for AE to keep tabs on things easier, and
+ * to support larger storage. stackSizes of getFluidStack will be capped.
  * 
  * You may hold on to these if you want, just make sure you let go of them when
  * your not using them.
  * 
+ * For better performance, compare Fluids by their ID, getFluid loops through
+ * a HashMap which is not performance-friendly!
+ *
  * Don't Implement.
  * 
  * Construct with Util.createFluidStack( FluidStack )
