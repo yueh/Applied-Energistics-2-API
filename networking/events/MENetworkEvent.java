@@ -11,7 +11,7 @@ public class MENetworkEvent
 {
 
 	private int visited = 0;
-	private boolean canceled;
+	private boolean canceled = false;
 
 	/**
 	 * Call to prevent AE from posting the event to any further objects.
