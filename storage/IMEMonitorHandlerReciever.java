@@ -1,5 +1,6 @@
 package appeng.api.storage;
 
+import appeng.api.networking.security.BaseActionSource;
 import appeng.api.storage.data.IAEStack;
 
 public interface IMEMonitorHandlerReciever<StackType extends IAEStack>
@@ -18,6 +19,6 @@ public interface IMEMonitorHandlerReciever<StackType extends IAEStack>
 	 * 
 	 * @param change
 	 */
-	void postChange(StackType change);
+	void postChange(IMEMonitor<StackType> monitor, StackType change, BaseActionSource actionSource);
 
 }

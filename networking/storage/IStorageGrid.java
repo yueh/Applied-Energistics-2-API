@@ -1,6 +1,7 @@
 package appeng.api.networking.storage;
 
 import appeng.api.networking.IGridCache;
+import appeng.api.networking.security.BaseActionSource;
 import appeng.api.storage.IStorageMonitorable;
 import appeng.api.storage.StorageChannel;
 import appeng.api.storage.data.IAEStack;
@@ -21,6 +22,6 @@ public interface IStorageGrid extends IGridCache, IStorageMonitorable
 	 * 
 	 * @param input
 	 */
-	void postAlterationOfStoredItems(StorageChannel chan, IAEStack input);
+	void postAlterationOfStoredItems(StorageChannel chan, IAEStack input, BaseActionSource src);
 
 }

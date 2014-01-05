@@ -7,6 +7,7 @@ import java.util.Map.Entry;
 import appeng.api.AEApi;
 import appeng.api.config.AccessRestriction;
 import appeng.api.config.Actionable;
+import appeng.api.networking.security.BaseActionSource;
 import appeng.api.storage.data.IAEStack;
 import appeng.api.storage.data.IItemList;
 
@@ -30,7 +31,12 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 		return internalHandler;
 	}
 
-	protected void postChange(StackType diff)
+	protected BaseActionSource getSource()
+	{
+		return null;
+	}
+
+	protected void postChange(StackType diff, BaseActionSource src)
 	{
 		hasChanged = true;// need to update the cache.
 		Iterator<Entry<IMEMonitorHandlerReciever<StackType>, Object>> i = listeners.entrySet().iterator();
@@ -39,7 +45,7 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 			Entry<IMEMonitorHandlerReciever<StackType>, Object> o = i.next();
 			IMEMonitorHandlerReciever<StackType> recv = o.getKey();
 			if ( recv.isValid( o.getValue() ) )
-				recv.postChange( diff );
+				recv.postChange( this, diff, src );
 			else
 				i.remove();
 		}
@@ -55,7 +61,7 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 			diff.decStackSize( leftOvers.getStackSize() );
 
 		if ( diff.getStackSize() != 0 )
-			postChange( diff );
+			postChange( diff, getSource() );
 
 		return leftOvers;
 	}
