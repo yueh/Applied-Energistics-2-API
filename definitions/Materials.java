@@ -35,6 +35,7 @@ public class Materials
 	public AEItemDefinition materialCardSpeed;
 	public AEItemDefinition materialCardCapacity;
 	public AEItemDefinition materialCardFuzzy;
+	public AEItemDefinition materialCardInverter;
 
 	public AEItemDefinition materialEnderDust;
 	public AEItemDefinition materialFlour;

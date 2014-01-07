@@ -66,7 +66,7 @@ public class Blocks
 	public AEItemDefinition blockDrive;
 	public AEItemDefinition blockChest;
 	public AEItemDefinition blockInterface;
-	public AEItemDefinition blockPartitioner;
+	public AEItemDefinition blockCellWorkbench;
 	public AEItemDefinition blockIOPort;
 	public AEItemDefinition blockCondenser;
 	public AEItemDefinition blockEnergyAcceptor;
