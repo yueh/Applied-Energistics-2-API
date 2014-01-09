@@ -1,6 +1,7 @@
 package appeng.api.implementations;
 
 import net.minecraft.item.ItemStack;
+import appeng.api.storage.ICellWorkbenchItem;
 import appeng.api.storage.data.IAEItemStack;
 
 /**
@@ -14,7 +15,7 @@ import appeng.api.storage.data.IAEItemStack;
  * The standard AE implementation only provides 1-63 Types
  * 
  */
-public interface IStorageCell
+public interface IStorageCell extends ICellWorkbenchItem
 {
 
 	/**
