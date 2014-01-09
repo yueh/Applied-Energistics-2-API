@@ -16,7 +16,7 @@ public interface ICellWorkbenchItem
 	boolean isEditable(ItemStack is);
 
 	/**
-	 * used to edit the upgrade lots on your cell, should have a capacity of 0-24, your also responsible for
+	 * used to edit the upgrade slots on your cell, should have a capacity of 0-24, you are also responsible for
 	 * implementing the valid checks, and any storage/usage of them.
 	 * 
 	 * onInventoryChange will be called when saving is needed.
