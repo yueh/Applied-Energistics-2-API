@@ -26,6 +26,8 @@ public class Items
 	public AEItemDefinition itemChargedStaff;
 	public AEItemDefinition itemMassCannon;
 	public AEItemDefinition itemMemoryCard;
+	public AEItemDefinition itemNetworkTool;
+	public AEItemDefinition itemPortableCell;
 
 	public AEItemDefinition itemCellCreative;
 
