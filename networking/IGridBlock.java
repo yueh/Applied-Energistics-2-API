@@ -14,6 +14,7 @@ import appeng.api.util.DimensionalCoord;
  */
 public interface IGridBlock
 {
+
 	/**
 	 * how much power to drain per tick as part of idle network usage.
 	 * 
@@ -24,21 +25,18 @@ public interface IGridBlock
 	double getIdlePowerUsage();
 
 	/**
-	 * Various flags that AE uses to modify basic behavior for various parts of
-	 * the network.
+	 * Various flags that AE uses to modify basic behavior for various parts of the network.
 	 * 
 	 * @return
 	 */
 	EnumSet<GridFlags> getFlags();
 
 	/**
-	 * generally speaking you will return true for this, the one exception is
-	 * buses, or worm holes where the node represents something that isn't a
-	 * real connection in the world, but rather one represented internally to
-	 * the block.
+	 * generally speaking you will return true for this, the one exception is buses, or worm holes where the node
+	 * represents something that isn't a real connection in the world, but rather one represented internally to the
+	 * block.
 	 * 
-	 * @return if the world can connect to this node, and the node can connect
-	 *         to the world.
+	 * @return if the world can connect to this node, and the node can connect to the world.
 	 */
 	boolean isWorldAccessable();
 
@@ -65,26 +63,18 @@ public interface IGridBlock
 	public void setNetworkStatus(IGrid grid, int channelsInUse);
 
 	/**
-	 * Determine which sides of the block can be connected too, only used when
-	 * isWorldAccessable returns true, not used for {@link IPart}
-	 * implementations.
+	 * Determine which sides of the block can be connected too, only used when isWorldAccessable returns true, not used
+	 * for {@link IPart} implementations.
 	 */
 	EnumSet<ForgeDirection> getConnectableSides();
 
 	/**
-	 * @return true if your isNetworkRunning
-	 */
-	public boolean isNetworkMachineActive();
-
-	/**
-	 * @return the IGridHost for the node, this will be an IGridPart or a
-	 *         TileEntity generally speaking.
+	 * @return the IGridHost for the node, this will be an IGridPart or a TileEntity generally speaking.
 	 */
 	IGridHost getMachine();
 
 	/**
-	 * called when the grid for the node has changed, the general grid state
-	 * should not be trusted at this point.
+	 * called when the grid for the node has changed, the general grid state should not be trusted at this point.
 	 */
 	void gridChanged();
 
