@@ -17,6 +17,11 @@ public interface IPartCable extends IPart, IGridHost
 {
 
 	/**
+	 * does this cable support buses?
+	 */
+	boolean supportsBuses();
+
+	/**
 	 * @return the current color of the cable.
 	 */
 	AEColor getCableColor();
