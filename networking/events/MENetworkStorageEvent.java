@@ -1,7 +1,7 @@
 package appeng.api.networking.events;
 
+import appeng.api.storage.IMEMonitor;
 import appeng.api.storage.StorageChannel;
-import appeng.api.storage.data.IItemList;
 
 /**
  * posted by the network when the networks Storage Changes, you can use the currentItems list to check levels, and
@@ -14,11 +14,11 @@ import appeng.api.storage.data.IItemList;
 public class MENetworkStorageEvent extends MENetworkEvent
 {
 
-	public final IItemList currentItems;
+	public final IMEMonitor monitor;
 	public final StorageChannel channel;
 
-	public MENetworkStorageEvent(IItemList o, StorageChannel chan) {
-		currentItems = o;
+	public MENetworkStorageEvent(IMEMonitor o, StorageChannel chan) {
+		monitor = o;
 		channel = chan;
 	}
 
