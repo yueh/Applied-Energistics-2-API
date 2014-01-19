@@ -14,22 +14,18 @@ public interface IRegistryContainer
 	IMovableRegistry moveable();
 
 	/**
-	 * Add new Grid Caches for use during run time, only use during loading
-	 * phase.
+	 * Add new Grid Caches for use during run time, only use during loading phase.
 	 */
 	IGridCacheRegistry gridCache();
 
 	/**
-	 * Add additional storage bus handlers to improve interplay with mod blocks
-	 * that contains special inventories that function unlike vanilla chests. AE
-	 * uses this internally for barrels, dsu's, quantum chests, AE Networks and
-	 * more.
+	 * Add additional storage bus handlers to improve interplay with mod blocks that contains special inventories that
+	 * function unlike vanilla chests. AE uses this internally for barrels, dsu's, quantum chests, AE Networks and more.
 	 */
 	IExternalStorageRegistry externalStorage();
 
 	/**
-	 * Add additional special comparison functionality, AE Uses this internally
-	 * for Bees.
+	 * Add additional special comparison functionality, AE Uses this internally for Bees.
 	 */
 	ISpecialComparisonRegistry specialComparson();
 
@@ -58,4 +54,8 @@ public interface IRegistryContainer
 	 */
 	IP2PTunnelRegistry p2pTunnel();
 
+	/**
+	 * get access to the ammo registry.
+	 */
+	IMatterCannonAmmoRegistry matterCannon();
 }
