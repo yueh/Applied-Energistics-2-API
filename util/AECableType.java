@@ -20,6 +20,11 @@ public enum AECableType
 	/**
 	 * Connections to this block should render as smart.
 	 */
-	SMART
+	SMART,
+
+	/**
+	 * Dense Cable, represents a tier 2 block that can carry 32 channels.
+	 */
+	DENSE,
 
 }
