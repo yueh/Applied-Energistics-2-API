@@ -206,6 +206,15 @@ public interface IPart
 	boolean onActivate(EntityPlayer player, Vec3 pos);
 
 	/**
+	 * Called when you right click the part, very similar to Block.onActivateBlock
+	 * 
+	 * @param player
+	 * @param pos
+	 * @return if your activate method performed something, you should use false unless you really need it.
+	 */
+	boolean onShiftActivate(EntityPlayer player, Vec3 pos);
+
+	/**
 	 * Add drops to the items being dropped into the world, if your item stores its contents when wrenched use the
 	 * wrenched boolean to control what data is saved vs dropped when it is broken.
 	 * 
@@ -229,5 +238,14 @@ public interface IPart
 	 * @param r
 	 */
 	void randomDisplayTick(World world, int x, int y, int z, Random r);
+
+	/**
+	 * Called when placed in the world by a player.
+	 * 
+	 * @param player
+	 * @param held
+	 * @param side
+	 */
+	void onPlacement(EntityPlayer player, ItemStack held, ForgeDirection side);
 
 }
