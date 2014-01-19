@@ -59,11 +59,6 @@ public interface IGrid
 	IReadOnlyCollection<IGridNode> getNodes();
 
 	/**
-	 * @return the current grids status, returns true if the grid is ready and operating
-	 */
-	public boolean isReady();
-
-	/**
 	 * @return true if the last node has been removed from the grid.
 	 */
 	public boolean isEmpty();
