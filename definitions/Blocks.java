@@ -21,6 +21,7 @@ public class Blocks
 	public AEItemDefinition blockQuartzGlass;
 	public AEItemDefinition blockQuartzVibrantGlass;
 	public AEItemDefinition blockQuartzTorch;
+	public AEItemDefinition blockFluix;
 
 	/*
 	 * Misc
