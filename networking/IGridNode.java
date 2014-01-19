@@ -21,22 +21,21 @@ public interface IGridNode
 {
 
 	/**
-	 * lets you walk the grid stating at the current node using a IGridVisitor,
-	 * generally not needed, please use only if required.
+	 * lets you walk the grid stating at the current node using a IGridVisitor, generally not needed, please use only if
+	 * required.
 	 * 
 	 * @param g
 	 */
 	void beginVisition(IGridVisitor g);
 
 	/**
-	 * inform the node that your IGridBlock has changed its internal state, and
-	 * force the node to update.
+	 * inform the node that your IGridBlock has changed its internal state, and force the node to update.
 	 * 
-	 * ALWAYS make sure that your tile entity is in the world, and has its node
-	 * properly saved to be returned from the host before updating state,
+	 * ALWAYS make sure that your tile entity is in the world, and has its node properly saved to be returned from the
+	 * host before updating state,
 	 * 
-	 * If your entity is not in the world, or if you IGridHost returns a
-	 * different node for the same side you will likely crash the game.
+	 * If your entity is not in the world, or if you IGridHost returns a different node for the same side you will
+	 * likely crash the game.
 	 * 
 	 */
 	void updateState();
@@ -56,8 +55,8 @@ public interface IGridNode
 	IGrid getGrid();
 
 	/**
-	 * By destroying your node, you destroy any connections, and its existence
-	 * in the grid, use in invalidate, or onChunkUnload
+	 * By destroying your node, you destroy any connections, and its existence in the grid, use in invalidate, or
+	 * onChunkUnload
 	 */
 	void destroy();
 
@@ -68,8 +67,7 @@ public interface IGridNode
 
 	/**
 	 * 
-	 * @return a set of the connected sides, UNKNOWN represents an invisible
-	 *         connection
+	 * @return a set of the connected sides, UNKNOWN represents an invisible connection
 	 */
 	EnumSet<ForgeDirection> getConnectedSides();
 
@@ -86,18 +84,16 @@ public interface IGridNode
 	IGridBlock getGridBlock();
 
 	/**
-	 * Reflects the networks status, returns true only if the network is
-	 * powered, and the network is not booting, this also takes into account
-	 * channels.
+	 * Reflects the networks status, returns true only if the network is powered, and the network is not booting, this
+	 * also takes into account channels.
 	 * 
 	 * @return true if is Network node active, and participating.
 	 */
 	boolean isActive();
 
 	/**
-	 * this should be called for each node you create, if you have a nodeData
-	 * compound to load from, you can store all your nods on a single compound
-	 * using name.
+	 * this should be called for each node you create, if you have a nodeData compound to load from, you can store all
+	 * your nods on a single compound using name.
 	 * 
 	 * Important: You must call this before updateState.
 	 * 
@@ -107,9 +103,8 @@ public interface IGridNode
 	void loadFromNBT(String name, NBTTagCompound nodeData);
 
 	/**
-	 * this should be called for each node you maintain, you can save all your
-	 * nodes to the same tag with different names, if you fail to complete the
-	 * load / save procedure, network state may be lost between game load/saves.
+	 * this should be called for each node you maintain, you can save all your nodes to the same tag with different
+	 * names, if you fail to complete the load / save procedure, network state may be lost between game load/saves.
 	 * 
 	 * @param name
 	 * @param nodeData
@@ -121,4 +116,12 @@ public interface IGridNode
 	 *         status.
 	 */
 	boolean meetsChannelRequirements();
+
+	/**
+	 * see if this node has a certain flag
+	 * 
+	 * @param tier2Capacity
+	 * @return
+	 */
+	boolean hasFlag(GridFlags flag);
 }
