@@ -31,11 +31,6 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 		return internalHandler;
 	}
 
-	protected BaseActionSource getSource()
-	{
-		return null;
-	}
-
 	protected void postChange(StackType diff, BaseActionSource src)
 	{
 		hasChanged = true;// need to update the cache.
@@ -51,7 +46,7 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 		}
 	}
 
-	private StackType monitorDiffrence(IAEStack original, StackType leftOvers, boolean extraction)
+	private StackType monitorDiffrence(IAEStack original, StackType leftOvers, boolean extraction, BaseActionSource src)
 	{
 		StackType diff = (StackType) original.copy();
 
@@ -61,7 +56,7 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 			diff.decStackSize( leftOvers.getStackSize() );
 
 		if ( diff.getStackSize() != 0 )
-			postChange( diff, getSource() );
+			postChange( diff, src );
 
 		return leftOvers;
 	}
@@ -83,19 +78,19 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 	}
 
 	@Override
-	public StackType injectItems(StackType input, Actionable mode)
+	public StackType injectItems(StackType input, Actionable mode, BaseActionSource src)
 	{
 		if ( mode == Actionable.SIMULATE )
-			return getHandler().injectItems( input, mode );
-		return monitorDiffrence( (StackType) input.copy(), getHandler().injectItems( input, mode ), false );
+			return getHandler().injectItems( input, mode, src );
+		return monitorDiffrence( (StackType) input.copy(), getHandler().injectItems( input, mode, src ), false, src );
 	}
 
 	@Override
-	public StackType extractItems(StackType request, Actionable mode)
+	public StackType extractItems(StackType request, Actionable mode, BaseActionSource src)
 	{
 		if ( mode == Actionable.SIMULATE )
-			return getHandler().extractItems( request, mode );
-		return monitorDiffrence( (StackType) request.copy(), getHandler().extractItems( request, mode ), true );
+			return getHandler().extractItems( request, mode, src );
+		return monitorDiffrence( (StackType) request.copy(), getHandler().extractItems( request, mode, src ), true, src );
 	}
 
 	@Override
