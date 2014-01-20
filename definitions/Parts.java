@@ -24,7 +24,12 @@ public class Parts
 	public AEItemDefinition partAnnihilationPlane;
 	public AEItemDefinition partFormationPlane;
 
-	public AEItemDefinition partP2PTunnel;
+	public AEItemDefinition partP2PTunnelME;
+	public AEItemDefinition partP2PTunnelRedstone;
+	public AEItemDefinition partP2PTunnelItems;
+	public AEItemDefinition partP2PTunnelLiquids;
+	public AEItemDefinition partP2PTunnelMJ;
+	public AEItemDefinition partP2PTunnelEU;
 
 	public AEItemDefinition partCableAnchor;
 	public AEItemDefinition partMonitior;
