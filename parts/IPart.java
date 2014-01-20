@@ -31,11 +31,11 @@ public interface IPart
 	 * called to save improtant details about the part, if the part is wrenched include in your NBT Data any settings
 	 * you might want to keep around, you can restore those settings when constructing your part.
 	 * 
-	 * @param wrenched
-	 *            was a wrench used?
+	 * @param type
+	 *            , what kind of ItemStack to return?
 	 * @return
 	 */
-	ItemStack getItemStack(boolean wrenched);
+	ItemStack getItemStack(PartItemStack type);
 
 	/**
 	 * render item form for inventory, or entity.
