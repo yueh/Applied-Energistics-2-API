@@ -2,6 +2,7 @@ package appeng.api.networking;
 
 import java.util.EnumSet;
 
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ForgeDirection;
 import appeng.api.parts.IPart;
 import appeng.api.util.AEColor;
@@ -78,4 +79,10 @@ public interface IGridBlock
 	 */
 	void gridChanged();
 
+	/**
+	 * Determines what item stack is used to render this node in the GUI.
+	 * 
+	 * @return the render item stack to use to render this node, null is valid, and will not show this node.
+	 */
+	public ItemStack getMachineRepresentation();
 }
