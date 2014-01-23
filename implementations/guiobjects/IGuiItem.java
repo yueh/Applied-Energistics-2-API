@@ -10,6 +10,6 @@ import net.minecraft.world.World;
 public interface IGuiItem
 {
 
-	Object getGuiObject(ItemStack is, World world, int x, int y, int z);
+	IGuiItemObject getGuiObject(ItemStack is, World world, int x, int y, int z);
 
 }
