@@ -28,7 +28,7 @@ public interface IGridBlock
 	/**
 	 * Various flags that AE uses to modify basic behavior for various parts of the network.
 	 * 
-	 * @return
+	 * @return Set of flags for this IGridBlock
 	 */
 	EnumSet<GridFlags> getFlags();
 

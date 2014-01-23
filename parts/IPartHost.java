@@ -102,7 +102,7 @@ public interface IPartHost
 	 * finds the part located at the position ( pos must be relative, not global )
 	 * 
 	 * @param pos
-	 * @return
+	 * @return a new SelectedPart, this is never null.
 	 */
 	SelectedPart selectPart(Vec3 pos);
 
@@ -120,7 +120,7 @@ public interface IPartHost
 	 * get the redstone state of host on this side, this value is cached internally.
 	 * 
 	 * @param side
-	 * @return
+	 * @return true of the part host is receieveing redstone from an external source.
 	 */
 	boolean hasRedstone(ForgeDirection side);
 

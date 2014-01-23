@@ -127,7 +127,7 @@ public interface IAEStack<StackType extends IAEStack>
 	 * 
 	 * @param st
 	 * @param mode
-	 * @return
+	 * @return true if two stacks are equal based on AE Fuzzy Comparison.
 	 */
 	boolean fuzzyComparison(Object st, FuzzyMode mode);
 
@@ -142,14 +142,14 @@ public interface IAEStack<StackType extends IAEStack>
 	/**
 	 * Clone the Item / Fluid Stack
 	 * 
-	 * @return
+	 * @return a new Stack, which is copied from the original.
 	 */
 	StackType copy();
 
 	/**
 	 * create an empty stack.
 	 * 
-	 * @return
+	 * @return a new stack, which represents an empty copy of the original.
 	 */
 	StackType empty();
 

@@ -17,7 +17,7 @@ public interface IGridConnection
 	 * lets you get the opposing node of the connection by passing your own node.
 	 * 
 	 * @param gridNode
-	 * @return
+	 * @return the IGridNode which represents the opposite side of the connection.
 	 */
 	IGridNode getOtherSide(IGridNode gridNode);
 
@@ -25,7 +25,7 @@ public interface IGridConnection
 	 * determine the direction of the connection based on your node.
 	 * 
 	 * @param gridNode
-	 * @return
+	 * @return the direction of the connection, only valid for in world connections.
 	 */
 	ForgeDirection getDirection(IGridNode gridNode);
 
@@ -36,16 +36,12 @@ public interface IGridConnection
 	void destroy();
 
 	/**
-	 * get node A
-	 * 
-	 * @return
+	 * @return node A
 	 */
 	IGridNode a();
 
 	/**
-	 * get node B
-	 * 
-	 * @return
+	 * @return node B
 	 */
 	IGridNode b();
 

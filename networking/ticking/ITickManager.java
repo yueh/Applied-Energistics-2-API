@@ -26,7 +26,8 @@ public interface ITickManager extends IGridCache
 	 * disables ticking for your device.
 	 * 
 	 * @param node
-	 * 
+	 
+	 * @return if the call was successful.
 	 */
 	boolean sleepDevice(IGridNode node);
 
@@ -35,8 +36,8 @@ public interface ITickManager extends IGridCache
 	 * enables ticking for your device, undoes a sleepDevice call.
 	 * 
 	 * @param node
-	 * @return
 	 * 
+	 * @return if the call was successful.
 	 */
 	boolean wakeDevice(IGridNode node);
 

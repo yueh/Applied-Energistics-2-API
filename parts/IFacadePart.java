@@ -16,8 +16,6 @@ public interface IFacadePart
 
 	/**
 	 * used to save the part.
-	 * 
-	 * @return
 	 */
 	ItemStack getItemStack();
 
