@@ -1,4 +1,4 @@
-package appeng.api.implementations;
+package appeng.api.implementations.parts;
 
 import appeng.api.networking.IGridHost;
 import appeng.api.parts.IPart;

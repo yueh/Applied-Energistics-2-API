@@ -1,4 +1,4 @@
-package appeng.api.implementations;
+package appeng.api.implementations.tiles;
 
 import net.minecraftforge.common.ForgeDirection;
 

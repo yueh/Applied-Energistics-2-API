@@ -1,4 +1,4 @@
-package appeng.api.implementations;
+package appeng.api.implementations.items;
 
 import net.minecraft.item.ItemStack;
 import appeng.api.config.Upgrades;

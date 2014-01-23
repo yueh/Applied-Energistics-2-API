@@ -3,7 +3,7 @@ package appeng.api.storage;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
-import appeng.api.implementations.IChestOrDrive;
+import appeng.api.implementations.tiles.IChestOrDrive;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
