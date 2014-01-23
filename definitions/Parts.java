@@ -1,14 +1,15 @@
 package appeng.api.definitions;
 
+import appeng.api.util.AEColoredItemDefinition;
 import appeng.api.util.AEItemDefinition;
 
 public class Parts
 {
 
-	public AEItemDefinition partCableSmart;
-	public AEItemDefinition partCableCovered;
-	public AEItemDefinition partCableGlass;
-	public AEItemDefinition partCableDense;
+	public AEColoredItemDefinition partCableSmart;
+	public AEColoredItemDefinition partCableCovered;
+	public AEColoredItemDefinition partCableGlass;
+	public AEColoredItemDefinition partCableDense;
 
 	public AEItemDefinition partQuartzFiber;
 	public AEItemDefinition partToggleBus;
