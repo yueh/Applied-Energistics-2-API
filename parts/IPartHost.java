@@ -124,4 +124,9 @@ public interface IPartHost
 	 */
 	boolean hasRedstone(ForgeDirection side);
 
+	/**
+	 * returns false if this block contains any parts or facades, true other wise.
+	 */
+	boolean isEmpty();
+
 }
