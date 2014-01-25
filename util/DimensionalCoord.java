@@ -60,6 +60,12 @@ public class DimensionalCoord extends WorldCoord
 		return w == world;
 	}
 
+	@Override
+	public String toString()
+	{
+		return dimId + "," + super.toString();
+	}
+
 	public World getWorld()
 	{
 		return w;
