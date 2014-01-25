@@ -12,7 +12,8 @@ public enum Settings
 
 	CONDENSER_OUTPUT(EnumSet.allOf( CondenserOuput.class )),
 
-	POWER_UNITS(EnumSet.allOf( PowerUnits.class )), ACCESS(EnumSet.allOf( AccessRestriction.class )), COMPARISON(EnumSet.allOf( MatchingMode.class )),
+	POWER_UNITS(EnumSet.allOf( PowerUnits.class )), ACCESS(EnumSet.of( AccessRestriction.READ_WRITE, AccessRestriction.READ, AccessRestriction.WRITE )), COMPARISON(
+			EnumSet.allOf( MatchingMode.class )),
 
 	SORT_DIRECTION(EnumSet.allOf( SortDir.class )), SORT_BY(EnumSet.allOf( SortOrder.class )),
 
