@@ -10,9 +10,9 @@ public enum AccessRestriction
 		permisionBit = v;
 	}
 
-	public boolean hasPermissions(AccessRestriction ar)
+	public boolean hasPermission(AccessRestriction ar)
 	{
-		return (ar.permisionBit & permisionBit) == permisionBit;
+		return (permisionBit & ar.permisionBit) == ar.permisionBit;
 	}
 
 	public AccessRestriction restrictPermissions(AccessRestriction ar)
