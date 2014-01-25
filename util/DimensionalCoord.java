@@ -63,7 +63,7 @@ public class DimensionalCoord extends WorldCoord
 	@Override
 	public String toString()
 	{
-		return "" + dimId + "," + x + "," + y + "," + z;
+		return dimId + "," + super.toString();
 	}
 
 	public World getWorld()
