@@ -124,4 +124,18 @@ public interface IGridNode
 	 * @return
 	 */
 	boolean hasFlag(GridFlags flag);
+
+	/**
+	 * tell the node who was responsible for placing it, failure to do this may result in in-compatibility with the
+	 * security system. Called instead of loadFromNBT when intialily placed, once set never required again, the value is saved with the Node NBT.
+	 * 
+	 * @param p
+	 */
+	void setPlayerID(int playerID);
+
+	/**
+	 * @return the ownerID this represents the person who placed the node.
+	 */
+	int getPlayerID();
+
 }

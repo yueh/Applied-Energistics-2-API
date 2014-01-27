@@ -34,6 +34,7 @@ public class Blocks
 	public AEItemDefinition blockTinyTNT;
 	public AEItemDefinition blockNetworkEmitter;
 	public AEItemDefinition blockQuartzCrystalizer;
+	public AEItemDefinition blockSecurity;
 
 	/*
 	 * Mac Components

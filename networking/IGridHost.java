@@ -35,4 +35,9 @@ public interface IGridHost
 	 */
 	public AECableType getCableConnectionType(ForgeDirection dir);
 
+	/**
+	 * break this host, its violating security rules, just break your block, or part.
+	 */
+	public void securityBreak();
+
 }

@@ -1,19 +1,17 @@
 package appeng.api.networking.security;
 
-import appeng.api.networking.IGridHost;
-
 public class MachineSource extends BaseActionSource
 {
 
-	public final IGridHost via;
+	public final IActionHost via;
 
 	@Override
-	boolean isMachine()
+	public boolean isMachine()
 	{
 		return true;
 	}
 
-	public MachineSource(IGridHost v) {
+	public MachineSource(IActionHost v) {
 		via = v;
 	}
 

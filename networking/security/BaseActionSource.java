@@ -3,12 +3,12 @@ package appeng.api.networking.security;
 public class BaseActionSource
 {
 
-	boolean isPlayer()
+	public boolean isPlayer()
 	{
 		return false;
 	}
 
-	boolean isMachine()
+	public boolean isMachine()
 	{
 		return false;
 	}

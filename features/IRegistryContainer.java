@@ -58,4 +58,9 @@ public interface IRegistryContainer
 	 * get access to the ammo registry.
 	 */
 	IMatterCannonAmmoRegistry matterCannon();
+
+	/**
+	 * get access to the player registry
+	 */
+	IPlayerRegistry players();
 }

@@ -4,6 +4,7 @@ import appeng.api.definitions.Blocks;
 import appeng.api.definitions.Items;
 import appeng.api.definitions.Materials;
 import appeng.api.definitions.Parts;
+import appeng.api.exceptions.FailedConnection;
 import appeng.api.features.IRegistryContainer;
 import appeng.api.networking.IGridBlock;
 import appeng.api.networking.IGridConnection;
@@ -63,7 +64,8 @@ public interface IAppEngApi
 	 * 
 	 * @param a
 	 * @param b
+	 * @throws FailedConnection
 	 */
-	IGridConnection createGridConnection(IGridNode a, IGridNode b);
+	IGridConnection createGridConnection(IGridNode a, IGridNode b) throws FailedConnection;
 
 }
