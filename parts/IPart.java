@@ -240,7 +240,7 @@ public interface IPart
 	void randomDisplayTick(World world, int x, int y, int z, Random r);
 
 	/**
-	 * Called when placed in the world by a player.
+	 * Called when placed in the world by a player, this happens before addWorld.
 	 * 
 	 * @param player
 	 * @param held

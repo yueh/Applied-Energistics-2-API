@@ -1,5 +1,6 @@
 package appeng.api.parts;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Vec3;
@@ -21,9 +22,8 @@ public interface IPartHost
 	IFacadeContainer getFacadeContainer();
 
 	/**
-	 * Test if you can add a part to the specified side of the Part Host,
-	 * {@link ForgeDirection}.UNKNOWN is used to represent the cable in the
-	 * middle.
+	 * Test if you can add a part to the specified side of the Part Host, {@link ForgeDirection}.UNKNOWN is used to
+	 * represent the cable in the middle.
 	 * 
 	 * @param is
 	 * @param side
@@ -32,35 +32,35 @@ public interface IPartHost
 	boolean canAddPart(ItemStack part, ForgeDirection side);
 
 	/**
-	 * try to add a new part to the specified side, returns false if it failed
-	 * to be added.
+	 * try to add a new part to the specified side, returns false if it failed to be added.
 	 * 
 	 * @param is
 	 * @param side
-	 * @return null if the item failed to add, the side it was placed on other
-	 *         wise ( may different for cables, {@link ForgeDirection}.UNKNOWN )
+	 * @param owner
+	 * @return null if the item failed to add, the side it was placed on other wise ( may different for cables,
+	 *         {@link ForgeDirection}.UNKNOWN )
 	 */
-	ForgeDirection addPart(ItemStack is, ForgeDirection side);
+	ForgeDirection addPart(ItemStack is, ForgeDirection side, EntityPlayer owner);
 
 	/**
 	 * Get part by side ( center is {@link ForgeDirection}.UNKNOWN )
 	 * 
 	 * @param side
-	 * @return the part located on the specified side, or null if there is no
-	 *         part.
+	 * @return the part located on the specified side, or null if there is no part.
 	 */
 	IPart getPart(ForgeDirection side);
 
 	/**
-	 * removes the part on the side, this doesn't drop it or anything, if you
-	 * don't do something with it, its just "gone" and its never coming back;
-	 * think about it.
+	 * removes the part on the side, this doesn't drop it or anything, if you don't do something with it, its just
+	 * "gone" and its never coming back; think about it.
 	 * 
 	 * if you want to drop the part you must request it prior to removing it.
 	 * 
 	 * @param side
+	 * @param suppressUpdate
+	 *            - used if you need to replace a part's instance, without really removing it first.
 	 */
-	void removePart(ForgeDirection side);
+	void removePart(ForgeDirection side, boolean suppressUpdate);
 
 	/**
 	 * something changed, might want to send a packet to clients to update state.
@@ -73,16 +73,13 @@ public interface IPartHost
 	DimensionalCoord getLocation();
 
 	/**
-	 * @return the tile entity for the host, this can either be an FMP tile, or
-	 *         a AE tile
+	 * @return the tile entity for the host, this can either be an FMP tile, or a AE tile
 	 */
 	TileEntity getTile();
 
 	/**
-	 * @return the color of the host type ( this is determined by the middle
-	 *         cable. ) if no cable is present, it returns {@link AEColor}
-	 *         .Transparent other wise it returns the color of the cable in the
-	 *         center.
+	 * @return the color of the host type ( this is determined by the middle cable. ) if no cable is present, it returns
+	 *         {@link AEColor} .Transparent other wise it returns the color of the cable in the center.
 	 */
 	AEColor getColor();
 
