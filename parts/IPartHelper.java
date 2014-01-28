@@ -33,7 +33,7 @@ public interface IPartHelper
 	 * @return true on success, false on failure, usually a error will be logged
 	 *         as well.
 	 */
-	boolean registerNewLayer(String string, Class<?> layerInterface);
+	boolean registerNewLayer(String string, String layerInterface);
 
 	/**
 	 * Register IBusItem with renderer
