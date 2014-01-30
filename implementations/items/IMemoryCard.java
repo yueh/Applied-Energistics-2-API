@@ -1,6 +1,5 @@
 package appeng.api.implementations.items;
 
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -47,13 +46,11 @@ public interface IMemoryCard
 	/**
 	 * notify the user of a outcome related to the memory card.
 	 * 
-	 * @param Block
-	 *            that the card was used on
 	 * @param player
 	 *            that used the card.
 	 * @param settingsSaved
 	 *            which message to send.
 	 */
-	void notifyUser(Block blk, EntityPlayer player, MemoryCardMessages msg);
+	void notifyUser(EntityPlayer player, MemoryCardMessages msg);
 
 }
