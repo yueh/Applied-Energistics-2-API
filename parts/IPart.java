@@ -248,4 +248,11 @@ public interface IPart
 	 */
 	void onPlacement(EntityPlayer player, ItemStack held, ForgeDirection side);
 
+	/**
+	 * Used to determine which parts can be placed on what cables.
+	 * 
+	 * @param what
+	 * @return true if the part can be placed on this support.
+	 */
+	boolean canBePlacedOn(BusSupport what);
 }
