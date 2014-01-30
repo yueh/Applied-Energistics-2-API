@@ -5,7 +5,7 @@ import java.util.List;
 import appeng.api.networking.security.IActionHost;
 
 /**
- * Represents a tile that contributes to storage, such as a ME Chest, or ME Drive.
+ * Represents a IGridhost that contributes to storage, such as a ME Chest, or ME Drive.
  */
 public interface ICellContainer extends IActionHost
 {
