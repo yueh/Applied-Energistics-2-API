@@ -1,5 +1,8 @@
 package appeng.api.storage;
 
+import java.io.DataInputStream;
+import java.io.IOException;
+
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 import appeng.api.networking.energy.IEnergySource;
@@ -33,7 +36,27 @@ public interface IStorageHelper
 	IItemList createItemList();
 
 	/**
-	 * use energy from energy, to remove request items from cell, at the request of src.
+	 * Read a AE Item Stack from a byte stream, returns a AE item stack or null.
+	 * 
+	 * @param input
+	 * @return
+	 * @throws IOException
+	 */
+	IAEItemStack readItemFromPacket(DataInputStream input) throws IOException;
+
+	/**
+	 * Read a AE Fluid Stack from a byte stream, returns a AE fluid stack or
+	 * null.
+	 * 
+	 * @param input
+	 * @return
+	 * @throws IOException
+	 */
+	IAEFluidStack readFluidFromPacket(DataInputStream input) throws IOException;
+
+	/**
+	 * use energy from energy, to remove request items from cell, at the request
+	 * of src.
 	 * 
 	 * @param energy
 	 * @param cell
