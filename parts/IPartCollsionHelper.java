@@ -34,4 +34,9 @@ public interface IPartCollsionHelper
 	 */
 	ForgeDirection getWorldZ();
 
+	/**
+	 * @return true if this test is to get the BB Collision information.
+	 */
+	boolean isBBCollision();
+
 }
