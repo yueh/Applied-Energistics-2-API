@@ -8,7 +8,7 @@ public enum GridFlags
 	/**
 	 * import/export buses, terminals, and other devices that use network features, will use this setting.
 	 */
-	REQURE_CHANNEL,
+	REQUIRE_CHANNEL,
 
 	/**
 	 * MAC, and P2P ME tunnels use this setting.
