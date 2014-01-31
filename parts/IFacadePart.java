@@ -63,4 +63,6 @@ public interface IFacadePart
 
 	boolean isBC();
 
+	void setThinFacades(boolean useThinFacades);
+
 }
