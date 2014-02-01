@@ -31,5 +31,17 @@ public enum SecurityPermissions
 	/**
 	 * required to modify the security blocks settings.
 	 */
-	SECURITY
+	SECURITY;
+
+	final private String unlocalizedName = "gui.appliedenergistics2.security." + name().toLowerCase();
+
+	public String getUnlocalizedName()
+	{
+		return unlocalizedName + ".name";
+	}
+
+	public String getUnlocalizedTip()
+	{
+		return unlocalizedName + ".tip";
+	}
 }
