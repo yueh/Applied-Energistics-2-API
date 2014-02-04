@@ -16,9 +16,8 @@ public interface IGridCache
 	 * Called each tick for the network, allows you to have active network wide
 	 * behaviors.
 	 * 
-	 * @param grid
 	 */
-	void onUpdateTick(IGrid grid);
+	void onUpdateTick();
 
 	/**
 	 * inform your cache, that a machine was removed from the grid.
@@ -27,11 +26,10 @@ public interface IGridCache
 	 * with the node you are passed, if you need to manage other grid
 	 * information, do it on the next updateTick.
 	 * 
-	 * @param grid
 	 * @param gridNode
 	 * @param machine
 	 */
-	void removeNode(IGrid grid, IGridNode gridNode, IGridHost machine);
+	void removeNode(IGridNode gridNode, IGridHost machine);
 
 	/**
 	 * informs you cache that a machine was added to the grid.
@@ -40,11 +38,10 @@ public interface IGridCache
 	 * with the node you are passed, if you need to manage other grid
 	 * information, do it on the next updateTick.
 	 * 
-	 * @param grid
 	 * @param gridNode
 	 * @param machine
 	 */
-	void addNode(IGrid grid, IGridNode gridNode, IGridHost machine);
+	void addNode(IGridNode gridNode, IGridHost machine);
 
 	/**
 	 * Called when a grid splits into two grids, AE will call a split as it
