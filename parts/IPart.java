@@ -77,6 +77,13 @@ public interface IPart
 	void renderDynamic(double x, double y, double z, IPartRenderHelper rh, RenderBlocks renderer);
 
 	/**
+	 * return true only if your part require dynamic rendering, must be consistent.
+	 * 
+	 * @return true to enable renderDynamic
+	 */
+	boolean requireDynamicRender();
+
+	/**
 	 * @return if the bus has a solid side, and you can place random stuff on it like torches or levers
 	 */
 	boolean isSolid();
