@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.util.Icon;
 import net.minecraftforge.common.ForgeDirection;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public interface IPartRenderHelper
 {
@@ -34,6 +36,7 @@ public interface IPartRenderHelper
 	 * @param face
 	 * @param renderer
 	 */
+	@SideOnly(Side.CLIENT)
 	void renderFace(int x, int y, int z, Icon ico, ForgeDirection face, RenderBlocks renderer);
 
 	/**
@@ -49,6 +52,7 @@ public interface IPartRenderHelper
 	 * @param edgeThickness
 	 * @param renderer
 	 */
+	@SideOnly(Side.CLIENT)
 	void renderFaceCutout(int x, int y, int z, Icon ico, ForgeDirection face, float edgeThickness, RenderBlocks renderer);
 
 	/**
@@ -61,6 +65,7 @@ public interface IPartRenderHelper
 	 * @param z
 	 * @param renderer
 	 */
+	@SideOnly(Side.CLIENT)
 	void renderBlock(int x, int y, int z, RenderBlocks renderer);
 
 	/**
@@ -70,6 +75,7 @@ public interface IPartRenderHelper
 	 * @param south
 	 * @param renderer
 	 */
+	@SideOnly(Side.CLIENT)
 	void renderInventoryFace(Icon icon, ForgeDirection south, RenderBlocks renderer);
 
 	/**
@@ -77,6 +83,7 @@ public interface IPartRenderHelper
 	 * 
 	 * @param renderer
 	 */
+	@SideOnly(Side.CLIENT)
 	void renderInventoryBox(RenderBlocks renderer);
 
 	/**
