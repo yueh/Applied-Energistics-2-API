@@ -33,7 +33,7 @@ public interface IStorageHelper
 	/**
 	 * @return a new instance of {@link IItemList}
 	 */
-	IItemList createItemList();
+	<T extends IAEStack> IItemList<T> createItemList();
 
 	/**
 	 * Read a AE Item Stack from a byte stream, returns a AE item stack or null.
