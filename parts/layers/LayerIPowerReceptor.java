@@ -30,7 +30,7 @@ public class LayerIPowerReceptor extends LayerBase implements IPowerReceptor
 	@Override
 	public World getWorld()
 	{
-		return ((IPartHost) this).getTile().worldObj;
+		return ((IPartHost) this).getTile().getWorldObj();
 	}
 
 }
