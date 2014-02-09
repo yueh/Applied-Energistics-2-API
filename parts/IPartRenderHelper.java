@@ -2,8 +2,8 @@ package appeng.api.parts;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.util.Icon;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraft.util.IIcon;
+import net.minecraftforge.common.util.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -37,7 +37,7 @@ public interface IPartRenderHelper
 	 * @param renderer
 	 */
 	@SideOnly(Side.CLIENT)
-	void renderFace(int x, int y, int z, Icon ico, ForgeDirection face, RenderBlocks renderer);
+	void renderFace(int x, int y, int z, IIcon ico, ForgeDirection face, RenderBlocks renderer);
 
 	/**
 	 * static renderer
@@ -53,7 +53,7 @@ public interface IPartRenderHelper
 	 * @param renderer
 	 */
 	@SideOnly(Side.CLIENT)
-	void renderFaceCutout(int x, int y, int z, Icon ico, ForgeDirection face, float edgeThickness, RenderBlocks renderer);
+	void renderFaceCutout(int x, int y, int z, IIcon ico, ForgeDirection face, float edgeThickness, RenderBlocks renderer);
 
 	/**
 	 * static renderer
@@ -71,12 +71,12 @@ public interface IPartRenderHelper
 	/**
 	 * render a single face in inventory renderer.
 	 * 
-	 * @param icon
+	 * @param IIcon
 	 * @param south
 	 * @param renderer
 	 */
 	@SideOnly(Side.CLIENT)
-	void renderInventoryFace(Icon icon, ForgeDirection south, RenderBlocks renderer);
+	void renderInventoryFace(IIcon IIcon, ForgeDirection south, RenderBlocks renderer);
 
 	/**
 	 * render a box in inventory renderer.
@@ -98,16 +98,16 @@ public interface IPartRenderHelper
 	 * @param West
 	 * @param East
 	 */
-	void setTexture(Icon Down, Icon Up, Icon North, Icon South, Icon West, Icon East);
+	void setTexture(IIcon Down, IIcon Up, IIcon North, IIcon South, IIcon West, IIcon East);
 
 	/**
 	 * inventory, and static renderer.
 	 * 
-	 * set all sides to a single icon.
+	 * set all sides to a single IIcon.
 	 * 
 	 * @param ico
 	 */
-	void setTexture(Icon ico);
+	void setTexture(IIcon ico);
 
 	/**
 	 * configure the color multiplier for the inventory renderer.
