@@ -33,7 +33,7 @@ public interface IStorageCell extends ICellWorkbenchItem
 	 * @param cellItem
 	 * @return numberOfBytes
 	 */
-	int BytePerType(ItemStack iscellItem);
+	int BytePerType(ItemStack cellItem);
 
 	/**
 	 * Must be between 1 and 63, indicates how many types you want to store on
@@ -50,10 +50,10 @@ public interface IStorageCell extends ICellWorkbenchItem
 	 * still the default cells, the normal AE black list is also applied.
 	 * 
 	 * @param cellItem
-	 * @param requsetedAddition
+	 * @param requestedAddition
 	 * @return true to preventAdditionOfItem
 	 */
-	boolean isBlackListed(ItemStack cellItem, IAEItemStack requsetedAddition);
+	boolean isBlackListed(ItemStack cellItem, IAEItemStack requestedAddition);
 
 	/**
 	 * Allows you to specify if this storage cell can be stored inside other
