@@ -11,6 +11,7 @@ import appeng.api.networking.IGridConnection;
 import appeng.api.networking.IGridHost;
 import appeng.api.networking.IGridNode;
 import appeng.api.parts.IPartHelper;
+import appeng.api.recipes.IRecipeHandler;
 import appeng.api.storage.IStorageHelper;
 
 public interface IAppEngApi
@@ -68,4 +69,10 @@ public interface IAppEngApi
 	 */
 	IGridConnection createGridConnection(IGridNode a, IGridNode b) throws FailedConnection;
 
+	/**
+	 * creates a new recipe loading handler, lets you use AE2's recipe loader/format.
+	 * 
+	 * @return new IRecipeHandler
+	 */
+	IRecipeHandler createNewRecipeHandler();
 }
