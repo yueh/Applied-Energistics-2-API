@@ -3,7 +3,7 @@ package appeng.api.storage;
 import appeng.api.networking.security.BaseActionSource;
 import appeng.api.storage.data.IAEStack;
 
-public interface IMEMonitorHandlerReciever<StackType extends IAEStack>
+public interface IMEMonitorHandlerReceiver<StackType extends IAEStack>
 {
 
 	/**

@@ -20,7 +20,8 @@ public interface IStackWatcherHost
 	 * Called when a watched item changes amounts.
 	 * 
 	 * @param o
-	 * @param diff
+	 * @param fullStack
+	 * @param diffStack
 	 * @param src
 	 * @param chan
 	 */

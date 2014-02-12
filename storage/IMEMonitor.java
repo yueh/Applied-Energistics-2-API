@@ -9,12 +9,12 @@ public interface IMEMonitor<T extends IAEStack> extends IMEInventoryHandler<T>
 	/**
 	 * add a new Listener to the monitor, be sure to properly remove yourself when your done.
 	 */
-	void addListener(IMEMonitorHandlerReciever<T> l, Object verificationToken);
+	void addListener(IMEMonitorHandlerReceiver<T> l, Object verificationToken);
 
 	/**
 	 * remove a Listener to the monitor.
 	 */
-	void removeListener(IMEMonitorHandlerReciever<T> l);
+	void removeListener(IMEMonitorHandlerReceiver<T> l);
 
 	@Override
 	@Deprecated

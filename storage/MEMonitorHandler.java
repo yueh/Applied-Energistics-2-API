@@ -22,7 +22,7 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 
 	private final IMEInventoryHandler<StackType> internalHandler;
 	private final IItemList<StackType> cachedList = AEApi.instance().storage().createItemList();
-	private final HashMap<IMEMonitorHandlerReciever<StackType>, Object> listeners = new HashMap<IMEMonitorHandlerReciever<StackType>, Object>();
+	private final HashMap<IMEMonitorHandlerReceiver<StackType>, Object> listeners = new HashMap<IMEMonitorHandlerReceiver<StackType>, Object>();
 
 	protected boolean hasChanged = true;
 
@@ -34,11 +34,11 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 	protected void postChange(StackType diff, BaseActionSource src)
 	{
 		hasChanged = true;// need to update the cache.
-		Iterator<Entry<IMEMonitorHandlerReciever<StackType>, Object>> i = listeners.entrySet().iterator();
+		Iterator<Entry<IMEMonitorHandlerReceiver<StackType>, Object>> i = listeners.entrySet().iterator();
 		while (i.hasNext())
 		{
-			Entry<IMEMonitorHandlerReciever<StackType>, Object> o = i.next();
-			IMEMonitorHandlerReciever<StackType> recv = o.getKey();
+			Entry<IMEMonitorHandlerReceiver<StackType>, Object> o = i.next();
+			IMEMonitorHandlerReceiver<StackType> recv = o.getKey();
 			if ( recv.isValid( o.getValue() ) )
 				recv.postChange( this, diff, src );
 			else
@@ -66,13 +66,13 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 	}
 
 	@Override
-	public void addListener(IMEMonitorHandlerReciever<StackType> l, Object verificationToken)
+	public void addListener(IMEMonitorHandlerReceiver<StackType> l, Object verificationToken)
 	{
 		listeners.put( l, verificationToken );
 	}
 
 	@Override
-	public void removeListener(IMEMonitorHandlerReciever<StackType> l)
+	public void removeListener(IMEMonitorHandlerReceiver<StackType> l)
 	{
 		listeners.remove( l );
 	}
