@@ -12,10 +12,10 @@ public interface ITickManager extends IGridCache
 {
 
 	/**
-	 * immediately sets the node to tick, only valid if your node is marked as
-	 * "Alertable" in its TickingRequest
+	 * immediately sets the node to tick, only valid if your node is marked as "Alertable" in its TickingRequest
 	 * 
-	 * Sleeping Devices Still Alertable, and alerting them does not wake them.
+	 * Sleeping Devices Still Alertable, when your tile is alerted its new status is determined by the result of its
+	 * tick.
 	 * 
 	 * @param node
 	 */
@@ -26,7 +26,7 @@ public interface ITickManager extends IGridCache
 	 * disables ticking for your device.
 	 * 
 	 * @param node
-	 
+	 * 
 	 * @return if the call was successful.
 	 */
 	boolean sleepDevice(IGridNode node);
