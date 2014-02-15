@@ -142,7 +142,7 @@ public interface IPartRenderHelper
 	 * 
 	 * Only worth it if you render more then 1 block.
 	 */
-	void useSimpliedRendering(int x, int y, int z, IPart p);
+	ISimplifiedBundle useSimpliedRendering(int x, int y, int z, IPart p, ISimplifiedBundle sim);
 
 	/**
 	 * disables, useSimpliedRendering.
