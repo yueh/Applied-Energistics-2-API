@@ -20,8 +20,7 @@ public interface IConfigManager
 	Set<Enum> getSettings();
 
 	/**
-	 * used to initialize the configuration manager, should be called for all
-	 * settings.
+	 * used to initialize the configuration manager, should be called for all settings.
 	 * 
 	 * @param settingName
 	 * @param defaultValue

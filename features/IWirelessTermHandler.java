@@ -2,6 +2,7 @@ package appeng.api.features;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import appeng.api.util.IConfigManager;
 
 /**
  * A handler for a wireless terminal.
@@ -54,4 +55,12 @@ public interface IWirelessTermHandler
 	 *            null for now.
 	 */
 	void setEncryptionKey(ItemStack item, String encKey, String name);
+
+	/**
+	 * Return the config manage for the wireless terminal.
+	 * 
+	 * @param is
+	 * @return
+	 */
+	IConfigManager getConfigManager(ItemStack is);
 }
