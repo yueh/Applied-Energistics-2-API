@@ -33,7 +33,7 @@ public class Parts
 	public AEItemDefinition partP2PTunnelEU;
 
 	public AEItemDefinition partCableAnchor;
-	public AEItemDefinition partMonitior;
+	public AEItemDefinition partMonitor;
 	public AEItemDefinition partSemiDarkMonitor;
 	public AEItemDefinition partDarkMonitor;
 
