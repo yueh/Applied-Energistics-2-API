@@ -63,4 +63,10 @@ public interface IRegistryContainer
 	 * get access to the player registry
 	 */
 	IPlayerRegistry players();
+	
+	/**
+	 * get access to the ae2 recipe api
+	 */
+	IRecipeHandlerRegistry recipes();
+	
 }
