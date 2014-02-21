@@ -65,6 +65,11 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 		cachedList = (IItemList<StackType>) t.getChannel().createList();
 	}
 
+	public MEMonitorHandler(IMEInventoryHandler<StackType> t, StorageChannel chan) {
+		internalHandler = t;
+		cachedList = (IItemList<StackType>) chan.createList();
+	}
+	
 	@Override
 	public void addListener(IMEMonitorHandlerReceiver<StackType> l, Object verificationToken)
 	{
