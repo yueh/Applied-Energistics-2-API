@@ -10,7 +10,6 @@ import appeng.api.networking.energy.IEnergySource;
 import appeng.api.networking.security.BaseActionSource;
 import appeng.api.storage.data.IAEFluidStack;
 import appeng.api.storage.data.IAEItemStack;
-import appeng.api.storage.data.IAEStack;
 import appeng.api.storage.data.IItemList;
 
 public interface IStorageHelper
@@ -33,10 +32,15 @@ public interface IStorageHelper
 	IAEFluidStack createFluidStack(FluidStack is);
 
 	/**
-	 * @return a new instance of {@link IItemList}
+	 * @return a new instance of {@link IItemList} for items
 	 */
-	<T extends IAEStack> IItemList<T> createItemList();
+	IItemList<IAEItemStack> createItemList();
 
+	/**
+	 * @return a new instance of {@link IItemList} for fluids
+	 */
+	IItemList<IAEFluidStack> createFluidList();
+	
 	/**
 	 * Read a AE Item Stack from a byte stream, returns a AE item stack or null.
 	 * 

@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
-import appeng.api.AEApi;
 import appeng.api.config.AccessRestriction;
 import appeng.api.config.Actionable;
 import appeng.api.networking.security.BaseActionSource;
@@ -21,11 +20,11 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 {
 
 	private final IMEInventoryHandler<StackType> internalHandler;
-	private final IItemList<StackType> cachedList = AEApi.instance().storage().createItemList();
+	private final IItemList<StackType> cachedList;
 	private final HashMap<IMEMonitorHandlerReceiver<StackType>, Object> listeners = new HashMap<IMEMonitorHandlerReceiver<StackType>, Object>();
 
 	protected boolean hasChanged = true;
-
+	
 	protected IMEInventoryHandler<StackType> getHandler()
 	{
 		return internalHandler;
@@ -63,6 +62,7 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 
 	public MEMonitorHandler(IMEInventoryHandler<StackType> t) {
 		internalHandler = t;
+		cachedList = (IItemList<StackType>) t.getChannel().createList();
 	}
 
 	@Override
