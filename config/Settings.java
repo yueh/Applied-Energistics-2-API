@@ -24,7 +24,9 @@ public enum Settings
 
 	OPERATION_MODE(EnumSet.allOf( OperationMode.class )), FULLNESS_MODE(EnumSet.allOf( FullnessMode.class )),
 
-	TRASH_CATCH(EnumSet.of( YesNo.YES, YesNo.NO )), FUZZY_MODE(EnumSet.allOf( FuzzyMode.class ));
+	TRASH_CATCH(EnumSet.of( YesNo.YES, YesNo.NO )), FUZZY_MODE(EnumSet.allOf( FuzzyMode.class )),
+
+	LEVEL_TYPE(EnumSet.allOf( LevelType.class ));
 
 	EnumSet values;
 
