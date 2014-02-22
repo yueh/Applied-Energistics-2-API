@@ -60,7 +60,6 @@ public class Materials
 
 	public AEItemDefinition materialAnnihilationCore;
 	public AEItemDefinition materialFormationCore;
-	public AEItemDefinition materialBlankPattern;
 
 	public AEItemDefinition materialSingularity;
 	public AEItemDefinition materialQESingularity;

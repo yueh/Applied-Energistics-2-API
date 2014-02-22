@@ -32,17 +32,7 @@ public class Blocks
 	public AEItemDefinition blockWireless;
 	public AEItemDefinition blockCharger;
 	public AEItemDefinition blockTinyTNT;
-	public AEItemDefinition blockNetworkEmitter;
-	public AEItemDefinition blockQuartzCrystalizer;
 	public AEItemDefinition blockSecurity;
-
-	/*
-	 * Mac Components
-	 */
-	public AEItemDefinition blockPatternProvider;
-	public AEItemDefinition blockAssemblerFieldWall;
-	public AEItemDefinition blockHeatVent;
-	public AEItemDefinition blockCraftingCPU;
 
 	/*
 	 * Quantum Network Bridge
@@ -73,6 +63,7 @@ public class Blocks
 	public AEItemDefinition blockCondenser;
 	public AEItemDefinition blockEnergyAcceptor;
 	public AEItemDefinition blockVibrationChamber;
+	public AEItemDefinition blockQuartzGrowthAccelerator;
 
 	public AEItemDefinition blockEnergyCell;
 	public AEItemDefinition blockEnergyCellDense;
