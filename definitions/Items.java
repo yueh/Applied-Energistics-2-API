@@ -42,4 +42,5 @@ public class Items
 	public AEItemDefinition itemSpatialCell128;
 
 	public AEItemDefinition itemFacade;
+	public AEItemDefinition itemCrystalSeed;
 }
