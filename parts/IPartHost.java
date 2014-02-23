@@ -1,5 +1,7 @@
 package appeng.api.parts;
 
+import java.util.Set;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -126,4 +128,8 @@ public interface IPartHost
 	 */
 	boolean isEmpty();
 
+	/**
+	 * @return a mutable list of flags you can adjust to track state.
+	 */
+	Set<LayerFlags> getLayerFlags();
 }

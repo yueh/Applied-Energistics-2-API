@@ -1,5 +1,7 @@
 package appeng.api.parts;
 
+import java.util.Set;
+
 import net.minecraftforge.common.util.ForgeDirection;
 
 /**
@@ -29,4 +31,11 @@ public class LayerBase // implements IPartHost
 	{
 	}
 
+	/**
+	 * @return a mutable list of flags you can adjust to track state.
+	 */
+	public Set<LayerFlags> getLayerFlags()
+	{
+		return null; // place holder.
+	}
 }

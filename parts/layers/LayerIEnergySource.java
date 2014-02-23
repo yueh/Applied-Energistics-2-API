@@ -1,6 +1,8 @@
 package appeng.api.parts.layers;
 
+import ic2.api.energy.tile.IEnergyEmitter;
 import ic2.api.energy.tile.IEnergySink;
+import ic2.api.energy.tile.IEnergySource;
 import ic2.api.energy.tile.IEnergyTile;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -12,7 +14,7 @@ import appeng.api.parts.LayerBase;
 import appeng.api.parts.LayerFlags;
 import appeng.util.Platform;
 
-public class LayerIEnergySink extends LayerBase implements IEnergySink
+public class LayerIEnergySource extends LayerBase implements IEnergySource
 {
 
 	private boolean isInIC2()
@@ -20,20 +22,20 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 		return getLayerFlags().contains( LayerFlags.IC2_ENET );
 	}
 
-	private TileEntity getEnergySinkTile()
+	private TileEntity getEnergySourceTile()
 	{
 		IPartHost host = (IPartHost) this;
 		return host.getTile();
 	}
 
-	private World getEnergySinkWorld()
+	private World getEnergySourceWorld()
 	{
-		return getEnergySinkTile().getWorldObj();
+		return getEnergySourceTile().getWorldObj();
 	}
 
 	final private void addToENet()
 	{
-		if ( getEnergySinkWorld() == null )
+		if ( getEnergySourceWorld() == null )
 			return;
 
 		// re-add
@@ -42,19 +44,19 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 		if ( !isInIC2() && Platform.isServer() )
 		{
 			getLayerFlags().add( LayerFlags.IC2_ENET );
-			MinecraftForge.EVENT_BUS.post( new ic2.api.energy.event.EnergyTileLoadEvent( (IEnergySink) getEnergySinkTile() ) );
+			MinecraftForge.EVENT_BUS.post( new ic2.api.energy.event.EnergyTileLoadEvent( (IEnergySink) getEnergySourceTile() ) );
 		}
 	}
 
 	final private void removeFromENet()
 	{
-		if ( getEnergySinkWorld() == null )
+		if ( getEnergySourceWorld() == null )
 			return;
 
 		if ( isInIC2() && Platform.isServer() )
 		{
 			getLayerFlags().remove( LayerFlags.IC2_ENET );
-			MinecraftForge.EVENT_BUS.post( new ic2.api.energy.event.EnergyTileUnloadEvent( (IEnergySink) getEnergySinkTile() ) );
+			MinecraftForge.EVENT_BUS.post( new ic2.api.energy.event.EnergyTileUnloadEvent( (IEnergySink) getEnergySourceTile() ) );
 		}
 	}
 
@@ -84,19 +86,19 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 	}
 
 	@Override
-	public boolean acceptsEnergyFrom(TileEntity emitter, ForgeDirection direction)
+	public boolean emitsEnergyTo(TileEntity receiver, ForgeDirection direction)
 	{
 		if ( !isInIC2() )
 			return false;
 
 		IPart part = getPart( direction );
 		if ( part instanceof IEnergySink )
-			return ((IEnergySink) part).acceptsEnergyFrom( emitter, direction );
+			return ((IEnergyEmitter) part).emitsEnergyTo( receiver, direction );
 		return false;
 	}
 
 	@Override
-	public double demandedEnergyUnits()
+	public double getOfferedEnergy()
 	{
 		if ( !isInIC2() )
 			return 0;
@@ -106,10 +108,10 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 		for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS)
 		{
 			IPart part = getPart( dir );
-			if ( part instanceof IEnergySink )
+			if ( part instanceof IEnergySource )
 			{
 				// use lower number cause ic2 deletes power it sends that isn't recieved.
-				return ((IEnergySink) part).demandedEnergyUnits();
+				return ((IEnergySource) part).getOfferedEnergy();
 			}
 		}
 
@@ -117,27 +119,19 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 	}
 
 	@Override
-	public double injectEnergyUnits(ForgeDirection directionFrom, double amount)
+	public void drawEnergy(double amount)
 	{
-		if ( !isInIC2() )
-			return amount;
+		// this is a flawed implementation, that requires a change to the IC2 API.
 
 		for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS)
 		{
 			IPart part = getPart( dir );
-			if ( part instanceof IEnergySink )
+			if ( part instanceof IEnergySource )
 			{
-				return ((IEnergySink) part).injectEnergyUnits( directionFrom, amount );
+				((IEnergySource) part).drawEnergy( amount );
+				return;
 			}
 		}
-
-		return amount;
-	}
-
-	@Override
-	public int getMaxSafeInput()
-	{
-		return Integer.MAX_VALUE; // no real options here...
 	}
 
 }
