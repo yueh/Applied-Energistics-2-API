@@ -7,7 +7,7 @@ import appeng.api.util.IConfigManager;
 /**
  * A handler for a wireless terminal.
  */
-public interface IWirelessTermHandler
+public interface IWirelessTermHandler extends INetworkEncodable
 {
 
 	/**
@@ -36,31 +36,11 @@ public interface IWirelessTermHandler
 	boolean hasPower(EntityPlayer player, double amount, ItemStack is);
 
 	/**
-	 * Used to get the current key from the item.
-	 * 
-	 * @param player
-	 * @param item
-	 * @return
-	 */
-	String getEncryptionKey(ItemStack item);
-
-	/**
-	 * Encode the wireless frequency via the Controller.
-	 * 
-	 * @param item
-	 *            the wireless terminal.
-	 * @param encKey
-	 *            the wireless encryption key.
-	 * @param name
-	 *            null for now.
-	 */
-	void setEncryptionKey(ItemStack item, String encKey, String name);
-
-	/**
 	 * Return the config manage for the wireless terminal.
 	 * 
 	 * @param is
 	 * @return
 	 */
 	IConfigManager getConfigManager(ItemStack is);
+	
 }
