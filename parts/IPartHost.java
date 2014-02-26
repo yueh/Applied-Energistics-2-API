@@ -113,7 +113,7 @@ public interface IPartHost
 	/**
 	 * part of the {@link LayerBase}
 	 */
-	void PartChanged();
+	void partChanged();
 
 	/**
 	 * get the redstone state of host on this side, this value is cached internally.

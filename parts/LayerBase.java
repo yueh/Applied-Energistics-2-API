@@ -27,7 +27,7 @@ public class LayerBase // implements IPartHost
 	/**
 	 * called when the parts change in the container, YOU MUST CALL super.PartChanged();
 	 */
-	public void PartChanged()
+	public void partChanged()
 	{
 	}
 

@@ -75,7 +75,7 @@ public class WorldCoord
 	/**
 	 * Will Return NULL if it's at some diagonal!
 	 */
-	public ForgeDirection DirectionTo(WorldCoord loc)
+	public ForgeDirection directionTo(WorldCoord loc)
 	{
 		int ox = x - loc.x;
 		int oy = y - loc.y;

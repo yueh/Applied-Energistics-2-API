@@ -73,9 +73,9 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 	}
 
 	@Override
-	public void PartChanged()
+	public void partChanged()
 	{
-		super.PartChanged();
+		super.partChanged();
 
 		if ( interestedInIC2() )
 			addToENet();

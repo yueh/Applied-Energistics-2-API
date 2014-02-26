@@ -75,9 +75,9 @@ public class LayerIEnergySource extends LayerBase implements IEnergySource
 	}
 
 	@Override
-	public void PartChanged()
+	public void partChanged()
 	{
-		super.PartChanged();
+		super.partChanged();
 
 		if ( interestedInIC2() )
 			addToENet();

@@ -38,9 +38,9 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 	 * Recalculate inventory wrapper cache.
 	 */
 	@Override
-	public void PartChanged()
+	public void partChanged()
 	{
-		super.PartChanged();
+		super.partChanged();
 
 		invs = new ArrayList();
 		int slotCount = 0;
