@@ -167,6 +167,8 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 	@Override
 	public void markDirty()
 	{
+		super.markDirty();
+
 		if ( invs != null )
 		{
 			for (IInventory inv : invs)

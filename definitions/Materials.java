@@ -11,11 +11,21 @@ public class Materials
 
 	public AEItemDefinition materialSilicon;
 
-	public AEItemDefinition materialLogicProcessorAsm;
+	public AEItemDefinition materialCalcProcessorPress;
+	public AEItemDefinition materialEngProcessorPress;
+	public AEItemDefinition materialLogicProcessorPress;
+
+	public AEItemDefinition materialCalcProcessorPrint;
+	public AEItemDefinition materialEngProcessorPrint;
+	public AEItemDefinition materialLogicProcessorPrint;
+
+	public AEItemDefinition materialSiliconPress;
+	public AEItemDefinition materialSiliconPrint;
+
+	public AEItemDefinition materialNamePress;
+
 	public AEItemDefinition materialLogicProcessor;
-
 	public AEItemDefinition materialCalcProcessor;
-
 	public AEItemDefinition materialEngProcessor;
 
 	public AEItemDefinition materialBasicCard;

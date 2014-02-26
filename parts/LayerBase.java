@@ -38,4 +38,9 @@ public class LayerBase // implements IPartHost
 	{
 		return null; // place holder.
 	}
+
+	public void markDirty()
+	{
+		// something!
+	}
 }
