@@ -28,7 +28,7 @@ public enum Settings
 
 	LEVEL_TYPE(EnumSet.allOf( LevelType.class ));
 
-	EnumSet values;
+	private EnumSet values;
 
 	public EnumSet getPossibleValues()
 	{
@@ -39,16 +39,6 @@ public enum Settings
 		if ( set == null || set.isEmpty() )
 			throw new RuntimeException( "Invalid configuration." );
 		values = set;
-	}
-
-	/**
-	 * used to disable settings that might rely on mods that are not present.
-	 * 
-	 * @param val
-	 */
-	public void disableSetting(Enum val)
-	{
-		values.remove( val );
 	}
 
 }
