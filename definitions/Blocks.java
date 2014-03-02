@@ -24,6 +24,7 @@ public class Blocks
 	public AEItemDefinition blockFluix;
 	public AEItemDefinition blockSkyStone;
 	public AEItemDefinition blockSkyChest;
+	public AEItemDefinition blockSkyCompass;
 
 	/*
 	 * Misc
