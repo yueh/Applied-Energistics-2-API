@@ -31,6 +31,7 @@ public class Items
 	public AEItemDefinition itemPortableCell;
 
 	public AEItemDefinition itemCellCreative;
+	public AEItemDefinition itemViewCell;
 
 	public AEItemDefinition itemCell1k;
 	public AEItemDefinition itemCell4k;

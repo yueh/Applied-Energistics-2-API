@@ -10,6 +10,7 @@ public class Materials
 	public AEItemDefinition materialCell128SpatialPart;
 
 	public AEItemDefinition materialSilicon;
+	public AEItemDefinition materialSkyDust;
 
 	public AEItemDefinition materialCalcProcessorPress;
 	public AEItemDefinition materialEngProcessorPress;
