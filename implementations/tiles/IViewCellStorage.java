@@ -6,9 +6,9 @@ public interface IViewCellStorage
 {
 
 	/**
-	 * should contains at least 1 slot, that single slot will be used to
+	 * should contains at least 5 slot, the first 5
 	 * 
-	 * @return inventory with at least 1 slot
+	 * @return inventory with at least 5 slot
 	 */
 	IInventory getViewCellStorage();
 
