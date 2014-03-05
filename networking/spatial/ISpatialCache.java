@@ -7,8 +7,7 @@ public interface ISpatialCache extends IGridCache
 {
 
 	/**
-	 * @return true if a region is defined at all, it dosn't have to be valid,
-	 *         but all points must be in the same world.
+	 * @return true if a region is defined at all, it dosn't have to be valid, but all points must be in the same world.
 	 */
 	boolean hasRegion();
 
@@ -26,5 +25,10 @@ public interface ISpatialCache extends IGridCache
 	 * @return the maximum anchor point for the spatial region.
 	 */
 	DimensionalCoord getMax();
+
+	/**
+	 * @return how many AE units are required to preform the activation
+	 */
+	long requiredPower();
 
 }
