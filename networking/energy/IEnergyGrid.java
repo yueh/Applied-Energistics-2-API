@@ -65,10 +65,18 @@ public interface IEnergyGrid extends IGridCache, IEnergySource, IEnergyGridProvi
 	public double getStoredPower();
 
 	/**
+	 * this is should be considered an estimate, and not relied upon for real calculations.
+	 * 
+	 * @return estimated available power.
+	 */
+	double getMaxStoredPower();
+
+	/**
 	 * Calculation will be capped at maxRequired, this improves performance by limiting the number of nodes needed to
 	 * calculate the demand.
 	 * 
 	 * @return Amount of power required to charge the grid, in AE.
 	 */
 	public double getEnergyDemand(double maxRequired);
+
 }

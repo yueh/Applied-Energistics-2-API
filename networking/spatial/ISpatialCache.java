@@ -31,4 +31,9 @@ public interface ISpatialCache extends IGridCache
 	 */
 	long requiredPower();
 
+	/**
+	 * @return current 100% - 0% effiency.
+	 */
+	float currentEffiency();
+
 }
