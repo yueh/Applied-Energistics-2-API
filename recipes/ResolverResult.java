@@ -1,12 +1,12 @@
 package appeng.api.recipes;
 
-public class ResolveResult
+public class ResolverResult
 {
 
 	final public String itemName;
 	final public int damageValue;
 
-	public ResolveResult(String name, int damage) {
+	public ResolverResult(String name, int damage) {
 		itemName = name;
 		damageValue = damage;
 	}

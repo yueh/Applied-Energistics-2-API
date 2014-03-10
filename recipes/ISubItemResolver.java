@@ -3,6 +3,11 @@ package appeng.api.recipes;
 public interface ISubItemResolver
 {
 
-	public ResolveResult resolveItemByName(String namespace, String fullName);
+	/**
+	 * @param namespace
+	 * @param fullName
+	 * @return either a ResolveReslult, or a ResolverResultSet
+	 */
+	public Object resolveItemByName(String namespace, String fullName);
 
 }

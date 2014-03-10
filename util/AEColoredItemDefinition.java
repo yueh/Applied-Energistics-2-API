@@ -29,6 +29,13 @@ public interface AEColoredItemDefinition
 	ItemStack stack(AEColor color, int stackSize);
 
 	/**
+	 * @param stackSize
+	 *            - stack size of the result.
+	 * @return an array of all colors.
+	 */
+	ItemStack[] allStacks(int stackSize);
+
+	/**
 	 * Compare {@link ItemStack} with this {@link AEItemDefinition}
 	 * 
 	 * @param comparableItem

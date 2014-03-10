@@ -3,7 +3,6 @@ package appeng.api.features;
 import appeng.api.recipes.ICraftHandler;
 import appeng.api.recipes.IRecipeHandler;
 import appeng.api.recipes.ISubItemResolver;
-import appeng.api.recipes.ResolveResult;
 
 public interface IRecipeHandlerRegistry
 {
@@ -42,8 +41,8 @@ public interface IRecipeHandlerRegistry
 	 * resolve sub items by name.
 	 * 
 	 * @param tmpName
-	 * @return
+	 * @return ResolerResult or ResolverResultSet
 	 */
-	ResolveResult resolveItem(String nameSpace, String itemName);
+	Object resolveItem(String nameSpace, String itemName);
 
 }
