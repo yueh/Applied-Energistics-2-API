@@ -2,13 +2,14 @@ package appeng.api.parts;
 
 import java.util.Set;
 
+import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
 /**
  * All Layers must extends this, this get part implementation is provided to interface with the parts, however a real
  * implementation will be used at runtime.
  */
-public class LayerBase // implements IPartHost
+public class LayerBase extends TileEntity // implements IPartHost
 {
 
 	/**
@@ -39,6 +40,7 @@ public class LayerBase // implements IPartHost
 		return null; // place holder.
 	}
 
+	@Override
 	public void markDirty()
 	{
 		// something!
