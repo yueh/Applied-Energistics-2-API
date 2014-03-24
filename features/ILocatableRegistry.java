@@ -3,7 +3,7 @@ package appeng.api.features;
 /**
  * A Registry for locatable items, works based on serial numbers.
  */
-public interface ILocateableRegistry
+public interface ILocatableRegistry
 {
 
 	/**
