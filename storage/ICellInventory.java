@@ -36,7 +36,7 @@ public interface ICellInventory extends IMEInventory<IAEItemStack>
 	/**
 	 * @return How many bytes are used for each type?
 	 */
-	int BytesPerType();
+	int getBytesPerType();
 
 	/**
 	 * @return true if a new item type can be added.
@@ -46,17 +46,17 @@ public interface ICellInventory extends IMEInventory<IAEItemStack>
 	/**
 	 * @return total byte storage.
 	 */
-	long totalBytes();
+	long getTotalBytes();
 
 	/**
 	 * @return how many bytes are free.
 	 */
-	long freeBytes();
+	long getFreeBytes();
 
 	/**
 	 * @return how many bytes are in use.
 	 */
-	long usedBytes();
+	long getUsedBytes();
 
 	/**
 	 * @return max number of types.
@@ -66,27 +66,27 @@ public interface ICellInventory extends IMEInventory<IAEItemStack>
 	/**
 	 * @return how many items are stored.
 	 */
-	long storedItemCount();
+	long getStoredItemCount();
 
 	/**
 	 * @return how many items types are currently stored.
 	 */
-	long storedItemTypes();
+	long getStoredItemTypes();
 
 	/**
 	 * @return how many item types remain.
 	 */
-	long remainingItemTypes();
+	long getRemainingItemTypes();
 
 	/**
 	 * @return how many more items can be stored.
 	 */
-	long remainingItemCount();
+	long getRemainingItemCount();
 
 	/**
 	 * @return how many items can be added without consuming another byte.
 	 */
-	int unusedItemCount();
+	int getUnusedItemCount();
 
 	/**
 	 * @return the status number for this drive.
