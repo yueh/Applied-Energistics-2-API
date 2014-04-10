@@ -132,4 +132,9 @@ public interface IPartHost
 	 * @return a mutable list of flags you can adjust to track state.
 	 */
 	Set<LayerFlags> getLayerFlags();
+
+	/**
+	 * remove host from world...
+	 */
+	void cleanup();
 }
