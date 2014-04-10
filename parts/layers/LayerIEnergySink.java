@@ -28,6 +28,9 @@ public class LayerIEnergySink extends LayerBase implements IEnergySink
 
 	private World getEnergySinkWorld()
 	{
+		if ( getEnergySinkTile() == null )
+			return null;
+		
 		return getEnergySinkTile().getWorldObj();
 	}
 

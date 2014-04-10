@@ -30,6 +30,8 @@ public class LayerIEnergySource extends LayerBase implements IEnergySource
 
 	private World getEnergySourceWorld()
 	{
+		if ( getEnergySourceTile() == null )
+			return null;
 		return getEnergySourceTile().getWorldObj();
 	}
 
