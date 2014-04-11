@@ -40,8 +40,6 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 	@Override
 	public void partChanged()
 	{
-		super.partChanged();
-
 		invs = new ArrayList();
 		int slotCount = 0;
 
@@ -90,6 +88,9 @@ public class LayerISidedInventory extends LayerBase implements ISidedInventory
 				}
 			}
 		}
+
+		// make sure inventory is updated before we call FMP.
+		super.partChanged();
 	}
 
 	/**
