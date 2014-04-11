@@ -40,8 +40,7 @@ public class LayerBase extends TileEntity // implements IPartHost
 		return null; // place holder.
 	}
 
-	@Override
-	public void markDirty()
+	public void markForSave()
 	{
 		// something!
 	}
