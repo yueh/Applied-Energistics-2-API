@@ -149,4 +149,14 @@ public interface IPartRenderHelper
 	 */
 	void normalRendering();
 
+	/**
+	 * render a block using the current renderer state.
+	 * 
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param renderer
+	 */
+	void renderBlockCurrentBounds(int x, int y, int z, RenderBlocks renderer);
+
 }
