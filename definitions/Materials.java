@@ -74,5 +74,6 @@ public class Materials
 
 	public AEItemDefinition materialSingularity;
 	public AEItemDefinition materialQESingularity;
+	public AEItemDefinition materialBlankPattern;
 
 }

@@ -44,4 +44,7 @@ public class Items
 
 	public AEItemDefinition itemFacade;
 	public AEItemDefinition itemCrystalSeed;
+
+	// rv1
+	public AEItemDefinition itemEncodedPattern;
 }

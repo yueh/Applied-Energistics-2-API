@@ -72,4 +72,8 @@ public class Blocks
 	public AEItemDefinition blockEnergyCellDense;
 	public AEItemDefinition blockEnergyCellCreative;
 
+	// rv1
+	public AEItemDefinition blockCraftingUnit;
+	public AEItemDefinition blockMolecularAssembler;
+
 }

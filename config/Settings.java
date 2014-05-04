@@ -26,7 +26,9 @@ public enum Settings
 
 	TRASH_CATCH(EnumSet.of( YesNo.YES, YesNo.NO )), FUZZY_MODE(EnumSet.allOf( FuzzyMode.class )),
 
-	LEVEL_TYPE(EnumSet.allOf( LevelType.class )), TERMINAL_STYLE(EnumSet.of( TerminalStyle.TALL, TerminalStyle.SMALL ));
+	LEVEL_TYPE(EnumSet.allOf( LevelType.class )), TERMINAL_STYLE(EnumSet.of( TerminalStyle.TALL, TerminalStyle.SMALL )),
+
+	COPY_MODE(EnumSet.allOf( CopyMode.class ));
 
 	private EnumSet values;
 
