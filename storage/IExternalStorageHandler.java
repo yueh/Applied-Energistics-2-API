@@ -22,6 +22,9 @@ public interface IExternalStorageHandler
 	/**
 	 * if this can handle the given inventory, return the a IMEInventory implementing class for it, if not return null
 	 * 
+	 * please note that if your inventory changes and requires polling, you must use an {@link IMEMonitor} instead of an
+	 * {@link IMEInventory} failure to do so will result in invalid item counts and reporting of the inventory.
+	 * 
 	 * @param te
 	 * @param d
 	 * @param channel
