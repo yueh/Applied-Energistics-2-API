@@ -29,16 +29,6 @@ public class LayerIEnergyHandler extends LayerBase implements IEnergyHandler
 	}
 
 	@Override
-	public boolean canInterface(ForgeDirection from)
-	{
-		IPart part = getPart( from );
-		if ( part instanceof IEnergyHandler )
-			return ((IEnergyHandler) part).canInterface( from );
-
-		return false;
-	}
-
-	@Override
 	public int getEnergyStored(ForgeDirection from)
 	{
 		IPart part = getPart( from );
@@ -56,6 +46,21 @@ public class LayerIEnergyHandler extends LayerBase implements IEnergyHandler
 			return ((IEnergyHandler) part).getMaxEnergyStored( from );
 
 		return 0;
+	}
+
+	@Deprecated
+	public boolean canInterface(ForgeDirection from)
+	{
+		return canConnectEnergy(from);
+	}
+
+	@Override
+	public boolean canConnectEnergy(ForgeDirection from) {
+		IPart part = getPart( from );
+		if ( part instanceof IEnergyHandler )
+			return ((IEnergyHandler) part).canConnectEnergy( from );
+
+		return false;
 	}
 
 }
