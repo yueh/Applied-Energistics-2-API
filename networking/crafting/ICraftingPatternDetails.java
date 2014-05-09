@@ -1,4 +1,4 @@
-package appeng.api.crafting;
+package appeng.api.networking.crafting;
 
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
@@ -7,6 +7,8 @@ import appeng.api.storage.data.IAEItemStack;
 
 public interface ICraftingPatternDetails
 {
+
+	ItemStack getPattern();
 
 	boolean isValidItemForSlot(int slotIndex, ItemStack i, World w);
 
