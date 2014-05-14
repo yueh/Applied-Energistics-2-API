@@ -48,14 +48,9 @@ public class LayerIEnergyHandler extends LayerBase implements IEnergyHandler
 		return 0;
 	}
 
-	@Deprecated
-	public boolean canInterface(ForgeDirection from)
-	{
-		return canConnectEnergy(from);
-	}
-
 	@Override
-	public boolean canConnectEnergy(ForgeDirection from) {
+	public boolean canConnectEnergy(ForgeDirection from)
+	{
 		IPart part = getPart( from );
 		if ( part instanceof IEnergyHandler )
 			return ((IEnergyHandler) part).canConnectEnergy( from );
