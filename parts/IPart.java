@@ -20,7 +20,7 @@ import appeng.api.networking.IGridNode;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public interface IPart
+public interface IPart extends IBoxProvider
 {
 
 	/**
@@ -195,13 +195,6 @@ public interface IPart
 	 * @param tile
 	 */
 	void setPartHostInfo(ForgeDirection side, IPartHost host, TileEntity tile);
-
-	/**
-	 * add your collision information to the the list.
-	 * 
-	 * @param boxes
-	 */
-	void getBoxes(IPartCollsionHelper bch);
 
 	/**
 	 * Called when you right click the part, very similar to Block.onActivateBlock
