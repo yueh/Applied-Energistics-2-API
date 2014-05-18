@@ -74,9 +74,12 @@ public class Blocks
 
 	// rv1
 	public AEItemDefinition blockCraftingUnit;
-	public AEItemDefinition blockCraftingStorage;
-	public AEItemDefinition blockCraftingMonitor;
 	public AEItemDefinition blockCraftingAccelerator;
+	public AEItemDefinition blockCraftingStorage1k;
+	public AEItemDefinition blockCraftingStorage4k;
+	public AEItemDefinition blockCraftingStorage16k;
+	public AEItemDefinition blockCraftingStorage64k;
+	public AEItemDefinition blockCraftingMonitor;
 
 	public AEItemDefinition blockMolecularAssembler;
 
