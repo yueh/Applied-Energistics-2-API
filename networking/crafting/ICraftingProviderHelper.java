@@ -9,6 +9,6 @@ public interface ICraftingProviderHelper
 	/**
 	 * Add new Pattern to AE's crafting cache.
 	 */
-	void addCraftingOption(ICraftingPatternDetails api);
+	void addCraftingOption(ICraftingMedium medium, ICraftingPatternDetails api);
 
 }
