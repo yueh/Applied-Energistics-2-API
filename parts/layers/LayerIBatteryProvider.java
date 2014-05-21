@@ -20,10 +20,4 @@ public class LayerIBatteryProvider extends LayerBase implements ISidedBatteryPro
 		return null;
 	}
 
-	@Override
-	public IBatteryObject getMjBattery(String kind)
-	{
-		return null;
-	}
-
 }
