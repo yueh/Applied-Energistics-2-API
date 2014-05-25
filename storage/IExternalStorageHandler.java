@@ -15,9 +15,10 @@ public interface IExternalStorageHandler
 	 * )
 	 * 
 	 * @param te
+	 * @param mySrc
 	 * @return true, if it can get a handler via getInventory
 	 */
-	boolean canHandle(TileEntity te, ForgeDirection d, StorageChannel channel);
+	boolean canHandle(TileEntity te, ForgeDirection d, StorageChannel channel, BaseActionSource mySrc);
 
 	/**
 	 * if this can handle the given inventory, return the a IMEInventory implementing class for it, if not return null
