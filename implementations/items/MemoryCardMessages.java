@@ -5,5 +5,5 @@ package appeng.api.implementations.items;
  */
 public enum MemoryCardMessages
 {
-	INVALID_MACHINE, SETTINGS_LOADED, SETTINGS_SAVED
+	INVALID_MACHINE, SETTINGS_LOADED, SETTINGS_SAVED, SETTINGS_CLEARED
 }
