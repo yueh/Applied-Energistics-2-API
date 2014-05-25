@@ -11,6 +11,11 @@ public class Parts
 	public AEColoredItemDefinition partCableGlass;
 	public AEColoredItemDefinition partCableDense;
 
+	public AEColoredItemDefinition partLumenCableSmart;
+	public AEColoredItemDefinition partLumenCableCovered;
+	public AEColoredItemDefinition partLumenCableGlass;
+	public AEColoredItemDefinition partLumenCableDense;
+
 	public AEItemDefinition partQuartzFiber;
 	public AEItemDefinition partToggleBus;
 	public AEItemDefinition partInvertedToggleBus;
