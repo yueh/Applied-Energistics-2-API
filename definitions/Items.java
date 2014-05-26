@@ -47,4 +47,6 @@ public class Items
 
 	// rv1
 	public AEItemDefinition itemEncodedPattern;
+	public AEItemDefinition itemPaintBall;
+	public AEItemDefinition itemColorApplicator;
 }
