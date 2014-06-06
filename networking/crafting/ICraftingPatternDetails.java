@@ -39,6 +39,11 @@ public interface ICraftingPatternDetails
 	IAEItemStack[] getInputs();
 
 	/**
+	 * @return a list of the inputs, will be clean
+	 */
+	IAEItemStack[] getCondencedInputs();
+
+	/**
 	 * @return a list of the outputs, will include nulls.
 	 */
 	IAEItemStack[] getOutputs();
