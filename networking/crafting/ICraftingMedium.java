@@ -1,7 +1,6 @@
 package appeng.api.networking.crafting;
 
 import net.minecraft.inventory.InventoryCrafting;
-import net.minecraftforge.common.util.ForgeDirection;
 
 /**
  * A place to send Items for crafting purposes, this is considered part of AE's External crafting system.
@@ -16,9 +15,13 @@ public interface ICraftingMedium
 	 * @param pattern
 	 * @param patternDetails
 	 * @param table
-	 * @param where
-	 * @return
+	 * @return if the pattern was successfully pushed.
 	 */
-	boolean pushPattern(ICraftingPatternDetails patternDetails, InventoryCrafting table, ForgeDirection where);
+	boolean pushPattern(ICraftingPatternDetails patternDetails, InventoryCrafting table);
+
+	/**
+	 * @return if this is false, the crafting engine will refuse to send new jobs to this medium.
+	 */
+	boolean isBusy();
 
 }
