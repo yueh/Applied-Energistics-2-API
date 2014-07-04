@@ -28,21 +28,30 @@ public interface ICraftingGrid extends IGridCache
 	 * @param craftWhat
 	 * @param callback
 	 *            -- optional
+	 * 
 	 * @return a future which will at an undetermined point in the future get you the {@link ICraftingJob} do not wait
 	 *         on this, your be waiting forever.
 	 */
 	Future<ICraftingJob> beginCraftingJob(World world, IGrid grid, BaseActionSource actionSrc, IAEItemStack craftWhat, ICraftingCallback callback);
 
 	/**
+	 * Submit the job to the Crafting system for processing.
 	 * 
 	 * @param result
 	 *            - the crafting job from beginCraftingJob
+	 * @param requestingMachine
+	 *            - a machine if its being requested via automation, may be null.
 	 * @param cpu
 	 *            - can be null
 	 * @param actionSrc
 	 *            - the action source to use when starting the job, this will be used for extracting items, should
 	 *            usually be the same as the one provided to beginCraftingJob.
+	 * 
+	 * @return null ( if failed ) or an {@link ICraftingLink} other wise, if you send requestingMachine you need to
+	 *         properly keep track of this and handle the nbt saving and loading of the object as well as the
+	 *         {@link ICraftingRequester} methods. if you send null, this object should be discarded after verifying the
+	 *         return state.
 	 */
-	boolean submitJob(ICraftingJob job, ICraftingCPU cpu, BaseActionSource src);
+	ICraftingLink submitJob(ICraftingJob job, ICraftingRequester requestingMachine, ICraftingCPU target, BaseActionSource src);
 
 }
