@@ -1,5 +1,6 @@
 package appeng.api.networking.crafting;
 
+import appeng.api.config.Actionable;
 import appeng.api.networking.security.IActionHost;
 import appeng.api.storage.data.IAEItemStack;
 
@@ -21,9 +22,10 @@ public interface ICraftingRequester extends IActionHost
 	 * be returned.
 	 * 
 	 * @param items
+	 * @param mode
 	 * @return
 	 */
-	IAEItemStack injectCratedItems(ICraftingLink link, IAEItemStack items);
+	IAEItemStack injectCratedItems(ICraftingLink link, IAEItemStack items, Actionable mode);
 
 	/**
 	 * called when the job changes from in progress, to either complete, or canceled.
