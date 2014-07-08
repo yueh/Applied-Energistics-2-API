@@ -43,7 +43,7 @@ public class Parts
 	public AEItemDefinition partSemiDarkMonitor;
 	public AEItemDefinition partDarkMonitor;
 
-	public AEItemDefinition partCraftingMonitor;
+	public AEItemDefinition partInterfaceTerminal;
 	public AEItemDefinition partPatternTerminal;
 	public AEItemDefinition partCraftingTerminal;
 	public AEItemDefinition partTerminal;
