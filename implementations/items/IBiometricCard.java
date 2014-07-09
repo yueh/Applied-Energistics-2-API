@@ -2,6 +2,8 @@ package appeng.api.implementations.items;
 
 import java.util.EnumSet;
 
+import com.mojang.authlib.GameProfile;
+
 import net.minecraft.item.ItemStack;
 import appeng.api.config.SecurityPermissions;
 import appeng.api.features.IPlayerRegistry;
@@ -11,14 +13,14 @@ public interface IBiometricCard
 {
 
 	/**
-	 * Set the username to blank, to clear it.
+	 * Set the  {@link GameProfile} to null, to clear it.
 	 */
-	void setUsername(ItemStack itemStack, String username);
+	void setProfile(ItemStack itemStack, GameProfile username);
 
 	/**
-	 * @return username of the player encoded on this card, or a blank string.
+	 * @return {@link GameProfile} of the player encoded on this card, or a blank string.
 	 */
-	String getUsername(ItemStack is);
+	GameProfile getProfile(ItemStack is);
 
 	/**
 	 * @param itemStack

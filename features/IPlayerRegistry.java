@@ -1,5 +1,7 @@
 package appeng.api.features;
 
+import com.mojang.authlib.GameProfile;
+
 import net.minecraft.entity.player.EntityPlayer;
 
 /**
@@ -13,18 +15,12 @@ public interface IPlayerRegistry
 	 * @param player
 	 * @return user id of a username.
 	 */
-	int getID(String username);
+	int getID(GameProfile gameProfile);
 
 	/**
 	 * @param player
 	 * @return user id of a player entity.
 	 */
 	int getID(EntityPlayer player);
-
-	/**
-	 * @param id
-	 * @return Username of an ID
-	 */
-	String getUsername(int id);
 
 }
