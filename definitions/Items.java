@@ -1,6 +1,8 @@
 package appeng.api.definitions;
 
+import appeng.api.util.AEColoredItemDefinition;
 import appeng.api.util.AEItemDefinition;
+import appeng.core.features.ColoredItemDefinition;
 
 public class Items
 {
@@ -47,6 +49,7 @@ public class Items
 
 	// rv1
 	public AEItemDefinition itemEncodedPattern;
-	public AEItemDefinition itemPaintBall;
 	public AEItemDefinition itemColorApplicator;
+	public AEColoredItemDefinition itemPaintBall;
+	public AEColoredItemDefinition itemLumenPaintBall;
 }
