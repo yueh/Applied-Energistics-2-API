@@ -9,6 +9,7 @@ import appeng.api.networking.security.BaseActionSource;
 import appeng.api.storage.data.IAEItemStack;
 
 import com.google.common.collect.ImmutableCollection;
+import com.google.common.collect.ImmutableSet;
 
 public interface ICraftingGrid extends IGridCache
 {
@@ -53,5 +54,10 @@ public interface ICraftingGrid extends IGridCache
 	 *         return state.
 	 */
 	ICraftingLink submitJob(ICraftingJob job, ICraftingRequester requestingMachine, ICraftingCPU target, BaseActionSource src);
+
+	/**
+	 * @return list of all the crafting cpus on the grid
+	 */
+	ImmutableSet<ICraftingCPU> getCpus();
 
 }
