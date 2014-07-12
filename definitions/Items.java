@@ -2,7 +2,6 @@ package appeng.api.definitions;
 
 import appeng.api.util.AEColoredItemDefinition;
 import appeng.api.util.AEItemDefinition;
-import appeng.core.features.ColoredItemDefinition;
 
 public class Items
 {
