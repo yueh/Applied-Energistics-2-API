@@ -26,7 +26,8 @@ public enum GridFlags
 	CANNOT_CARRY_DENSE,
 
 	/**
-	 * This block can transmit 32 signals, this should only apply to Tier2 Cable, P2P Tunnels, and Quantum Network Bridges.
+	 * This block can transmit 32 signals, this should only apply to Tier2 Cable, P2P Tunnels, and Quantum Network
+	 * Bridges.
 	 */
 	TIER_2_CAPACITY,
 
@@ -34,5 +35,11 @@ public enum GridFlags
 	 * This block is part of a multiblock, used in conjunction with REQUIRE_CANNEL, and {@link IGridMultiblock} see this
 	 * interface for details.
 	 */
-	MULTIBLOCK
+	MULTIBLOCK,
+
+	/**
+	 * Indicates which path might be preferred, this only matters if two routes of equal length exist, ad only changes
+	 * the order they are processed in.
+	 */
+	PREFERED
 }
