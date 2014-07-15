@@ -8,5 +8,6 @@ public enum TunnelType
 	RF_POWER, // RF Tunnel
 	REDSTONE, // Redstone Tunnel
 	FLUID, // Fluid Tunnel
-	ITEM // Item Tunnel
+	ITEM, // Item Tunnel
+	LIGHT // Light Tunnel
 }

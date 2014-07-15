@@ -37,6 +37,7 @@ public class Parts
 	public AEItemDefinition partP2PTunnelMJ;
 	public AEItemDefinition partP2PTunnelEU;
 	public AEItemDefinition partP2PTunnelRF;
+	public AEItemDefinition partP2PTunnelLight;
 
 	public AEItemDefinition partCableAnchor;
 	public AEItemDefinition partMonitor;
