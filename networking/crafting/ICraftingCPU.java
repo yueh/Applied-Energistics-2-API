@@ -27,4 +27,9 @@ public interface ICraftingCPU extends IBaseMonitor<IAEItemStack>
 	 */
 	int getCoProcessors();
 
+	/**
+	 * @return an empty string or the name of the cpu.
+	 */
+	String getName();
+
 }
