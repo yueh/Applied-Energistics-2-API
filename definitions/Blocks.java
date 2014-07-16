@@ -83,4 +83,6 @@ public class Blocks
 
 	public AEItemDefinition blockMolecularAssembler;
 
+	public AEItemDefinition blockLightDetector;
+
 }
