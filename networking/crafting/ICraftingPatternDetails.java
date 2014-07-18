@@ -67,4 +67,11 @@ public interface ICraftingPatternDetails
 	 */
 	ItemStack getOutput(InventoryCrafting craftingInv, World world);
 
+	/**
+	 * Set the priority the of this pattern.
+	 * 
+	 * @param priority
+	 */
+	void setPriority(int priority);
+
 }
