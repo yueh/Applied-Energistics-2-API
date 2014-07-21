@@ -1,5 +1,7 @@
 package appeng.api.implementations.tiles;
 
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.common.util.ForgeDirection;
 import appeng.api.util.AEColor;
 
 public interface IColorableTile
@@ -7,6 +9,6 @@ public interface IColorableTile
 
 	AEColor getColor();
 
-	void setColor(AEColor newColor);
+	boolean recolourBlock(ForgeDirection side, AEColor colour, EntityPlayer who);
 
 }
