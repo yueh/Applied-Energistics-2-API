@@ -5,7 +5,7 @@ import appeng.api.networking.security.IActionHost;
 /**
  * Represents a IGridhost that contributes to storage, such as a ME Chest, or ME Drive.
  */
-public interface ICellContainer extends IActionHost, ICellProvider
+public interface ICellContainer extends IActionHost, ICellProvider, ISaveProvider
 {
 
 	/**
