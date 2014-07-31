@@ -24,7 +24,9 @@ public enum Settings
 
 	FUZZY_MODE(EnumSet.allOf( FuzzyMode.class )), LEVEL_TYPE(EnumSet.allOf( LevelType.class )),
 
-	TERMINAL_STYLE(EnumSet.of( TerminalStyle.TALL, TerminalStyle.SMALL )), COPY_MODE(EnumSet.allOf( CopyMode.class ));
+	TERMINAL_STYLE(EnumSet.of( TerminalStyle.TALL, TerminalStyle.SMALL )), COPY_MODE(EnumSet.allOf( CopyMode.class )),
+
+	INTERFACE_TERMINAL(EnumSet.of( YesNo.YES, YesNo.NO ));
 
 	private EnumSet values;
 
