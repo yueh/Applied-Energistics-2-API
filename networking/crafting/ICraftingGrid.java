@@ -44,6 +44,11 @@ public interface ICraftingGrid extends IGridCache
 	 *            - a machine if its being requested via automation, may be null.
 	 * @param cpu
 	 *            - can be null
+	 * 
+	 * @param prioritizePower
+	 *            - if cpu is null, this determine if the system should prioritize power, or if it should find the lower
+	 *            end cpus, automatic processes generally should pick lower end cpus.
+	 * 
 	 * @param actionSrc
 	 *            - the action source to use when starting the job, this will be used for extracting items, should
 	 *            usually be the same as the one provided to beginCraftingJob.
@@ -53,7 +58,7 @@ public interface ICraftingGrid extends IGridCache
 	 *         {@link ICraftingRequester} methods. if you send null, this object should be discarded after verifying the
 	 *         return state.
 	 */
-	ICraftingLink submitJob(ICraftingJob job, ICraftingRequester requestingMachine, ICraftingCPU target, BaseActionSource src);
+	ICraftingLink submitJob(ICraftingJob job, ICraftingRequester requestingMachine, ICraftingCPU target, boolean prioritizePower, BaseActionSource src);
 
 	/**
 	 * @return list of all the crafting cpus on the grid
