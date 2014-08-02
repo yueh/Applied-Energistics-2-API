@@ -16,9 +16,12 @@ public interface ICraftingGrid extends IGridCache
 
 	/**
 	 * @param whatToCraft
+	 * @param world
+	 * @param slot
+	 * @param details
 	 * @return a collection of crafting patterns for the item in question.
 	 */
-	ImmutableCollection<ICraftingPatternDetails> getCraftingFor(IAEItemStack whatToCraft);
+	ImmutableCollection<ICraftingPatternDetails> getCraftingFor(IAEItemStack whatToCraft, ICraftingPatternDetails details, int slot, World world);
 
 	/**
 	 * Begin calculating a crafting job.
