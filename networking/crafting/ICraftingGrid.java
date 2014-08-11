@@ -68,4 +68,18 @@ public interface ICraftingGrid extends IGridCache
 	 */
 	ImmutableSet<ICraftingCPU> getCpus();
 
+	/**
+	 * @param what
+	 * @return true if the item can be requested via a crafting emitter.
+	 */
+	boolean canEmitFor(IAEItemStack what);
+
+	/**
+	 * is this item being crafted?
+	 * 
+	 * @param aeStackInSlot
+	 * @return
+	 */
+	boolean isRequesting(IAEItemStack aeStackInSlot);
+
 }
