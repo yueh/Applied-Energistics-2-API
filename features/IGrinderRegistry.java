@@ -20,44 +20,41 @@ public interface IGrinderRegistry
 	/**
 	 * add a new recipe the easy way, in -> out, how many turns., duplicates will not be added.
 	 * 
-	 * @param in
-	 * @param out
-	 * @param turns
+	 * @param in input
+	 * @param out output
+	 * @param turns amount of turns to turn the input into the output
 	 */
 	public void addRecipe(ItemStack in, ItemStack out, int turns);
 
 	/**
 	 * add a new recipe with optional outputs, duplicates will not be added.
 	 * 
-	 * @param in
-	 * @param out
-	 * @param optional
-	 * @param chance
-	 *            ( value 0.0 - 1.0 )
-	 * @param turns
+	 * @param in input
+	 * @param out output
+	 * @param optional optional output
+	 * @param chance chance to get the optional output within 0.0 - 1.0
+	 * @param turns amount of turns to turn the input into the outputs
 	 */
 	void addRecipe(ItemStack in, ItemStack out, ItemStack optional, float chance, int turns);
 
 	/**
 	 * add a new recipe with optional outputs, duplicates will not be added.
 	 * 
-	 * @param in
-	 * @param out
-	 * @param optional
-	 * @param chance
-	 *            ( value 0.0 - 1.0 )
-	 * @param optional2
-	 * @param chance2
-	 *            ( value 0.0 - 1.0 )
-	 * @param turns
+	 * @param in input
+	 * @param out output
+	 * @param optional optional output
+	 * @param chance chance to get the optional output within 0.0 - 1.0
+	 * @param optional2 second optional output
+	 * @param chance2 chance to get the second optional output within 0.0 - 1.0
+	 * @param turns amount of turns to turn the input into the outputs
 	 */
-	void addRecipe(ItemStack in, ItemStack out, ItemStack optional, float chance, ItemStack optional2, float chance2, int cost);
+	void addRecipe(ItemStack in, ItemStack out, ItemStack optional, float chance, ItemStack optional2, float chance2, int turns);
 
 	/**
 	 * Searches for a recipe for a given input, and returns it.
 	 * 
-	 * @param input
-	 * @return identified recipe, or null
+	 * @param input input
+	 * @return identified recipe or null
 	 */
 	public IGrinderEntry getRecipeForInput(ItemStack input);
 
