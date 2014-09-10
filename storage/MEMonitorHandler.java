@@ -38,6 +38,11 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 	protected void postChange(StackType diff, BaseActionSource src)
 	{
 		hasChanged = true;// need to update the cache.
+		postChangeToListeners(diff,src);
+	}
+	
+	protected void postChangeToListeners(StackType diff, BaseActionSource src)
+	{
 		Iterator<Entry<IMEMonitorHandlerReceiver<StackType>, Object>> i = getListeners();
 		while (i.hasNext())
 		{
