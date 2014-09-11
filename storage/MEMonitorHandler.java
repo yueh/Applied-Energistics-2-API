@@ -10,6 +10,8 @@ import appeng.api.networking.security.BaseActionSource;
 import appeng.api.storage.data.IAEStack;
 import appeng.api.storage.data.IItemList;
 
+import com.google.common.collect.ImmutableList;
+
 /**
  * Common implementation of a simple class that monitors injection/extraction of a inventory to send events to a list of
  * listeners.
@@ -35,14 +37,9 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 		return listeners.entrySet().iterator();
 	}
 
-	protected void postChange(StackType diff, BaseActionSource src)
+	protected void postChangeToListeners(Iterable<StackType> diff, BaseActionSource src)
 	{
 		hasChanged = true;// need to update the cache.
-		postChangeToListeners(diff,src);
-	}
-	
-	protected void postChangeToListeners(StackType diff, BaseActionSource src)
-	{
 		Iterator<Entry<IMEMonitorHandlerReceiver<StackType>, Object>> i = getListeners();
 		while (i.hasNext())
 		{
@@ -65,7 +62,7 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 			diff.decStackSize( leftOvers.getStackSize() );
 
 		if ( diff.getStackSize() != 0 )
-			postChange( diff, src );
+			postChangeToListeners( ImmutableList.of( diff ), src );
 
 		return leftOvers;
 	}
