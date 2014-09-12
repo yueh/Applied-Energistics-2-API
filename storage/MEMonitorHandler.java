@@ -37,7 +37,12 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 		return listeners.entrySet().iterator();
 	}
 
-	protected void postChangeToListeners(Iterable<StackType> diff, BaseActionSource src)
+	protected void postChangesToListeners( Iterable<StackType> changes, BaseActionSource src)
+	{
+		notifyListenersOfChange( changes, src );
+	}
+	
+	protected void notifyListenersOfChange(Iterable<StackType> diff, BaseActionSource src)
 	{
 		hasChanged = true;// need to update the cache.
 		Iterator<Entry<IMEMonitorHandlerReceiver<StackType>, Object>> i = getListeners();
@@ -62,7 +67,7 @@ public class MEMonitorHandler<StackType extends IAEStack> implements IMEMonitor<
 			diff.decStackSize( leftOvers.getStackSize() );
 
 		if ( diff.getStackSize() != 0 )
-			postChangeToListeners( ImmutableList.of( diff ), src );
+			postChangesToListeners( ImmutableList.of( diff ), src );
 
 		return leftOvers;
 	}
