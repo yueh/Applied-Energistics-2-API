@@ -25,7 +25,7 @@ public interface IStorageGrid extends IGridCache, IStorageMonitorable
 	 * 
 	 * @param input
 	 */
-	void postAlterationOfStoredItems(StorageChannel chan, IAEStack input, BaseActionSource src);
+	void postAlterationOfStoredItems(StorageChannel chan, Iterable<? extends IAEStack> input, BaseActionSource src);
 
 	/**
 	 * Used to add a cell provider to the storage system
