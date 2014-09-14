@@ -23,4 +23,10 @@ public interface IPlayerRegistry
 	 */
 	int getID(EntityPlayer player);
 
+	/**
+	 * @param playerID
+	 * @return PlayerEntity, or null if the player could not be found.
+	 */
+	EntityPlayer findPlayer(int playerID);
+
 }
