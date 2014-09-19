@@ -34,6 +34,6 @@ public interface IWirelessTermRegistry
 	 * opens the wireless terminal gui, the wireless terminal item, must be in
 	 * the active slot on the tool bar.
 	 */
-	void OpenWirelessTerminalGui(ItemStack item, World w, EntityPlayer player);
+	void openWirelessTerminalGui(ItemStack item, World w, EntityPlayer player);
 
 }
