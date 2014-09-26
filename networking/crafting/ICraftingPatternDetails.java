@@ -74,4 +74,10 @@ public interface ICraftingPatternDetails
 	 */
 	void setPriority(int priority);
 
+	/**
+	 * Get the priority of this pattern
+	 *
+	 * @return the priority of this pattern
+	 */
+	int getPriority();
 }
