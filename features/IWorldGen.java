@@ -13,7 +13,7 @@ public interface IWorldGen
 
 	public void disableWorldGenForProviderID(WorldGenType type, Class<? extends WorldProvider> provider);
 
-	public void disableWorldGenForDimension(WorldGenType type, int dimID);
+	public void enableWorldGenForDimension(WorldGenType type, int dimID);
 
 	boolean isWorldGenEnabled(WorldGenType type, World w);
 
