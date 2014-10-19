@@ -15,6 +15,8 @@ public interface IWorldGen
 
 	public void enableWorldGenForDimension(WorldGenType type, int dimID);
 
+	public void disableWorldGenForDimension(WorldGenType type, int dimID);
+
 	boolean isWorldGenEnabled(WorldGenType type, World w);
 
 }
